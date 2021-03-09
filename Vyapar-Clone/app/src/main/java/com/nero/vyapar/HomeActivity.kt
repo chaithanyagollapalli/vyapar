@@ -33,9 +33,21 @@ class HomeActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_items, R.id.nav_Business_dasboard, R.id.nav_Reports
+                R.id.nav_items,
+                R.id.nav_business_dashboard,
+                R.id.nav_reports,
+                R.id.nav_sale,
+                R.id.nav_purchase,
+                R.id.nav_expenses,
+                R.id.nav_cash_banks,
+                R.id.nav_online_store,
+                R.id.settings
             ), drawerLayout
         )
+
+        //will help to change the icon color
+        navView.itemIconTintList = null;
+        navView.itemBackground = null
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }

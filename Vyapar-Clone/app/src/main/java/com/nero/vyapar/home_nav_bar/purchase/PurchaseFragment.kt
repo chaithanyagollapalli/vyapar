@@ -1,4 +1,4 @@
-package com.nero.vyapar.home_nav_bar.sale
+package com.nero.vyapar.home_nav_bar.purchase
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -8,24 +8,24 @@ import android.view.View
 import android.view.ViewGroup
 import com.nero.vyapar.R
 
-class sale : Fragment() {
+class PurchaseFragment : Fragment() {
 
     companion object {
-        fun newInstance() = sale()
+        fun newInstance() = PurchaseFragment()
     }
 
-    private lateinit var viewModel: SaleViewModel
+    private lateinit var viewModel: PurchaseViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.sale_fragment, container, false)
+        return inflater.inflate(R.layout.purchase_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SaleViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(PurchaseViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

@@ -28,4 +28,9 @@
     <string name="sale_invoice">Sale Invoice</string>
     <string name="sales_lists">Sales List</string>
     <string name="stock_item_list">Stock Item List</string>
+    <string name="purchase_List">Purchase List</string>
+    <string name="my_online_store">My Online Store</string>
+    <string name="expenses_list">Expenses List</string>
+    <string name="bank_account">Bank \n Account</string>
+    <string name="create_online_store">Create Online Store</string>
 </resources>
