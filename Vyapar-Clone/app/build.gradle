@@ -1,11 +1,12 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-kapt'
+    //id 'kotlin-kapt'
     id 'kotlin-android-extensions'
 }
-    apply plugin: 'dagger.hilt.android.plugin'
-
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -94,8 +95,7 @@ dependencies {
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
 
     //lottie
-    implementation "com.airbnb.android:lottie:$lottieVersion"
-
+    implementation "com.airbnb.android:lottie:3.6.1"
 
 
 }
