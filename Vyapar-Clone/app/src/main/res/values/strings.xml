@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">Vyapar</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Store Name</string>
+    <string name="nav_header_subtitle">xxxxxxxxxx</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_items">Items</string>
+    <string name="menu_Business_dashboard">Business Dashboard</string>
+    <string name="menu_Reports">Reports</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="sales">Sales</string>
+    <string name="purchase">Purchase</string>
+    <string name="expenses">Expenses</string>
+    <string name="cash_bank"><![CDATA[Cash & Bank]]></string>
+    <string name="settings">Settings</string>
+    <string name="backup_restore"><![CDATA[Backup & Restore]]></string>
+    <string name="vyapar_premium">Vyapar Premium</string>
+    <string name="get_destop_billing_software">Get Destop billing software</string>
+    <string name="whatsapp_greetings">WhatsApp Greetings</string>
+    <string name="refer_earn"><![CDATA[Refer & Earn]]></string>
+    <string name="utilities">Utilities</string>
+    <string name="help_support"><![CDATA[Help & Support]]></string>
+    <string name="rate_this_app">Rate this app</string>
+    <string name="sale_invoice">Sale Invoice</string>
+    <string name="sales_lists">Sales List</string>
+    <string name="stock_item_list">Stock Item List</string>
 </resources>

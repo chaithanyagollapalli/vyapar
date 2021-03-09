@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_items"
+            android:icon="@drawable/ic_item"
+            android:title="@string/menu_items" />
+        <item
+            android:id="@+id/nav_Business_dasboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="@string/menu_Business_dashboard" />
+        <item
+            android:id="@+id/nav_Reports"
+            android:icon="@drawable/ic_reports"
+            android:title="@string/menu_Reports" />
+        <item
+            android:id="@+id/nav_sale"
+            android:icon="@drawable/ic_reports"
+            android:title="@string/sales" />
+
+        <item
+            android:id="@+id/nav_purchase"
+            android:icon="@drawable/ic_reports"
+            android:title="@string/purchase" />
+        <item
+            android:id="@+id/nav_expenses"
+            android:icon="@drawable/ic_reports"
+            android:title="@string/expenses" />
+        <item
+            android:id="@+id/nav_cash_banks"
+            android:icon="@drawable/ic_reports"
+            android:title="@string/cash_bank" />
+        <item
+            android:id="@+id/nav_online_store"
+            android:icon="@drawable/ic_reports"
+            android:title="My Online Store" />
+
+    </group>
+
+    <group
+        android:id="@+id/settings"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_reports"
+            android:title="@string/settings" />
+        <item
+            android:id="@+id/nav_backup"
+            android:icon="@drawable/ic_reports"
+            android:title="@string/backup_restore" />
+
+    </group>
+
+
+    <group
+        android:id="@+id/premium"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_premium"
+            android:icon="@drawable/ic_reports"
+            android:title="@string/vyapar_premium" />
+        <item
+            android:id="@+id/nav_get_destop_billing"
+            android:title="@string/get_destop_billing_software" />
+
+        <item
+            android:id="@+id/nav_whatsapp"
+            android:title="@string/whatsapp_greetings" />
+
+        <item
+            android:id="@+id/nav_Refer_earn"
+            android:title="@string/refer_earn" />
+
+        <item
+            android:id="@+id/nav_utilites"
+            android:title="@string/utilities" />
+        <item
+            android:id="@+id/nav_help_support"
+            android:title="@string/help_support" />
+
+        <item
+            android:id="@+id/nav_rate_app"
+            android:title="@string/rate_this_app" />
+    </group>
+
+</menu>
