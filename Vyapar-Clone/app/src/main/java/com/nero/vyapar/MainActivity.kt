@@ -10,11 +10,11 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-
+    val viewmodel: viewmodel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val viewmodel: viewmodel by viewModels()
+
         viewmodel.data
     }
 }
