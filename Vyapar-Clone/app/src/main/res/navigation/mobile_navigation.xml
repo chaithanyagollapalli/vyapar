@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_items">
+
+    <fragment
+        android:id="@+id/nav_items"
+        android:name="com.nero.vyapar.home_nav_bar.items.ItemsFragment"
+        android:label="@string/stock_item_list"
+        tools:layout="@layout/fragment_item">
+        <action
+            android:id="@+id/action_nav_items_to_nav_Business_dasboard"
+            app:destination="@id/nav_Business_dasboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_Business_dasboard"
+        android:name="com.nero.vyapar.home_nav_bar.businessDashboard.BusinessDashboardFragment"
+        android:label="@string/menu_Business_dashboard"
+        tools:layout="@layout/fragment_business_dashboard">
+        <action
+            android:id="@+id/action_nav_Business_dasboard_to_nav_Reports"
+            app:destination="@id/nav_Reports" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_Reports"
+        android:name="com.nero.vyapar.home_nav_bar.reports.ReportsFragment"
+        android:label="@string/menu_Reports"
+        tools:layout="@layout/fragment_reports" />
+
+
+<!--    <fragment-->
+<!--        android:id="@+id/nav_sale"-->
+<!--        android:name="com.nero.vyapar.home_nav_bar.sale.sale"-->
+<!--        android:label="@string/sales_lists" />-->
+
+
+</navigation>
