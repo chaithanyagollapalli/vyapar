@@ -5,7 +5,9 @@ buildscript {
         google()
         jcenter()
     }
-
+    ext {
+        compose_version = '1.0.0-beta01'
+    }
     ext.hilt_version = '2.33-beta'
 
     dependencies {
