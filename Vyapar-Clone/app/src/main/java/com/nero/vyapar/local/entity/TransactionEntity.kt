@@ -12,6 +12,8 @@ data class TransactionEntity(
     @ColumnInfo(name = "billedItemNames") var billedItemNames: String?,
     @ColumnInfo(name = "billedItemQuantity") var billedItemQuantity: String?,
     @ColumnInfo(name = "paidAmt") var paidAmt: Long?,
+    @ColumnInfo(name = "received") var received: Long? = 0,
+    @ColumnInfo(name = "total") var total: Long?,
 ) {
     @ColumnInfo(name = "id")
     @PrimaryKey(autoGenerate = true)
