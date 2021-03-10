@@ -13,6 +13,7 @@ data class ItemsEntity(
     @ColumnInfo(name = "salePrice") var salePrice: Long?,
     @ColumnInfo(name = "purchasePrice") var purchasePrice: Long?,
     @ColumnInfo(name = "taxRate") var taxRate: Float?,
+    @ColumnInfo(name = "stock") var stock: Long?,
 ) {
     @ColumnInfo(name = "id")
     @PrimaryKey(autoGenerate = true)
