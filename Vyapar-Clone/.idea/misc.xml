@@ -25,43 +25,10 @@
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/activity_add_sale.xml" value="0.152" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/activity_main.xml" value="0.11041666666666666" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.176" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_dashboard.xml" value="0.287109375" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_item.xml" value="0.3828125" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_menu_camera.xml" value="0.3828125" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.3828125" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.3828125" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_premium.xml" value="0.3828125" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_store.xml" value="0.3828125" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/drawable/side_nav_bar.xml" value="0.3828125" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/activity_home.xml" value="0.2463768115942029" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/activity_home_screen.xml" value="0.2957427536231884" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/activity_main.xml" value="0.35280797101449274" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/app_bar_home.xml" value="0.22" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/app_bar_home_screen.xml" value="0.2957427536231884" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/cash_bank_fragment.xml" value="0.275" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/content_home.xml" value="0.2463768115942029" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/content_home_screen.xml" value="0.2957427536231884" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/expenses_fragment.xml" value="0.275" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_business_dashboard.xml" value="0.35280797101449274" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_gallery.xml" value="0.35280797101449274" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_home.xml" value="0.2957427536231884" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_item.xml" value="0.2463768115942029" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_items.xml" value="0.35280797101449274" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_reports.xml" value="0.35280797101449274" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_slideshow.xml" value="0.35280797101449274" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/my_online_store_fragment.xml" value="0.275" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/nav_header_home.xml" value="0.25" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/purchase_fragment.xml" value="0.35260416666666666" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/sale_fragment.xml" value="0.35280797101449274" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/settings_fragment.xml" value="0.275" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/menu/home.xml" value="0.5" />
-        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/menu/home_screen.xml" value="0.36666666666666664" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/sale_fragment.xml" value="0.16052631578947368" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK"/>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

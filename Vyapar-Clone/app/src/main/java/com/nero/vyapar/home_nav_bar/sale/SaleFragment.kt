@@ -9,14 +9,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import com.nero.vyapar.R
-import com.nero.vyapar.databinding.SaleFragmentBinding
 
 class SaleFragment : Fragment() {
 
 
     private lateinit var saleViewModel: SaleViewModel
-    private var _binding: SaleFragmentBinding? = null
-
+//    private var _binding: SaleFragmentBinding? = null
+private var _binding: SaleFragmentBinding? = null
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
