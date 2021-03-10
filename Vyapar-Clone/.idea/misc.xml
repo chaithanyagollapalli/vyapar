@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/btn_animation_bg.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/close_button_bg.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_add_file.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_baseline_calendar_today_20.xml" value="0.1707236842105263" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_camera.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_economy_forecast.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_invoices.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_outline_settings_24.xml" value="0.16872964169381108" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_resource_return.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_rupee.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_share.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_shopping_bag.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_shopping_cart.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_truck.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_wallet.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/image_button_bg.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/party_editext_box.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/activity_add_purchase.xml" value="0.15895765472312703" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/activity_add_sale.xml" value="0.152" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/activity_main.xml" value="0.11041666666666666" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.176" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

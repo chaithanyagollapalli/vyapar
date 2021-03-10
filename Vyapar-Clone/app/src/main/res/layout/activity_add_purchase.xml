@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPurchaseActivity">
+
+    <ImageButton
+        android:id="@+id/ibBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/tvPurchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_70"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/purchase"
+        android:textSize="@dimen/sp_24" />
+
+    <ImageButton
+        android:id="@+id/ibSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_outline_settings_24" />
+
+    <TextView
+        android:id="@+id/tvBillNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ibBack"
+        android:layout_margin="@dimen/dp_15"
+        android:text="@string/bill_no" />
+
+    <EditText
+        android:id="@+id/etBillNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ibBack"
+        android:layout_toEndOf="@id/tvBillNo"
+        android:ems="4"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ibBack"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/dp_15"
+        android:drawableEnd="@drawable/ic_baseline_calendar_today_20"
+        android:drawablePadding="@dimen/dp_10"
+        android:text="@string/date_09_03_2021" />
+
+    <View
+        android:id="@+id/vLine1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tvDate"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="#C4C4C4" />
+
+    <EditText
+        android:id="@+id/etParty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vLine1"
+        android:layout_margin="@dimen/dp_15"
+        android:background="@drawable/party_editext_box"
+        android:hint="Party*"
+        android:padding="@dimen/dp_15" />
+
+    <View
+        android:id="@+id/vLine2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/etParty"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="#C4C4C4" />
+
+    <Button
+        android:id="@+id/btnAddItems"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:layout_below="@id/vLine2"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@color/add_items_btn"
+        android:text="@string/add_items_optional"
+        android:textColor="@color/add_items_grey" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAddItems"
+        android:elevation="@dimen/dp_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="@string/total_amt"
+                    android:textSize="@dimen/sp_18" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="@string/paid_amt"
+                    android:textSize="@dimen/sp_18" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:text="@string/balance_due"
+                    android:textSize="@dimen/sp_18" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:ems="6"
+                    android:textSize="@dimen/sp_18" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:ems="6"
+                    android:textSize="@dimen/sp_18" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:ems="6"
+                    android:textSize="@dimen/sp_18" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvPaymentType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cvAmount"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/payment_type"
+        android:textColor="@color/add_items_grey" />
+
+    <TextView
+        android:id="@+id/tvCash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPaymentType"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10"
+        android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+        android:text="@string/cash"
+        android:textColor="@color/black" />
+
+
+    <TextView
+        android:id="@+id/tvStateOfSupply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCash"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10"
+        android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+        android:text="State of Suuply"
+        android:textColor="@color/add_items_grey" />
+
+    <View
+        android:id="@+id/vLine3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tvStateOfSupply"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="#C4C4C4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vLine3"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_20"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:background="@color/add_items_btn"
+            android:drawableStart="@drawable/ic_add_file"
+            android:text="@string/add_description"
+            android:layout_gravity="center"
+            android:textColor="@color/save_btn" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_camera" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnSaveAndNew"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_50"
+            android:layout_weight="1.5"
+            android:background="@color/save_and_btn"
+            android:text="@string/save_amp_new" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_50"
+            android:layout_weight="1.5"
+            android:background="@color/save_btn"
+            android:text="@string/save"
+            android:textColor="@color/white" />
+
+        <ImageButton
+
+            android:id="@+id/btnShare"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_50"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:background="@color/save_and_btn"
+            android:src="@drawable/ic_share" />
+
+    </LinearLayout>
+
+</RelativeLayout>

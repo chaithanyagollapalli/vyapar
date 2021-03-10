@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llBottomConatainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_animation_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvSaleTransactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:text="Sale Transactions"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibSaleInvoices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/image_button_bg"
+        android:src="@drawable/ic_invoices"
+        app:layout_constraintEnd_toStartOf="@+id/ibPaymentIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSaleTransactions" />
+
+    <TextView
+        android:id="@+id/tvSaleInvoices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:text="Sale invoices"
+        app:layout_constraintEnd_toStartOf="@+id/ibPaymentIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibSaleInvoices" />
+
+    <ImageButton
+        android:id="@+id/ibPaymentIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/image_button_bg"
+        android:src="@drawable/ic_rupee"
+        app:layout_constraintEnd_toStartOf="@+id/ibSaleReturn"
+        app:layout_constraintStart_toEndOf="@id/ibSaleInvoices"
+        app:layout_constraintTop_toBottomOf="@+id/tvSaleTransactions" />
+
+    <TextView
+        android:id="@+id/tvPaymentIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:text="Payment in"
+        app:layout_constraintEnd_toStartOf="@+id/ibSaleReturn"
+        app:layout_constraintStart_toEndOf="@id/ibSaleInvoices"
+        app:layout_constraintTop_toBottomOf="@+id/ibSaleInvoices" />
+
+    <ImageButton
+        android:id="@+id/ibSaleReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/image_button_bg"
+        android:src="@drawable/ic_resource_return"
+        app:layout_constraintEnd_toStartOf="@+id/ibSaleOrder"
+        app:layout_constraintStart_toEndOf="@id/ibPaymentIn"
+        app:layout_constraintTop_toBottomOf="@+id/tvSaleTransactions" />
+
+    <TextView
+        android:id="@+id/tvSaleReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:text="Sale Return"
+        app:layout_constraintEnd_toStartOf="@+id/ibSaleOrder"
+        app:layout_constraintStart_toEndOf="@id/tvPaymentIn"
+        app:layout_constraintTop_toBottomOf="@+id/ibSaleInvoices" />
+
+    <ImageButton
+        android:id="@+id/ibSaleOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/image_button_bg"
+        android:src="@drawable/ic_shopping_bag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ibSaleReturn"
+        app:layout_constraintTop_toBottomOf="@+id/tvSaleTransactions" />
+
+    <TextView
+        android:id="@+id/tvSaleOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:text="Sale Order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvSaleReturn"
+        app:layout_constraintTop_toBottomOf="@+id/ibSaleInvoices" />
+
+    <ImageButton
+        android:id="@+id/ibEstimate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/image_button_bg"
+        android:src="@drawable/ic_economy_forecast"
+        app:layout_constraintEnd_toStartOf="@+id/ibPaymentIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSaleInvoices" />
+
+    <TextView
+        android:id="@+id/tvEstimate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estimate/\nQuotation"
+        app:layout_constraintEnd_toStartOf="@+id/ibPaymentIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibEstimate" />
+
+    <ImageButton
+        android:id="@+id/ibInvoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/image_button_bg"
+        android:src="@drawable/ic_invoices"
+        app:layout_constraintStart_toEndOf="@+id/ibEstimate"
+        app:layout_constraintTop_toBottomOf="@+id/tvSaleInvoices" />
+
+    <TextView
+        android:id="@+id/tvProformaInvoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proforma\n  Invoice"
+        app:layout_constraintEnd_toStartOf="@+id/ibSaleReturn"
+        app:layout_constraintStart_toEndOf="@id/ibSaleInvoices"
+        app:layout_constraintTop_toBottomOf="@+id/ibEstimate" />
+
+    <ImageButton
+        android:id="@+id/ibDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/image_button_bg"
+        android:src="@drawable/ic_truck"
+        app:layout_constraintStart_toEndOf="@+id/ibInvoice"
+        app:layout_constraintTop_toBottomOf="@+id/tvSaleInvoices" />
+
+    <TextView
+        android:id="@+id/tvDeliveryChallan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Challan"
+        app:layout_constraintEnd_toStartOf="@+id/ibSaleOrder"
+        app:layout_constraintStart_toEndOf="@id/tvPaymentIn"
+        app:layout_constraintTop_toBottomOf="@+id/ibEstimate" />
+
+    <TextView
+        android:id="@+id/tvPurchaseTransactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:text="@string/purchase_transactions"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEstimate" />
+
+    <ImageButton
+        android:id="@+id/ibPurchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/image_button_bg"
+        android:src="@drawable/ic_shopping_cart"
+        app:layout_constraintEnd_toStartOf="@+id/ibPaymentOut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPurchaseTransactions" />
+
+    <TextView
+        android:id="@+id/tvPurchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:text="Purchase"
+        app:layout_constraintEnd_toStartOf="@id/tvPaymentIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ibPurchase" />
+
+    <ImageButton
+        android:id="@+id/ibPaymentOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/image_button_bg"
+        android:src="@drawable/ic_rupee"
+        app:layout_constraintEnd_toStartOf="@+id/ibPurchase"
+        app:layout_constraintStart_toEndOf="@id/ibPurchaseReturn"
+        app:layout_constraintTop_toBottomOf="@+id/tvPurchaseTransactions" />
+
+    <TextView
+        android:id="@+id/tvPaymentOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:text="Payment-Out"
+        app:layout_constraintEnd_toStartOf="@+id/ibSaleReturn"
+        app:layout_constraintStart_toEndOf="@id/ibSaleInvoices"
+        app:layout_constraintTop_toBottomOf="@+id/ibPaymentOut" />
+
+    <ImageButton
+        android:id="@+id/ibPurchaseReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/image_button_bg"
+        android:src="@drawable/ic_resource_return"
+        app:layout_constraintEnd_toStartOf="@+id/ibPurchaseOrder"
+        app:layout_constraintStart_toEndOf="@id/ibPaymentOut"
+        app:layout_constraintTop_toBottomOf="@+id/tvPurchaseTransactions" />
+
+    <TextView
+        android:id="@+id/tvPurchaseReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="center"
+        android:text="Purchase\nReturn"
+        app:layout_constraintEnd_toStartOf="@+id/ibSaleOrder"
+        app:layout_constraintStart_toEndOf="@id/tvPaymentIn"
+        app:layout_constraintTop_toBottomOf="@+id/ibPurchaseReturn" />
+
+    <ImageButton
+        android:id="@+id/ibPurchaseOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/image_button_bg"
+        android:src="@drawable/ic_shopping_bag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ibPurchaseReturn"
+        app:layout_constraintTop_toBottomOf="@+id/tvPurchaseTransactions" />
+
+    <TextView
+        android:id="@+id/tvPurchaseOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:text="Purchase Order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvSaleReturn"
+        app:layout_constraintTop_toBottomOf="@+id/ibPurchaseOrder" />
+
+
+    <TextView
+        android:id="@+id/tvOtherTransactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:text="Other Transactions"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPurchaseReturn" />
+
+
+    <ImageButton
+        android:id="@+id/ibExpenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/image_button_bg"
+        android:src="@drawable/ic_wallet"
+
+        app:layout_constraintEnd_toStartOf="@+id/ibPaymentOut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOtherTransactions" />
+
+    <TextView
+        android:id="@+id/tvExpenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:text="Expenses"
+        app:layout_constraintEnd_toStartOf="@id/tvPaymentIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ibExpenses" />
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:background="@drawable/close_button_bg"
+        android:gravity="center"
+        android:padding="@dimen/dp_15"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintBottom_toBottomOf="@id/llBottomConatainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvExpenses" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

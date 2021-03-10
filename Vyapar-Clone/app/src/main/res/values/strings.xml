@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Vyapar</string>
+    <string name="purchase">Purchase</string>
+    <string name="bill_no">Bill No.</string>
+    <string name="date_09_03_2021">Date 09/03/2021</string>
+    <string name="add_items_optional">ADD ITEMS (OPTIONAL)</string>
+    <string name="total_amt">Total Amt</string>
+    <string name="paid_amt">Paid Amt</string>
+    <string name="balance_due">Balance Due</string>
+    <string name="payment_type">Payment type</string>
+    <string name="cash">Cash</string>
+    <string name="add_description">Add Description</string>
+    <string name="sale">Sale</string>
+    <string name="customer">Customer*</string>
+    <string name="save_amp_new"><![CDATA[SAVE & NEW]]></string>
+    <string name="save">SAVE</string>
+    <string name="purchase_transactions">Purchase Transactions</string>
 </resources>

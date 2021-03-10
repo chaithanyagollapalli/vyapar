@@ -1,0 +1,108 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="25dp"
+    android:height="25dp"
+    android:viewportWidth="480"
+    android:viewportHeight="480.0001">
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m456,152h-224c-13.25,0.016 -23.984,10.75 -24,24v280c0.016,13.25 10.75,23.984 24,24h224c13.25,-0.016 23.984,-10.75 24,-24v-280c-0.016,-13.25 -10.75,-23.984 -24,-24zM464,456c-0.004,4.418 -3.582,7.996 -8,8h-224c-4.418,-0.004 -7.996,-3.582 -8,-8v-280c0.004,-4.418 3.582,-7.996 8,-8h224c4.418,0.004 7.996,3.582 8,8zM464,456" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m424,184h-160c-13.25,0.016 -23.984,10.75 -24,24v24c0.016,13.25 10.75,23.984 24,24h160c13.25,-0.016 23.984,-10.75 24,-24v-24c-0.016,-13.25 -10.75,-23.984 -24,-24zM432,232c-0.004,4.418 -3.582,7.996 -8,8h-160c-4.418,-0.004 -7.996,-3.582 -8,-8v-24c0.004,-4.418 3.582,-7.996 8,-8h160c4.418,0.004 7.996,3.582 8,8zM432,232" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m288,272h-16c-8.832,0.012 -15.988,7.168 -16,16v16c0.012,8.832 7.168,15.988 16,16h16c8.832,-0.012 15.988,-7.168 16,-16v-16c-0.012,-8.832 -7.168,-15.988 -16,-16zM272,304v-16h16l0.008,16zM272,304" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m352,272h-16c-8.832,0.012 -15.988,7.168 -16,16v16c0.012,8.832 7.168,15.988 16,16h16c8.832,-0.012 15.988,-7.168 16,-16v-16c-0.012,-8.832 -7.168,-15.988 -16,-16zM336,304v-16h16l0.008,16zM336,304" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m416,272h-16c-8.832,0.012 -15.988,7.168 -16,16v16c0.012,8.832 7.168,15.988 16,16h16c8.832,-0.012 15.988,-7.168 16,-16v-16c-0.012,-8.832 -7.168,-15.988 -16,-16zM400,304v-16h16l0.008,16zM400,304" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m288,336h-16c-8.832,0.012 -15.988,7.168 -16,16v16c0.012,8.832 7.168,15.988 16,16h16c8.832,-0.012 15.988,-7.168 16,-16v-16c-0.012,-8.832 -7.168,-15.988 -16,-16zM272,368v-16h16l0.008,16zM272,368" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m352,336h-16c-8.832,0.012 -15.988,7.168 -16,16v16c0.012,8.832 7.168,15.988 16,16h16c8.832,-0.012 15.988,-7.168 16,-16v-16c-0.012,-8.832 -7.168,-15.988 -16,-16zM336,368v-16h16l0.008,16zM336,368" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m416,336h-16c-8.832,0.012 -15.988,7.168 -16,16v16c0.012,8.832 7.168,15.988 16,16h16c8.832,-0.012 15.988,-7.168 16,-16v-16c-0.012,-8.832 -7.168,-15.988 -16,-16zM400,368v-16h16l0.008,16zM400,368" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m288,400h-16c-8.832,0.012 -15.988,7.168 -16,16v16c0.012,8.832 7.168,15.988 16,16h16c8.832,-0.012 15.988,-7.168 16,-16v-16c-0.012,-8.832 -7.168,-15.988 -16,-16zM272,432v-16h16l0.008,16zM272,432" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m352,400h-16c-8.832,0.012 -15.988,7.168 -16,16v16c0.012,8.832 7.168,15.988 16,16h16c8.832,-0.012 15.988,-7.168 16,-16v-16c-0.012,-8.832 -7.168,-15.988 -16,-16zM336,432v-16h16l0.008,16zM336,432" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m416,400h-16c-8.832,0.012 -15.988,7.168 -16,16v16c0.012,8.832 7.168,15.988 16,16h16c8.832,-0.012 15.988,-7.168 16,-16v-16c-0.012,-8.832 -7.168,-15.988 -16,-16zM400,432v-16h16l0.008,16zM400,432" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m16,440.004v-328.004h72c13.25,-0.016 23.984,-10.75 24,-24v-72h200c4.418,0.004 7.996,3.582 8,8v112.004h16v-112.004c-0.016,-13.25 -10.75,-23.984 -24,-24h-201.375c-6.367,-0.016 -12.48,2.516 -16.969,7.031l-86.625,86.625c-4.516,4.492 -7.047,10.602 -7.031,16.973v329.375c0.016,13.25 10.75,23.984 24,24l168,-0.004v-16l-168,0.004c-4.418,-0.004 -7.996,-3.582 -8,-8zM96,27.313v60.688c-0.004,4.418 -3.582,7.996 -8,8h-60.688zM96,27.313" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m176,200c0,-35.348 -28.652,-64 -64,-64s-64,28.652 -64,64 28.652,64 64,64c35.328,-0.039 63.961,-28.672 64,-64zM104,152.723v31.277c-0.004,4.418 -3.582,7.996 -8,8h-31.277c3.43,-20.102 19.176,-35.848 39.277,-39.277zM112,248c-23.398,-0.039 -43.363,-16.934 -47.277,-40h31.277c13.25,-0.016 23.984,-10.75 24,-24v-31.277c24.602,4.145 41.918,26.457 39.832,51.32 -2.086,24.859 -22.883,43.973 -47.832,43.957zM112,248" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m172,88c6.625,-0.008 11.992,-5.375 12,-12v-24c-0.008,-6.625 -5.375,-11.992 -12,-12h-24c-6.625,0.008 -11.992,5.375 -12,12v24c0.008,6.625 5.375,11.992 12,12zM152,56h16v16h-16zM152,56" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m200,40h16v16h-16zM200,40" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m232,40h72v16h-72zM232,40" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m200,72h16v16h-16zM200,72" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m232,72h72v16h-72zM232,72" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m136,104h16v16h-16zM136,104" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m168,104h104v16h-104zM168,104" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m288,104h16v16h-16zM288,104" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m180,280h-24c-6.625,0.008 -11.992,5.375 -12,12v24c0.008,6.625 5.375,11.992 12,12h24c6.625,-0.008 11.992,-5.375 12,-12v-24c-0.008,-6.625 -5.375,-11.992 -12,-12zM176,312h-16v-16h16zM176,312" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m112,280h16v16h-16zM112,280" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m32,280h64v16h-64zM32,280" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m112,312h16v16h-16zM112,312" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m32,312h64v16h-64zM32,312" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m32,412c0.008,6.625 5.375,11.992 12,12h24c6.625,-0.008 11.992,-5.375 12,-12v-24c-0.008,-6.625 -5.375,-11.992 -12,-12h-24c-6.625,0.008 -11.992,5.375 -12,12zM48,392h16v16h-16zM48,392" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m96,376h16v16h-16zM96,376" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m128,376h64v16h-64zM128,376" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m96,408h16v16h-16zM96,408" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m128,408h64v16h-64zM128,408" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m176,344h16v16h-16zM176,344" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m64,344h96v16h-96zM64,344" />
+    <path
+        android:fillColor="@color/save_btn"
+        android:pathData="m32,344h16v16h-16zM32,344" />
+</vector>
