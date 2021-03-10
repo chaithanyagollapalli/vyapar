@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewmodel.data
+//        viewmodel
 
         // This is used to hide the status bar and make
         // the splash screen as a full screen activity.
