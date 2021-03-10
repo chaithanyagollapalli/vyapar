@@ -8,37 +8,29 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.nero.vyapar.R
 import com.nero.vyapar.databinding.FragmentItemBinding
+import com.nero.vyapar.home_nav_bar.expense.ExpensesFragment
+import com.nero.vyapar.home_nav_bar.expense.ExpensesViewModel
 
 class ItemsFragment : Fragment() {
 
-    private lateinit var itemsViewModel: ItemsViewModel
-    private var _binding: FragmentItemBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        itemsViewModel =
-            ViewModelProvider(this).get(ItemsViewModel::class.java)
-
-        _binding = FragmentItemBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textHome
-        itemsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+    companion object {
+        fun newInstance() = ItemsFragment()
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    private lateinit var viewModel: ItemsViewModel
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_item, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(ItemsViewModel::class.java)
+        // TODO: Use the ViewModel
     }
 }

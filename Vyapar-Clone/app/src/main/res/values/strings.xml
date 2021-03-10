@@ -33,4 +33,27 @@
     <string name="expenses_list">Expenses List</string>
     <string name="bank_account">Bank \n Account</string>
     <string name="create_online_store">Create Online Store</string>
+    <string name="general">General</string>
+    <string name="transaction">Transaction</string>
+    <string name="party">Party</string>
+    <string name="item">Item</string>
+    <string name="transaction_message">Transaction Message</string>
+    <string name="payment_reminder">Payment Reminder</string>
+    <string name="invoice_print">Invoice Print</string>
+    <string name="taxes_gst"><![CDATA[Taxes & GST]]></string>
+    <string name="ab_har_business_banega_digital">Ab har business banega <b>digital</b></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_product">Add Product</string>
+    <string name="item_code_barcode">Item Code / Barcode</string>
+    <string name="hsn_sac_code">HSN / SAC Code</string>
+    <string name="item_name">Item Name</string>
+    <string name="astae">*</string>
+    <string name="open_stock">Open Stock</string>
+    <string name="pricing_details">Pricing Details</string>
+    <string name="purchase_price">Purchase Price</string>
+    <string name="tax_rate">Tax Rate</string>
+    <string name="sale_price">Sale Price</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 </resources>
