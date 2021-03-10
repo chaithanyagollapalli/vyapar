@@ -17,6 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.nero.vyapar.R
+import com.nero.vyapar.constants.Constants
 import com.nero.vyapar.local.entity.ItemsEntity
 import com.nero.vyapar.local.entity.PartyEntity
 import com.nero.vyapar.local.entity.TransactionEntity
@@ -160,6 +161,7 @@ fun TransactionCard(
             //0xFFD1F2E7
             Spacer(modifier = Modifier.size(5.dp))
             Surface(
+                modifier = Modifier.height(20.dp),
                 shape = MaterialTheme.shapes.small,
                 color = if (transactionEntity.type == "purchase") Color(0xFFFEE4DC) else Color(
                     0xFFD1F2E7
@@ -169,13 +171,15 @@ fun TransactionCard(
                     Text(
                         text = "PURCHASE",
                         modifier = Modifier.padding(3.dp),
-                        color = Color(0xFFE36B4E)
+                        color = Color(0xFFE36B4E),
+                        fontSize = 10.sp
                     )
                 } else {
                     Text(
                         text = "SALE",
                         modifier = Modifier.padding(3.dp),
-                        color = Color(0xFF26B180)
+                        color = Color(0xFF26B180),
+                        fontSize = 10.sp
                     )
                 }
             }
@@ -206,7 +210,7 @@ fun TransactionCard(
                         )
                         Spacer(modifier = Modifier.size(5.dp))
                         Text(
-                            text = transactionEntity.total.toString(),
+                            text = "₹ "+transactionEntity.total.toString(),
                             fontSize = 15.sp,
                             fontFamily = robotoFamily,
                             fontWeight = FontWeight.Normal
@@ -229,7 +233,7 @@ fun TransactionCard(
                         )
                         Spacer(modifier = Modifier.size(5.dp))
                         Text(
-                            text = (transactionEntity.total!! - (transactionEntity.received!!)).toString(),
+                            text = "₹ "+(transactionEntity.total!! - (transactionEntity.received!!)).toString(),
                             fontSize = 15.sp,
                             fontFamily = robotoFamily,
                             fontWeight = FontWeight.Normal
@@ -240,8 +244,8 @@ fun TransactionCard(
                     Image(
                         modifier = Modifier
                             .padding(top = 10.dp, end = 10.dp)
-                            .height(15.dp)
-                            .width(15.dp),
+                            .height(20.dp)
+                            .width(20.dp),
                         painter = painterResource(id = R.drawable.ic_print),
                         contentDescription = null,
                         contentScale = ContentScale.Fit
@@ -249,8 +253,8 @@ fun TransactionCard(
                     Image(
                         modifier = Modifier
                             .padding(top = 10.dp, end = 10.dp)
-                            .height(15.dp)
-                            .width(15.dp),
+                            .height(20.dp)
+                            .width(20.dp),
                         painter = painterResource(id = R.drawable.ic_share),
                         contentDescription = null,
                         contentScale = ContentScale.Fit
@@ -258,8 +262,8 @@ fun TransactionCard(
                     Image(
                         modifier = Modifier
                             .padding(top = 10.dp, end = 10.dp)
-                            .height(15.dp)
-                            .width(15.dp),
+                            .height(20.dp)
+                            .width(20.dp),
                         painter = painterResource(id = R.drawable.ic_more),
                         contentDescription = null,
                         contentScale = ContentScale.Fit
@@ -273,7 +277,7 @@ fun TransactionCard(
 
 @Composable
 fun PartiesCard(partyEntity: PartyEntity, onClick: (PartyEntity) -> Unit) {
-    Column (modifier = Modifier.fillMaxWidth()){
+    Column(modifier = Modifier.fillMaxWidth()) {
         Card(
             modifier = Modifier
                 .height(60.dp)
@@ -320,9 +324,8 @@ fun PartiesCard(partyEntity: PartyEntity, onClick: (PartyEntity) -> Unit) {
 
             }
         }
-        Divider(color = Color.Black)
+        Divider(color = Color.LightGray,thickness = 0.5.dp,)
     }
-
 
 }
 
@@ -330,7 +333,29 @@ fun PartiesCard(partyEntity: PartyEntity, onClick: (PartyEntity) -> Unit) {
 @Composable
 fun preview() {
     Column {
-        PartiesCard(partyEntity = PartyEntity("asd", "asd", "asd", 100), onClick = { /*TODO*/ })
-        PartiesCard(partyEntity = PartyEntity("asd", "asd", "asd", -100), onClick = { /*TODO*/ })
+
+        TransactionCard(transactionEntity =
+        TransactionEntity(
+            54,
+            Constants.PURCHASE,
+            "batman",
+            "cola,car",
+            "10,15",
+            1000,
+            500,
+            1000
+        ), onClick = { /*TODO*/ })
+        TransactionCard(transactionEntity =
+        TransactionEntity(
+            54,
+            Constants.SALE,
+            "batman",
+            "cola,car",
+            "10,15",
+            1000,
+            500,
+            1000
+        ), onClick = { /*TODO*/ })
+
     }
 }
