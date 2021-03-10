@@ -5,9 +5,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nero.vyapar.local.entity.ItemsEntity
+import com.nero.vyapar.local.entity.PartyEntity
+import com.nero.vyapar.local.entity.TransactionEntity
 import com.nero.vyapar.repository.ItemsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -20,7 +21,11 @@ class ItemsViewModel @Inject constructor(
         getAllItems()
     }
 
+    val selectedType: MutableState<Int> = mutableStateOf(0)
+
     var items: MutableState<List<ItemsEntity>> = mutableStateOf(listOf())
+    var transcations: MutableState<List<TransactionEntity>> = mutableStateOf(listOf())
+    var parties: MutableState<List<PartyEntity>> = mutableStateOf(listOf())
 
     fun getAllItems() {
         repository.getAllItems().observeForever() {
@@ -32,6 +37,10 @@ class ItemsViewModel @Inject constructor(
         viewModelScope.launch {
             repository.addItem(itemsEntity)
         }
+    }
+
+    fun changeSelectedType(type: Int) {
+        selectedType.value = type
     }
 
 }
