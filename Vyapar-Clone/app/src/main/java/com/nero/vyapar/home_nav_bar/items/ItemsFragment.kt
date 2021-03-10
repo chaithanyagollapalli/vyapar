@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import com.nero.vyapar.R
 import com.nero.vyapar.constants.Constants
 import com.nero.vyapar.presentation.componenets.*
@@ -30,6 +31,13 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class ItemsFragment : Fragment() {
+
+    private fun addItem(item: Int) {
+        if (item == 2) {
+            val action = ItemsFragmentDirections.actionNavItemsToAddProductFragment()
+//            Navigation.findNavCont
+        }
+    }
 
     private val viewModel: ItemsViewModel by viewModels()
     override fun onCreateView(
@@ -89,9 +97,9 @@ class ItemsFragment : Fragment() {
 
                         }
 
-                        Selector(viewModel.selectedType.value, {
+                        Selector(viewModel.selectedType.value) {
                             viewModel.changeSelectedType(it)
-                        })
+                        }
 
                         if (viewModel.selectedType.value == 0 || viewModel.selectedType.value == 2) {
                             Row(
@@ -104,7 +112,9 @@ class ItemsFragment : Fragment() {
                                 if (viewModel.selectedType.value == 0) {
                                     AddButton(name = "New Party", onClick = { /*TODO*/ }, type = 0)
                                 } else if (viewModel.selectedType.value == 2) {
-                                    AddButton(name = "New Item", onClick = { /*TODO*/ }, type = 2)
+                                    AddButton(name = "New Item", onClick = {
+                                        addItem(it)
+                                    }, type = 2)
                                 }
                             }
                         } else {
@@ -143,7 +153,9 @@ class ItemsFragment : Fragment() {
             }
         }
     }
+
 }
+
 
 @Composable
 fun Selector(selected: Int, onClick: (Int) -> Unit) {

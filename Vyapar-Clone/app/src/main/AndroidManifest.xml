@@ -20,17 +20,15 @@
             android:name=".HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_home"
-            android:theme="@style/Theme.Vyapar.NoActionBar">
+            android:theme="@style/Theme.Vyapar.NoActionBar" />
 
+
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-        <activity android:name=".MainActivity">
-
         </activity>
     </application>
 

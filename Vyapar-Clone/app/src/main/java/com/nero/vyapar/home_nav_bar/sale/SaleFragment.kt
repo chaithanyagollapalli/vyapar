@@ -6,41 +6,28 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.lifecycle.Observer
 import com.nero.vyapar.R
-import com.nero.vyapar.databinding.SaleFragmentBinding
+import com.nero.vyapar.home_nav_bar.purchase.PurchaseFragment
 
 class SaleFragment : Fragment() {
 
 
-    private lateinit var saleViewModel: SaleViewModel
-    private var _binding: SaleFragmentBinding? = null
+    companion object {
+        fun newInstance() = SaleFragment()
+    }
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    private lateinit var viewModel: SaleViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        saleViewModel = ViewModelProvider(this).get(SaleViewModel::class.java)
-
-        _binding = SaleFragmentBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textHome
-        saleViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return inflater.inflate(R.layout.sale_fragment, container, false)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(SaleViewModel::class.java)
+        // TODO: Use the ViewModel
     }
-
 }
