@@ -123,6 +123,7 @@
     <dimen name="nav_header_vertical_spacing">10dp</dimen>
     <dimen name="nav_header_height">130dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dimen_250">250dp</dimen>
 
 
 </resources>
