@@ -160,7 +160,7 @@ class ItemsFragment : Fragment() {
                 ) {
                     BottomButtons(
                         { navigateToPurchaseFragment() },
-                        {  openBottomSheet()   },
+                        { openBottomSheet() },
                         { navigateToSaleFragment() })
                     Spacer(modifier = Modifier.size(15.dp))
                 }
@@ -169,13 +169,10 @@ class ItemsFragment : Fragment() {
     }
 
     private fun openBottomSheet() {
-        val bottomSheetDialog = activity?.let {
-            BottomSheetDialog(
-                it.applicationContext,
-                R.style.BottomSheetDialogTheme
-            )
-        }
-        val view = LayoutInflater.from(activity).inflate(
+        val bottomSheetDialog =
+            context?.let { BottomSheetDialog(it, R.style.BottomSheetDialogTheme) }
+
+        val view = layoutInflater.inflate(
             R.layout.bottom_sheet_layout, activity?.findViewById(R.id.llBottomConatainer)
         )
         bottomSheetDialog?.setContentView(view)
