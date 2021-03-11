@@ -66,6 +66,9 @@
         <action
             android:id="@+id/action_nav_purchase_to_nav_expenses"
             app:destination="@id/nav_expenses" />
+        <action
+            android:id="@+id/action_nav_purchase_to_addPurchaseFragment"
+            app:destination="@id/addPurchaseFragment" />
     </fragment>
 
     <fragment
@@ -130,6 +133,11 @@
         android:name="com.nero.vyapar.home_nav_bar.sale.AddSaleFragment"
         android:label="fragment_add_sale"
         tools:layout="@layout/fragment_add_sale" />
+    <fragment
+        android:id="@+id/addPurchaseFragment"
+        android:name="com.nero.vyapar.home_nav_bar.purchase.AddPurchaseFragment"
+        android:label="fragment_add_purchase"
+        tools:layout="@layout/fragment_add_purchase" />
 
 
 </navigation>

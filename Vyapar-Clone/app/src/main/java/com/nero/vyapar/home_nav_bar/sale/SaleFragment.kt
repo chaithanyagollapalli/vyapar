@@ -80,7 +80,12 @@ class SaleFragment : Fragment() {
                         etTotalAmount.text.toString().toLong()
                     )
                 )
+                sharedViewModel.listOfSale.value.clear()
+
             }
+
+            activity?.onBackPressed()
+
         }
     }
 
