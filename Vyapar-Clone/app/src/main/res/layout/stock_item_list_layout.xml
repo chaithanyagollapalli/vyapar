@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/dp_12"
+    app:cardCornerRadius="@dimen/dp_10"
+    android:layout_margin="@dimen/dp_10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvMenuItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_20"
+            android:text="Item 1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/dp_20">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_edit_24" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_settings" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_share_grey" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vLine4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_below="@+id/tvMenuItemName"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:background="#C3C3C3" />
+
+        <TextView
+            android:id="@+id/tvStockQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vLine4"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="Stock Quantity" />
+
+        <TextView
+            android:id="@+id/tvStockQuantityNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvStockQuantity"
+            android:layout_marginStart="@dimen/dp_25"
+            android:text="10.0 Box" />
+
+
+        <TextView
+            android:id="@+id/tvStockValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvStockQuantityNumber"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="Stock Quantity" />
+
+        <TextView
+            android:id="@+id/tvStockValueNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvStockValue"
+            android:layout_marginStart="@dimen/dp_25"
+            android:text="500.00" />
+
+        <TextView
+            android:id="@+id/tvSalePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vLine4"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:text="Sale Price" />
+
+        <TextView
+            android:id="@+id/tvSalePriceNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSalePrice"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:text="10.00" />
+
+
+        <TextView
+            android:id="@+id/tvPurchasePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvStockQuantityNumber"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:text="Stock Quantity" />
+
+        <TextView
+            android:id="@+id/tvPurchasePriceNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPurchasePrice"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:text="500.0" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
