@@ -6,9 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import com.nero.vyapar.R
+import com.nero.vyapar.home_nav_bar.expense.fragments.CategoriesFragment
+import com.nero.vyapar.home_nav_bar.expense.fragments.ItemFragment
 
 import kotlinx.android.synthetic.main.expenses_fragment.*
 
@@ -42,12 +45,13 @@ class ExpensesFragment : Fragment() {
             }
 
         }.attach()
-    }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ExpensesViewModel::class.java)
-        // TODO: Use the ViewModel
+
+
+        addExpensesBtn.setOnClickListener {
+            val action = ExpensesFragmentDirections.actionNavExpensesToAddExpenseFragment()
+            findNavController().navigate(action)
+        }
     }
 
     private class ExpenseViewPagerAdapter(fm: ExpensesFragment) :

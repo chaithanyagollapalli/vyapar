@@ -18,22 +18,19 @@
         android:theme="@style/Theme.Vyapar">
         <activity
             android:name=".AddSaleActivity"
-            android:exported="true"></activity>
-        <activity android:name=".AddPurchaseActivity"/>
+            android:exported="true" />
+        <activity android:name=".AddPurchaseActivity" />
         <activity
             android:name=".HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.Vyapar.NoActionBar" />
-
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

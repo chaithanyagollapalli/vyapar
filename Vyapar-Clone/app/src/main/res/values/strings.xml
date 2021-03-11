@@ -70,4 +70,5 @@
     <string name="tax_rate">Tax Rate</string>
     <string name="sale_price">Sale Price</string>
     <string name="cancel">Cancel</string>
+    <string name="expense">Expense</string>
 </resources>
