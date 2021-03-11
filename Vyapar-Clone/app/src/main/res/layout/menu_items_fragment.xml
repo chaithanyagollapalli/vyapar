@@ -13,9 +13,9 @@
         android:layout_alignParentTop="true"
         android:background="@color/white"
         android:padding="@dimen/dp_5"
-        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorColor="@color/black"
         app:tabIndicatorGravity="bottom"
-        app:tabBackground="#15759F"
+        app:tabBackground="@color/top_blue"
         app:tabIndicatorHeight="1dp"
         app:tabTextAppearance="@style/MineCustomTabText"
         app:tabTextColor="@color/white" />

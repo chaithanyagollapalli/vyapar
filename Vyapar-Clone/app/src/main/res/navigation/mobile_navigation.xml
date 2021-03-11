@@ -99,5 +99,11 @@
         android:label="fragment_add_product"
         tools:layout="@layout/fragment_add_product" />
 
+    <fragment
+        android:id="@+id/nav_backup"
+        android:name="com.nero.vyapar.home_nav_bar.menuItems.MenuItemsFragment"
+        android:label="fragment_add_product"
+        tools:layout="@layout/menu_items_fragment" />
+
 
 </navigation>
