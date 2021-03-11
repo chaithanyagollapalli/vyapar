@@ -11,6 +11,6 @@ class viewmodel @Inject constructor(
     database: ItemsRepository
 ) : ViewModel() {
 
-    val data = database.data
+
 
 }

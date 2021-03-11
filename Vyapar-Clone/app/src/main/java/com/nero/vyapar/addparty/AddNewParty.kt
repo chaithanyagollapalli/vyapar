@@ -25,6 +25,7 @@ class AddNewParty : AppCompatActivity() {
             val partyName = partyNameEditText.text.toString()
             val partyContact = contactNumberEditText.text.toString()
             val partyBillingAdd = billingAddressEditText.text.toString()
+
         }
     }
 
