@@ -34,15 +34,24 @@
     <string name="bank_account">Bank \n Account</string>
     <string name="create_online_store">Create Online Store</string>
 
-
-
-
+    <string name="eg_party">e.g. Ram Prasad</string>
+    <string name="btn_save">Save</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="import_parties_select_multiple">Select multiple contacts and add as parties</string>
+    <string name="import_parties">Import parties from Contacts</string>
     <string name="this_month">This month</string>
     <string name="date_start">01/03/2021</string>
     <string name="date_end">to 31/03/2021</string>
     <string name="no_of_txn">No. of Txn</string>
     <string name="total_amnt">Total Amount</string>
     <string name="total_bal">Total Balance</string>
+    <string name="billing_add">Billing Address</string>
+    <string name="email_add">Email Address</string>
+    <string name="gst_type">GST Type</string>
+    <string name="state">State</string>
+    <string name="open_balance">Opening Balance</string>
+    <string name="as_of_date">As of Date</string>
+
 
     <string name="general">General</string>
     <string name="transaction">Transaction</string>

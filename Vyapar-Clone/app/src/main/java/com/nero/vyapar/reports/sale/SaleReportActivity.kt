@@ -20,7 +20,7 @@ class SaleReportActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sale_report)
 
-        vyaparDatabase = VyaparDatabase
+
         vyaparDAO = vyaparDatabase.getDAO()
 
         setRecyclerView()
