@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.nero.vyapar.R
 import com.nero.vyapar.constants.Constants
 import com.nero.vyapar.presentation.componenets.*
@@ -157,12 +158,41 @@ class ItemsFragment : Fragment() {
                         .fillMaxHeight(),
                     verticalArrangement = Arrangement.Bottom
                 ) {
-                    BottomButtons({}, {}, {})
+                    BottomButtons(
+                        { navigateToPurchaseFragment() },
+                        {  openBottomSheet()   },
+                        { navigateToSaleFragment() })
                     Spacer(modifier = Modifier.size(15.dp))
                 }
             }
         }
     }
+
+    private fun openBottomSheet() {
+        val bottomSheetDialog = activity?.let {
+            BottomSheetDialog(
+                it.applicationContext,
+                R.style.BottomSheetDialogTheme
+            )
+        }
+        val view = LayoutInflater.from(activity).inflate(
+            R.layout.bottom_sheet_layout, activity?.findViewById(R.id.llBottomConatainer)
+        )
+        bottomSheetDialog?.setContentView(view)
+        bottomSheetDialog?.setCanceledOnTouchOutside(true)
+        bottomSheetDialog?.show()
+    }
+
+    private fun navigateToSaleFragment() {
+        val action = ItemsFragmentDirections.actionNavItemsToNavSale()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToPurchaseFragment() {
+        val action = ItemsFragmentDirections.actionNavItemsToNavPurchase()
+        findNavController().navigate(action)
+    }
+
 }
 
 
@@ -273,7 +303,7 @@ fun BottomButtons(
     onClickPurchase: () -> Unit,
     onClickMiddle: () -> Unit,
     onClickSale: () -> Unit,
-    ) {
+) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceEvenly
