@@ -13,11 +13,12 @@
         android:layout_alignParentTop="true"
         android:background="@color/white"
         android:padding="@dimen/dp_5"
-        app:tabIndicatorColor="@color/save_btn"
+        app:tabIndicatorColor="@color/white"
         app:tabIndicatorGravity="bottom"
+        app:tabBackground="#15759F"
         app:tabIndicatorHeight="1dp"
         app:tabTextAppearance="@style/MineCustomTabText"
-        app:tabTextColor="@color/black" />
+        app:tabTextColor="@color/white" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/menuItemsViewPager"

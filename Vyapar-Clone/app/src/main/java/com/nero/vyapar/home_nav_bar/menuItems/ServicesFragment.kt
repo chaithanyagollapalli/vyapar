@@ -5,7 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.nero.vyapar.R
+import com.nero.vyapar.home_nav_bar.menuItems.adapters.ServicesAdapter
+import com.nero.vyapar.home_nav_bar.menuItems.adapters.UnitsAdapter
+import kotlinx.android.synthetic.main.fragment_services.*
+import kotlinx.android.synthetic.main.fragment_units.*
 
 class ServicesFragment : Fragment() {
 
@@ -20,4 +25,11 @@ class ServicesFragment : Fragment() {
     companion object {
         fun newInstance() = ServicesFragment()
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        val servicesAdapter = ServicesAdapter()
+//        servicesRecyclerView.adapter = servicesAdapter
+//        servicesRecyclerView.layoutManager = LinearLayoutManager(context)
+    }
+
 }

@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.nero.vyapar.R
+import com.nero.vyapar.home_nav_bar.menuItems.adapters.ProductsAdapter
+import com.nero.vyapar.home_nav_bar.menuItems.adapters.ServicesAdapter
+import kotlinx.android.synthetic.main.fragment_services.*
 
 class ProductFragment : Fragment() {
 
@@ -22,6 +26,8 @@ class ProductFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+//        val productsAdapter = ProductsAdapter()
+//        servicesRecyclerView.adapter = productsAdapter
+//        servicesRecyclerView.layoutManager = LinearLayoutManager(context)
     }
 }

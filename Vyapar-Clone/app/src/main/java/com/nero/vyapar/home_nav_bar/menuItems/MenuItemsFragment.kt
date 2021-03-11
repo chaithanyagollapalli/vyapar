@@ -20,8 +20,10 @@ class MenuItemsFragment : Fragment() {
 
     private lateinit var viewModel: MenuItemsViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.menu_items_fragment, container, false)
     }
 
@@ -32,7 +34,7 @@ class MenuItemsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val viewPagerAdapter = ItemsViewPagerAdapter(this)
+        val viewPagerAdapter = MenuItemsViewPagerAdapter(this)
 
         menuItemsViewPager.adapter = viewPagerAdapter
 
@@ -47,7 +49,7 @@ class MenuItemsFragment : Fragment() {
         }.attach()
     }
 
-    private class ItemsViewPagerAdapter(fm: MenuItemsFragment) :
+    private class MenuItemsViewPagerAdapter(fm: MenuItemsFragment) :
         FragmentStateAdapter(fm) {
 
         override fun getItemCount(): Int {
@@ -59,7 +61,7 @@ class MenuItemsFragment : Fragment() {
                 0 -> return ProductFragment.newInstance()
                 1 -> return ServicesFragment.newInstance()
                 2 -> return UnitsFragment.newInstance()
-                else -> CategoriesFragment.newInstance()
+                else -> ProductFragment.newInstance()
             }
         }
     }

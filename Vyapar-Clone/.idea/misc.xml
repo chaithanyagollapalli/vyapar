@@ -10,6 +10,7 @@
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.16905537459283387" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_baseline_calendar_today_20.xml" value="0.1707236842105263" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.16905537459283387" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.16905537459283387" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.16905537459283387" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_camera.xml" value="0.16905537459283387" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/drawable/ic_cart_bluet_24.xml" value="0.16905537459283387" />
@@ -49,11 +50,14 @@
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_units.xml" value="0.16052631578947368" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/item_category_layout.xml" value="0.16052631578947368" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/menu_items_fragment.xml" value="0.16052631578947368" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/menu_items_services_layout.xml" value="0.16052631578947368" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/menu_items_units_layout.xml" value="0.176" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/my_online_store_fragment.xml" value="0.16052631578947368" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/nav_header_home.xml" value="0.16052631578947368" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/purchase_fragment.xml" value="0.16052631578947368" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/sale_fragment.xml" value="0.16052631578947368" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/settings_fragment.xml" value="0.16052631578947368" />
+        <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/layout/stock_item_list_layout.xml" value="0.176" />
         <entry key="..\:/Vyapar/vyapar/Vyapar-Clone/app/src/main/res/menu/activity_main_drawer.xml" value="0.15895765472312703" />
       </map>
     </option>
