@@ -9,15 +9,16 @@
         android:padding="@dimen/dp_12">
 
         <TextView
+            android:id="@+id/categoryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_marginStart="@dimen/dp_5"
-
             android:text="Petrol"
             android:textSize="@dimen/sp_18" />
 
         <TextView
+            android:id="@+id/categoryAmt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"

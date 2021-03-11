@@ -3,6 +3,7 @@ package com.nero.vyapar.repository
 import androidx.lifecycle.LiveData
 import com.nero.vyapar.constants.Constants
 import com.nero.vyapar.local.dao.VyaparDAO
+import com.nero.vyapar.local.entity.ExpenseEntity
 import com.nero.vyapar.local.entity.ItemsEntity
 import com.nero.vyapar.local.entity.PartyEntity
 import com.nero.vyapar.local.entity.TransactionEntity
@@ -21,12 +22,20 @@ class ItemsRepository(private val databaseDao: VyaparDAO) {
         return databaseDao.getAllParties()
     }
 
+    fun getAllExpenses(): LiveData<List<ExpenseEntity>> {
+        return databaseDao.getAllExpenses()
+    }
+
     suspend fun addItem(itemsEntity: ItemsEntity) {
         databaseDao.insertItem(itemsEntity)
     }
 
     suspend fun addParty(partyEntity: PartyEntity) {
         databaseDao.insertParty(partyEntity)
+    }
+
+    suspend fun addExpense(expenseEntity: ExpenseEntity) {
+        databaseDao.insertExpense(expenseEntity)
     }
 
     suspend fun addTransaction(transactionEntity: TransactionEntity) {

@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import com.nero.vyapar.R
-import com.nero.vyapar.home_nav_bar.expense.CategoriesFragment
 import kotlinx.android.synthetic.main.menu_items_fragment.*
 
 class MenuItemsFragment : Fragment() {

@@ -73,6 +73,9 @@
         <action
             android:id="@+id/action_nav_expenses_to_nav_cash_banks"
             app:destination="@id/nav_cash_banks" />
+        <action
+            android:id="@+id/action_nav_expenses_to_addExpenseFragment"
+            app:destination="@id/addExpenseFragment" />
     </fragment>
 
     <fragment
@@ -110,6 +113,15 @@
         android:name="com.nero.vyapar.home_nav_bar.menuItems.MenuItemsFragment"
         android:label="fragment_add_product"
         tools:layout="@layout/menu_items_fragment" />
+    <fragment
+        android:id="@+id/addExpenseFragment"
+        android:name="com.nero.vyapar.home_nav_bar.expense.AddExpenseFragment"
+        android:label="fragment_add_expense"
+        tools:layout="@layout/fragment_add_expense" >
+        <action
+            android:id="@+id/action_addExpenseFragment_to_nav_expenses"
+            app:destination="@id/nav_expenses" />
+    </fragment>
 
 
 </navigation>
