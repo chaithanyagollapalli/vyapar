@@ -47,4 +47,6 @@
     <string name="expenses_list">Expenses List</string>
     <string name="bank_account">Bank \n Account</string>
     <string name="create_online_store">Create Online Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

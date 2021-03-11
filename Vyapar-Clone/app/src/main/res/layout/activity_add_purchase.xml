@@ -272,7 +272,7 @@
             android:layout_gravity="center"
             android:layout_weight="0.5"
             android:background="@color/save_and_btn"
-            android:src="@drawable/ic_share" />
+            android:src="@drawable/ic_share2" />
 
     </LinearLayout>
 

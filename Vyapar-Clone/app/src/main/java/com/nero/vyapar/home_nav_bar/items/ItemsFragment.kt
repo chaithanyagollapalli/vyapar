@@ -21,15 +21,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.google.android.material.tabs.TabLayoutMediator
+import com.nero.vyapar.home_nav_bar.expense.CategoriesFragment
 import com.nero.vyapar.presentation.componenets.ItemCard
 import com.nero.vyapar.presentation.componenets.robotoFamily
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.expenses_fragment.*
 
 @AndroidEntryPoint
 class ItemsFragment : Fragment() {
 
-    private val viewModel: ItemsViewModel by viewModels()
+    private lateinit var viewModel: ItemsViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -49,8 +53,8 @@ class ItemsFragment : Fragment() {
             }
         }
     }
-
 }
+
 
 @Composable
 fun Selector(selected: Int) {
@@ -98,7 +102,7 @@ fun preview() {
 
 
 @Composable
-fun SelectorCards(isSelected: Boolean,){
+fun SelectorCards(isSelected: Boolean) {
     Row(
         modifier = Modifier.fillMaxWidth()
     ) {
