@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp_20"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_baseline_arrow_back_24" />
+        android:src="@drawable/ic_backarrow_black" />
 
     <TextView
         android:id="@+id/tvPurchase"
