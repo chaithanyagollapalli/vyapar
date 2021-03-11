@@ -11,10 +11,6 @@ import com.nero.vyapar.R
 class AddProductFragment : Fragment() {
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,11 +20,11 @@ class AddProductFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_add_product, container, false)
     }
 
-    companion object {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        fun newInstance() =
-            AddProductFragment().apply {
 
-            }
+
     }
+
 }
