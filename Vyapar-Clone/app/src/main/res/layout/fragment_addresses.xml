@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:orientation="vertical"
+    tools:context=".home_nav_bar.party.fragments.AddressesFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/billingAddressInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        app:boxStrokeColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/billingAddressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/dp_5"
+            android:hint="@string/billing_add" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailAddressInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailAddressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/dp_5"
+            android:hint="@string/email_add" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

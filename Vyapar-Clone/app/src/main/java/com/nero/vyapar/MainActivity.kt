@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000) // 3000
+        }, 1000) // 3000
 
 
     }

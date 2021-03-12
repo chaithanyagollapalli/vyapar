@@ -45,10 +45,33 @@
     <string name="purchase_List">Purchase List</string>
     <string name="my_online_store">My Online Store</string>
     <string name="expenses_list">Expenses List</string>
-    <string name="bank_account">Bank \n Account</string>
+    <string name="bank_account">Bank Account</string>
     <string name="create_online_store">Create Online Store</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string name="eg_party">e.g. Ram Prasad</string>
+    <string name="btn_save">Save</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="import_parties_select_multiple">Select multiple contacts and add as parties</string>
+    <string name="import_parties">Import parties from Contacts</string>
+    <string name="this_month">This month :</string>
+    <string name="date_start">01/03/2021</string>
+    <string name="date_end">to 31/03/2021</string>
+    <string name="no_of_txn">No. of Txn</string>
+    <string name="total_amnt">Total Amount</string>
+    <string name="total_bal">Total Balance</string>
+    <string name="billing_add">Billing Address</string>
+    <string name="email_add">Email Address</string>
+    <string name="gst_type">GST Type</string>
+    <string name="state">State</string>
+    <string name="open_balance">Opening Balance</string>
+    <string name="as_of_date">As of Date</string>
+    <string name="add_new_party">Add New Party</string>
+    <string name="sale_report">Sale Report</string>
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="general">General</string>
     <string name="transaction">Transaction</string>
     <string name="party">Party</string>
@@ -58,7 +81,7 @@
     <string name="invoice_print">Invoice Print</string>
     <string name="taxes_gst"><![CDATA[Taxes & GST]]></string>
     <string name="ab_har_business_banega_digital">Ab har business banega <b>digital</b></string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="add_product">Add Product</string>
     <string name="item_code_barcode">Item Code / Barcode</string>
     <string name="hsn_sac_code">HSN / SAC Code</string>
@@ -70,6 +93,11 @@
     <string name="tax_rate">Tax Rate</string>
     <string name="sale_price">Sale Price</string>
     <string name="cancel">Cancel</string>
+    <string name="camera">Camera</string>
+    <string name="big">Big Bazaar</string>
+    <string name="home">Home</string>
+    <string name="product">Product</string>
+    <string name="add_item">Add Item</string>
     <string name="expense">Expense</string>
     <string name="submit">Submit</string>
     <string name="resend_code_in_40_sec">Resend code in 40 sec</string>

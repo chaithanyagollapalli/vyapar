@@ -1,5 +1,6 @@
 package com.nero.vyapar.home_nav_bar.reports
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -53,7 +54,9 @@ class ReportsFragment : Fragment() {
     }
 
     private fun OnItemClicked(name: String) {
-
+        if(name == "Sale Report"){
+            val intent = Intent()
+        }
     }
 
 

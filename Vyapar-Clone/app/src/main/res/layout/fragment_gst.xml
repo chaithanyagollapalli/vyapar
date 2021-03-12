@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".home_nav_bar.party.fragments.GstFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/gstTypeInputLayout"
+        app:boxStrokeColor="@color/black"
+        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/gstTypeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/gst_type"
+            android:layout_margin="@dimen/dp_5"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailAddressInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailAddressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/state"
+            android:layout_margin="@dimen/dp_5"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

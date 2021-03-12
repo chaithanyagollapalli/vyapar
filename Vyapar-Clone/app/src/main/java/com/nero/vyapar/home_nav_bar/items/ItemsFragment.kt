@@ -1,9 +1,8 @@
 package com.nero.vyapar.home_nav_bar.items
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.ImageButton
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -38,6 +37,24 @@ class ItemsFragment : Fragment() {
             val action = ItemsFragmentDirections.actionNavItemsToAddProductFragment()
             findNavController().navigate(action)
         }
+    }
+
+    private fun addParty(item: Int) {
+        if (item == 0) {
+            val action = ItemsFragmentDirections.actionNavItemsToAddNewPartyFragment()
+            findNavController().navigate(action)
+        }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.item_menu, menu)
+
     }
 
     private val viewModel: ItemsViewModel by viewModels()
@@ -84,7 +101,7 @@ class ItemsFragment : Fragment() {
                                 name = "You'll Give",
                                 viewModel.totalToGive.value,
                                 R.drawable.ic_upward,
-                                Constants.YOUWILLGETINT,
+                                Constants.YOUWILLGIVEINT,
                                 { })
                             Spacer(modifier = Modifier.size(10.dp))
 
@@ -92,6 +109,14 @@ class ItemsFragment : Fragment() {
                                 name = "Purchase",
                                 viewModel.totalPurchase.value,
                                 R.drawable.ic_shopping_cart,
+                                Constants.PURCHASEINT,
+                                { })
+                            Spacer(modifier = Modifier.size(10.dp))
+
+                            TotalInformationCard(
+                                name = "Expense",
+                                viewModel.totalExpenses.value,
+                                R.drawable.ic_wallet,
                                 Constants.PURCHASEINT,
                                 { })
                             Spacer(modifier = Modifier.size(10.dp))
@@ -112,7 +137,11 @@ class ItemsFragment : Fragment() {
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 if (viewModel.selectedType.value == 0) {
-                                    AddButton(name = "New Party", onClick = { /*TODO*/ }, type = 0)
+                                    AddButton(
+                                        name = "New Party",
+                                        onClick = { addParty(it) },
+                                        type = 0
+                                    )
                                 } else if (viewModel.selectedType.value == 2) {
                                     AddButton(name = "New Item", onClick = {
                                         addItem(it)
@@ -178,6 +207,13 @@ class ItemsFragment : Fragment() {
         bottomSheetDialog?.setContentView(view)
         bottomSheetDialog?.setCanceledOnTouchOutside(true)
         bottomSheetDialog?.show()
+
+        val ibExpense = bottomSheetDialog?.findViewById<ImageButton>(R.id.ibExpenses)
+        ibExpense?.setOnClickListener {
+
+
+        }
+
     }
 
     private fun navigateToSaleFragment() {
