@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.Vyapar" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/app_blue</item>
-        <item name="colorPrimaryVariant">#296AEC</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/app_blue</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

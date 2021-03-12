@@ -5,10 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isInvisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nero.vyapar.R
 import com.nero.vyapar.home_nav_bar.menuItems.adapters.UnitsAdapter
 import kotlinx.android.synthetic.main.fragment_units.*
+import kotlinx.android.synthetic.main.menu_items_fragment.*
 
 class UnitsFragment : Fragment() {
 
@@ -31,4 +33,9 @@ class UnitsFragment : Fragment() {
 //        unitsRecyclerView.layoutManager = LinearLayoutManager(context)
     }
 
+
+    override fun onResume() {
+        super.onResume()
+
+    }
 }

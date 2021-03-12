@@ -9,6 +9,8 @@ class Constants {
         const val YOUWILLGETINT = 7
         const val YOUWILLGIVE = 8
         const val PURCHASEINT = 9
+        const val PRODUCT = "product"
+        const val SERVICE = "service"
     }
 
 }

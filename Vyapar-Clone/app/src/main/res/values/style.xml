@@ -29,6 +29,20 @@
         <item name="android:drawablePadding">@dimen/dp_10</item>
         <item name="android:padding">@dimen/dp_20</item>
 
-
     </style>
+
+
+    <string-array name="tax_rate">
+        <item>None</item>
+        <item>Exempted   0.0</item>
+        <item>GST@0%     0.0</item>
+        <item>IGST@0%    0.0</item>
+        <item>GST@0.25%  0.25</item>
+        <item>Exempted   0.0</item>
+        <item>Exempted   0.0</item>
+        <item>Exempted   0.0</item>
+        <item>Exempted   0.0</item>
+        <item>Exempted   0.0</item>
+
+    </string-array>
 </resources>

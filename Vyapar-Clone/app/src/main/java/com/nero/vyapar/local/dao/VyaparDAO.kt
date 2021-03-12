@@ -2,6 +2,7 @@ package com.nero.vyapar.local.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.nero.vyapar.local.entity.ExpenseEntity
 import com.nero.vyapar.local.entity.ItemsEntity
 import com.nero.vyapar.local.entity.PartyEntity
 import com.nero.vyapar.local.entity.TransactionEntity
@@ -18,7 +19,8 @@ interface VyaparDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTransaction(transactionEntity: TransactionEntity)
 
-
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertExpense(expenseEntity: ExpenseEntity)
 
 
     @Query("SELECT * FROM ItemsTable")
@@ -29,6 +31,9 @@ interface VyaparDAO {
 
     @Query("SELECT * FROM partyTable")
     fun getAllParties(): LiveData<List<PartyEntity>>
+
+    @Query("SELECT * FROM expensetable")
+    fun getAllExpenses(): LiveData<List<ExpenseEntity>>
 
     @Query("SELECT * FROM ItemsTable WHERE itemName= :itemName")
     suspend fun getSpecificItem(itemName: String): ItemsEntity?
