@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.nero.vyapar.R
 import com.nero.vyapar.local.entity.TransactionEntity
 
-class SalesReportAdapter(val transactions: List<TransactionEntity>): RecyclerView.Adapter<SalesReportViewHolder>() {
+class SalesReportAdapter(private val transactions: List<TransactionEntity>): RecyclerView.Adapter<SalesReportViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SalesReportViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_sales_report,parent,false)
