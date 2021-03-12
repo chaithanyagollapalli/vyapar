@@ -6,15 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import com.nero.vyapar.R
-import com.nero.vyapar.home_nav_bar.party.adapter.PartiesViewPagerAdapter
+import com.nero.vyapar.home_nav_bar.expense.ExpensesFragment
+import com.nero.vyapar.home_nav_bar.expense.fragments.CategoriesFragment
+import com.nero.vyapar.home_nav_bar.party.fragments.AddressesFragment
+import com.nero.vyapar.home_nav_bar.party.fragments.GstFragment
+import com.nero.vyapar.home_nav_bar.party.fragments.OpeningBalanceFragment
 import com.nero.vyapar.local.entity.PartyEntity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_add_new_party.*
 import kotlinx.android.synthetic.main.fragment_addresses.*
 import kotlinx.android.synthetic.main.fragment_opening_balance.*
-import java.lang.Integer.parseInt
 import java.lang.Long.parseLong
 
 @AndroidEntryPoint
@@ -36,10 +40,10 @@ class AddNewPartyFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        val viewPageAdapter = PartiesViewPagerAdapter(this.parentFragmentManager)
+        val viewPageAdapter = PartyViewPagerAdapterNew(this)
         viewPagerAddNewParty.adapter = viewPageAdapter
 
-    /*    TabLayoutMediator(tabLayoutAddNewParty,viewPagerAddNewParty){       //TODO - asking for viewpager2
+        TabLayoutMediator(tabLayoutAddNewParty,viewPagerAddNewParty){
                 tab,position ->
             tab.text = when(position) {
                 0 -> "Addresses"
@@ -50,7 +54,7 @@ class AddNewPartyFragment : Fragment() {
         }.attach()
 
 
-     */
+
         var partyName: String = ""
         var contactNo: String = ""
         var billingAdd: String = ""
@@ -82,5 +86,20 @@ class AddNewPartyFragment : Fragment() {
 
         return true
     }
+}
 
+private class PartyViewPagerAdapterNew(fm: AddNewPartyFragment) :
+    FragmentStateAdapter(fm) {
+    override fun getItemCount(): Int {
+        return 3
+    }
+
+    override fun createFragment(position: Int): Fragment {
+        return when (position) {
+            0 -> return AddressesFragment.newInstance()
+            1 -> return GstFragment.newInstance()
+            3 -> return OpeningBalanceFragment.newInstance()
+            else -> CategoriesFragment.newInstance()
+        }
+    }
 }

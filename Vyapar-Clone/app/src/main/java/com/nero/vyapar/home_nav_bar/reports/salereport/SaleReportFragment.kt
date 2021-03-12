@@ -28,6 +28,7 @@ import java.io.File
 import java.io.FileOutputStream
 import android.graphics.pdf.PdfDocument.PageInfo
 import android.icu.text.SimpleDateFormat
+import android.net.Uri
 import android.os.Build
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -107,7 +108,18 @@ class SaleReportFragment : Fragment() {
             }
             mDoc.add(table)
             mDoc.close()
+            val pdfFile = File(mFilePath, mFileName)
 
+            if (pdfFile.exists())
+            {
+                val path: Uri = Uri.fromFile(pdfFile)
+                val objIntent = Intent(Intent.ACTION_VIEW)
+                objIntent.setDataAndType(path, "application/pdf")
+                objIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                startActivity(objIntent) //Starting the pdf viewer
+            } else {
+                Toast.makeText(activity, "The file not exists! ", Toast.LENGTH_SHORT).show()
+            }
         }catch (e: Exception){}
     }
 

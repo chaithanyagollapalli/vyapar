@@ -6,12 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.nero.vyapar.R
+import com.nero.vyapar.home_nav_bar.expense.fragments.CategoriesFragment
 
 class OpeningBalanceFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+    }
+
+    companion object {
+        fun newInstance() = OpeningBalanceFragment()
     }
 
     override fun onCreateView(
