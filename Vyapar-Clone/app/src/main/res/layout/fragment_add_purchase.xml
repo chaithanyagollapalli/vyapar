@@ -1,68 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".home_nav_bar.purchase.AddPurchaseFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_50"
-        android:layout_gravity="center"
-        android:background="@color/app_bar_color"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/ivBackBtn"
-            android:layout_width="@dimen/dp_24"
-            android:layout_height="@dimen/dp_24"
-            android:layout_gravity="center"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/ic_baseline_arrow_back_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tvAddProduct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="24dp"
-            android:gravity="center"
-            android:text="Add Line Item"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_17"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ivBackBtn"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.407" />
-
-
-        <ImageView
-            android:id="@+id/ivSettings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="15dp"
-            android:src="@drawable/ic_baseline_settings_24_white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_marginTop="@dimen/dp_20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -75,14 +27,14 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
                 android:hint="Product/Service name"
+                app:boxBackgroundColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:boxBackgroundColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etProductName"
+                    android:id="@+id/etProductNamePurchaseFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColorHighlight="#105B7A" />
@@ -117,7 +69,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etQuantity"
+                    android:id="@+id/etQuantityProductFrag"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColorHighlight="#105B7A" />
@@ -145,13 +97,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
                 android:hint="Rate (Price / Unit)"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:boxBackgroundColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/etTaxExcludedLayout"
                 app:layout_constraintStart_toStartOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etRate"
+                    android:id="@+id/etRateProductFrag"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColorHighlight="#105B7A" />
@@ -181,7 +133,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvSaveAndNew"
+        android:id="@+id/cvSaveAndNewPurchaseFragment"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:backgroundTint="#E6E5E9"
