@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home_nav_bar.menuItems.MenuItemsFragment">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/menuItemsTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:padding="@dimen/dp_5"
+        app:tabIndicatorColor="@color/black"
+        app:tabIndicatorGravity="bottom"
+        app:tabBackground="@color/top_blue"
+        app:tabIndicatorHeight="1dp"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        app:tabTextColor="@color/white" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/menuItemsViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/menuItemsTabLayout" />
+
+
+</RelativeLayout>

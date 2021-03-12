@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".addparty.fragments.OpeningBalanceFragment">
+    tools:context=".home_nav_bar.party.fragments.OpeningBalanceFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/openingBalanceInputLayout"
@@ -17,6 +17,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/openingBalanceEditText"
+            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/open_balance"

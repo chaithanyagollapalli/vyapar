@@ -23,7 +23,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.nero.vyapar.R
 import com.nero.vyapar.constants.Constants
 import com.nero.vyapar.presentation.componenets.*
@@ -35,7 +36,7 @@ class ItemsFragment : Fragment() {
     private fun addItem(item: Int) {
         if (item == 2) {
             val action = ItemsFragmentDirections.actionNavItemsToAddProductFragment()
-//            Navigation.findNavCont
+            findNavController().navigate(action)
         }
     }
 
@@ -48,6 +49,7 @@ class ItemsFragment : Fragment() {
 
         return ComposeView(requireContext()).apply {
             setContent {
+
                 Column(
                     modifier = Modifier
                         .fillMaxHeight()
@@ -150,8 +152,42 @@ class ItemsFragment : Fragment() {
                         }
                     }
                 }
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .fillMaxHeight(),
+                    verticalArrangement = Arrangement.Bottom
+                ) {
+                    BottomButtons(
+                        { navigateToPurchaseFragment() },
+                        { openBottomSheet() },
+                        { navigateToSaleFragment() })
+                    Spacer(modifier = Modifier.size(15.dp))
+                }
             }
         }
+    }
+
+    private fun openBottomSheet() {
+        val bottomSheetDialog =
+            context?.let { BottomSheetDialog(it, R.style.BottomSheetDialogTheme) }
+
+        val view = layoutInflater.inflate(
+            R.layout.bottom_sheet_layout, activity?.findViewById(R.id.llBottomConatainer)
+        )
+        bottomSheetDialog?.setContentView(view)
+        bottomSheetDialog?.setCanceledOnTouchOutside(true)
+        bottomSheetDialog?.show()
+    }
+
+    private fun navigateToSaleFragment() {
+        val action = ItemsFragmentDirections.actionNavItemsToNavSale()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToPurchaseFragment() {
+        val action = ItemsFragmentDirections.actionNavItemsToNavPurchase()
+        findNavController().navigate(action)
     }
 
 }
@@ -214,6 +250,7 @@ fun TotalInformationCard(name: String, total: Long, image: Int, type: Int, onCli
         modifier = Modifier
             .height(80.dp)
             .clickable { onClick(type) },
+        shape = RoundedCornerShape(5.dp),
         elevation = 10.dp
     ) {
 
@@ -258,11 +295,31 @@ fun TotalInformationCard(name: String, total: Long, image: Int, type: Int, onCli
 
 }
 
+@Composable
+fun BottomButtons(
+    onClickPurchase: () -> Unit,
+    onClickMiddle: () -> Unit,
+    onClickSale: () -> Unit,
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceEvenly
+
+    ) {
+        SalePurchaseButton(Color(0xFF0174E7), "Purchase", onClickPurchase)
+        CircleAddButton(onClick = onClickMiddle)
+        SalePurchaseButton(Color(0xFFED1A3B), "Add Sale", onClickSale)
+    }
+}
+
 
 @Preview(showBackground = true)
 @Composable
 fun preview() {
     Column {
-        TotalInformationCard("you'll get", 1000, R.drawable.ic_arrow_downward, 3, {})
+
+        BottomButtons({}, {}, {})
+
+        // TotalInformationCard("you'll get", 1000, R.drawable.ic_arrow_downward, 3, {})
     }
 }

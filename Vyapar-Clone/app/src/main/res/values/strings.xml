@@ -1,5 +1,20 @@
 <resources>
     <string name="app_name">Vyapar</string>
+    <string name="purchase">Purchase</string>
+    <string name="bill_no">Bill No.</string>
+    <string name="date_09_03_2021">Date 09/03/2021</string>
+    <string name="add_items_optional">ADD ITEMS (OPTIONAL)</string>
+    <string name="total_amt">Total Amt</string>
+    <string name="paid_amt">Paid Amt</string>
+    <string name="balance_due">Balance Due</string>
+    <string name="payment_type">Payment type</string>
+    <string name="cash">Cash</string>
+    <string name="add_description">Add Description</string>
+    <string name="sale">Sale</string>
+    <string name="customer">Customer*</string>
+    <string name="save_amp_new"><![CDATA[SAVE & NEW]]></string>
+    <string name="save">SAVE</string>
+    <string name="purchase_transactions">Purchase Transactions</string>
     <string name="title_activity_home_screen">HomeScreen</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -13,7 +28,6 @@
     <string name="menu_Reports">Reports</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="sales">Sales</string>
-    <string name="purchase">Purchase</string>
     <string name="expenses">Expenses</string>
     <string name="cash_bank"><![CDATA[Cash & Bank]]></string>
     <string name="settings">Settings</string>
@@ -34,12 +48,13 @@
     <string name="bank_account">Bank \n Account</string>
     <string name="create_online_store">Create Online Store</string>
 
+
     <string name="eg_party">e.g. Ram Prasad</string>
     <string name="btn_save">Save</string>
     <string name="contact_number">Contact Number</string>
     <string name="import_parties_select_multiple">Select multiple contacts and add as parties</string>
     <string name="import_parties">Import parties from Contacts</string>
-    <string name="this_month">This month</string>
+    <string name="this_month">This month :</string>
     <string name="date_start">01/03/2021</string>
     <string name="date_end">to 31/03/2021</string>
     <string name="no_of_txn">No. of Txn</string>
@@ -51,7 +66,11 @@
     <string name="state">State</string>
     <string name="open_balance">Opening Balance</string>
     <string name="as_of_date">As of Date</string>
+    <string name="add_new_party">Add New Party</string>
+    <string name="sale_report">Sale Report</string>
 
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="general">General</string>
     <string name="transaction">Transaction</string>
@@ -62,8 +81,7 @@
     <string name="invoice_print">Invoice Print</string>
     <string name="taxes_gst"><![CDATA[Taxes & GST]]></string>
     <string name="ab_har_business_banega_digital">Ab har business banega <b>digital</b></string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="add_product">Add Product</string>
     <string name="item_code_barcode">Item Code / Barcode</string>
     <string name="hsn_sac_code">HSN / SAC Code</string>
@@ -74,6 +92,5 @@
     <string name="purchase_price">Purchase Price</string>
     <string name="tax_rate">Tax Rate</string>
     <string name="sale_price">Sale Price</string>
-    <string name="save">Save</string>
     <string name="cancel">Cancel</string>
 </resources>

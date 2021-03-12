@@ -128,4 +128,8 @@ dependencies {
     implementation "com.airbnb.android:lottie:3.6.1"
 
 
+    //pdf creation
+    implementation 'com.github.tejpratap46:PDFCreatorAndroid:LATEST_RELEASE'
+
+
 }

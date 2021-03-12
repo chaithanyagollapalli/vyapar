@@ -1,4 +1,4 @@
-package com.nero.vyapar.reports.sale
+package com.nero.vyapar.home_nav_bar.reports.salereport.recyclerview
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -17,6 +17,9 @@ class SalesReportAdapter(val transactions: List<TransactionEntity>): RecyclerVie
         holder.mPartyName.text = transactions[position].partyName.toString()
         holder.mId.text = transactions[position].id.toString()
         holder.mAmount.text = transactions[position].paidAmt.toString()
+        holder.mBillNo.text = transactions[position].billNo.toString()
+        holder.mReceivedAmnt.text = transactions[position].received.toString()
+        holder.mTotal.text = transactions[position].total.toString()
     }
 
     override fun getItemCount(): Int {

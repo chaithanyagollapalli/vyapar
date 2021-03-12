@@ -1,4 +1,4 @@
-package com.nero.vyapar.addparty.fragments
+package com.nero.vyapar.home_nav_bar.party.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

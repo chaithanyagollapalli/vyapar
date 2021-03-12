@@ -2,31 +2,27 @@ package com.nero.vyapar.reports.sale
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
+import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nero.vyapar.R
-import com.nero.vyapar.local.dao.VyaparDAO
-import com.nero.vyapar.local.database.VyaparDatabase
+import com.nero.vyapar.home_nav_bar.reports.salereport.recyclerview.SalesReportAdapter
 import com.nero.vyapar.local.entity.TransactionEntity
+import com.nero.vyapar.viewmodel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_sale_report.*
 
+@AndroidEntryPoint
 class SaleReportActivity : AppCompatActivity() {
 
     val transactions = mutableListOf<TransactionEntity>()
-    lateinit var vyaparDatabase: VyaparDatabase
-    lateinit var vyaparDAO: VyaparDAO
+    val viewModelObject: viewmodel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sale_report)
-
-
-        vyaparDAO = vyaparDatabase.getDAO()
-
         setRecyclerView()
         btnExportPdf.setOnClickListener {
-            //fetch
-            //store
+            viewModelObject
         }
 
     }
