@@ -75,7 +75,7 @@ class SaleFragment : Fragment() {
                         etCustomer.text.toString(),
                         convertListToBilledItems(),
                         convertListToBilledQuantity(),
-                        etPaidAmount.text.toString().toLong(),
+                        0,
                         etPaidAmount.text.toString().toLong(),
                         etTotalAmount.text.toString().toLong()
                     )
