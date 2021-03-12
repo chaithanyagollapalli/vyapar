@@ -5,6 +5,7 @@ import android.os.Binder
 import android.os.Bundle
 import android.view.*
 import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -40,11 +41,15 @@ class ItemsFragment : Fragment() {
 
     private fun addItem(item: Int) {
         if (item == 2) {
-            val action = ItemsFragmentDirections.actionNavItemsToAddProductFragment()
+            val action = ItemsFragmentDirections.actionNavItemsToAddProductFragment(null)
             findNavController().navigate(action)
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)

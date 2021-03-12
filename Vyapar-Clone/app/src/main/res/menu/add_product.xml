@@ -7,9 +7,8 @@
         android:id="@+id/action_camera"
         android:icon="@drawable/ic_baseline_camera_alt_24"
         android:title="@string/camera"
+
         app:showAsAction="ifRoom" />
-
-
 
     <item
         android:id="@+id/action_setting"

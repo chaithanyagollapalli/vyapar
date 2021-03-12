@@ -176,7 +176,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
+        android:id="@+id/cvSaveAndNew"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:backgroundTint="#E6E5E9"

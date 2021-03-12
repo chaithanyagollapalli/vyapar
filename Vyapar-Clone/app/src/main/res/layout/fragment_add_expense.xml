@@ -10,8 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp_20"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_backarrow_black" />
+        android:background="@android:color/transparent" />
+    <!--        android:src="@drawable/ic_backarrow_black" />-->
 
     <TextView
         android:id="@+id/tvAddExpense"
@@ -20,6 +20,7 @@
         android:layout_marginStart="@dimen/dp_70"
         android:layout_marginTop="@dimen/dp_15"
         android:text="@string/expense"
+        android:textColor="@color/white"
         android:textSize="@dimen/sp_24" />
 
     <ImageButton
@@ -37,7 +38,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/sp_18"
         android:layout_toStartOf="@+id/ibSettings"
-        android:text="GST" />
+        android:text="GST"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <TextView
         android:id="@+id/tvExpenseNo"
