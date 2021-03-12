@@ -1,7 +1,5 @@
 package com.nero.vyapar.home_nav_bar.items
 
-import android.content.Intent
-import android.os.Binder
 import android.os.Bundle
 import android.view.*
 import android.widget.ImageButton
@@ -25,14 +23,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.FragmentNavigator
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.nero.vyapar.HomeActivity
 import com.nero.vyapar.R
 import com.nero.vyapar.constants.Constants
-import com.nero.vyapar.home_nav_bar.expense.ExpensesFragment
-import com.nero.vyapar.home_nav_bar.expense.ExpensesFragmentDirections
 import com.nero.vyapar.presentation.componenets.*
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -46,6 +40,13 @@ class ItemsFragment : Fragment() {
         }
     }
 
+    private fun addParty(item: Int) {
+        if (item == 0) {
+            val action = ItemsFragmentDirections.actionNavItemsToAddNewPartyFragment()
+            findNavController().navigate(action)
+        }
+    }
+
     override fun onResume() {
         super.onResume()
         (activity as AppCompatActivity?)!!.supportActionBar!!.show()
@@ -55,6 +56,7 @@ class ItemsFragment : Fragment() {
         setHasOptionsMenu(true)
 
     }
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.item_menu, menu)
 
@@ -104,7 +106,7 @@ class ItemsFragment : Fragment() {
                                 name = "You'll Give",
                                 viewModel.totalToGive.value,
                                 R.drawable.ic_upward,
-                                Constants.YOUWILLGETINT,
+                                Constants.YOUWILLGIVEINT,
                                 { })
                             Spacer(modifier = Modifier.size(10.dp))
 
@@ -112,6 +114,14 @@ class ItemsFragment : Fragment() {
                                 name = "Purchase",
                                 viewModel.totalPurchase.value,
                                 R.drawable.ic_shopping_cart,
+                                Constants.PURCHASEINT,
+                                { })
+                            Spacer(modifier = Modifier.size(10.dp))
+
+                            TotalInformationCard(
+                                name = "Expense",
+                                viewModel.totalExpenses.value,
+                                R.drawable.ic_wallet,
                                 Constants.PURCHASEINT,
                                 { })
                             Spacer(modifier = Modifier.size(10.dp))
@@ -132,7 +142,11 @@ class ItemsFragment : Fragment() {
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 if (viewModel.selectedType.value == 0) {
-                                    AddButton(name = "New Party", onClick = { /*TODO*/ }, type = 0)
+                                    AddButton(
+                                        name = "New Party",
+                                        onClick = { addParty(it) },
+                                        type = 0
+                                    )
                                 } else if (viewModel.selectedType.value == 2) {
                                     AddButton(name = "New Item", onClick = {
                                         addItem(it)

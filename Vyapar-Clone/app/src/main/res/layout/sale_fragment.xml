@@ -81,11 +81,18 @@
         android:text="@string/add_items_optional"
         android:textColor="@color/add_items_grey" />
 
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/ItemRecyclerCompose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAddItems2"
+        android:layout_margin="@dimen/dp_10" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cvAmount2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnAddItems2"
+        android:layout_below="@id/ItemRecyclerCompose"
         android:elevation="@dimen/dp_10">
 
         <RelativeLayout
@@ -133,6 +140,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/dp_10"
                     android:ems="6"
+                    android:gravity="center_horizontal"
+                    android:text="0"
                     android:textSize="@dimen/sp_18" />
 
                 <EditText
@@ -141,13 +150,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/dp_10"
                     android:ems="6"
+                    android:gravity="center_horizontal"
                     android:textSize="@dimen/sp_18" />
 
                 <EditText
+                    android:id="@+id/etBalanceDue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/dp_10"
                     android:ems="6"
+                    android:gravity="center_horizontal"
                     android:textSize="@dimen/sp_18" />
 
             </LinearLayout>
@@ -228,12 +240,6 @@
 
     </LinearLayout>
 
-    <androidx.compose.ui.platform.ComposeView
-        android:id="@+id/ItemRecyclerCompose"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/layoutbuttons"
-        android:layout_marginTop="95dp" />
 
     <LinearLayout
         android:id="@+id/layoutbuttons"

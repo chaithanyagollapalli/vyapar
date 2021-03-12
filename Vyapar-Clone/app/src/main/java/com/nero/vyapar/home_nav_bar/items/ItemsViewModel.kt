@@ -12,7 +12,6 @@ import com.nero.vyapar.repository.ItemsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import kotlin.math.abs
 
 @HiltViewModel
 class ItemsViewModel @Inject constructor(
@@ -51,6 +50,7 @@ class ItemsViewModel @Inject constructor(
     var totalSale: MutableState<Long> = mutableStateOf(0)
     var totalPurchase: MutableState<Long> = mutableStateOf(0)
     var totalToGive: MutableState<Long> = mutableStateOf(0)
+    var totalExpenses: MutableState<Long> = mutableStateOf(0)
 
     fun getAllItems() {
         repository.getAllItems().observeForever() {
@@ -63,13 +63,21 @@ class ItemsViewModel @Inject constructor(
             transcations.value = it
             var sale: Long = 0;
             var pruchase: Long = 0;
+            var toget: Long = 0;
+            var togive: Long = 0;
+            
             for (transaction in it) {
                 if (transaction.total != null && transaction.type != Constants.PURCHASE) {
                     sale += transaction.total!!
+                    toget += transaction.total!! - transaction.received!!
                 } else if (transaction.total != null) {
                     pruchase += transaction.total!!
+                    togive += (transaction.total!! - transaction.paidAmt!!)
                 }
             }
+
+            totalToGive.value = togive
+            totalToGet.value = toget
             totalSale.value = sale
             totalPurchase.value = pruchase
         }
@@ -78,19 +86,6 @@ class ItemsViewModel @Inject constructor(
     fun getAllParties() {
         repository.getAllParties().observeForever() {
             parties.value = it
-            var total: Long = 0
-            var totalGive: Long = 0
-
-            for (party in it) {
-                if (party.amout != null && party.amout!! > 0) {
-                    total += party.amout!!
-                } else if (party.amout != null && party.amout!! < 0) {
-                    totalGive += abs(party.amout!!)
-                }
-            }
-
-            totalToGet.value = total
-            totalToGive.value = totalGive
         }
 
     }

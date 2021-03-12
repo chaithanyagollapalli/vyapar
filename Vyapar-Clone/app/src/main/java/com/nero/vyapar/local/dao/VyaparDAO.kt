@@ -19,6 +19,7 @@ interface VyaparDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTransaction(transactionEntity: TransactionEntity)
 
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertExpense(expenseEntity: ExpenseEntity)
 

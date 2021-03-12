@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/dp_5"
+    android:elevation="@dimen/dp_5"
+    android:padding="@dimen/dp_5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tvPartyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="customer 1"
+                android:layout_weight="1"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/tvId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sale 1"
+                android:layout_weight="1"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paid amt 100"
+                android:layout_weight="1"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tvBillNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="454545"
+                android:layout_weight="1"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/tvReceived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sale 1"
+                android:layout_weight="1"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total 1515"
+                android:layout_weight="1"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

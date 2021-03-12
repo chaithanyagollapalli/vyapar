@@ -66,6 +66,10 @@ class ItemsRepository(private val databaseDao: VyaparDAO) {
                 party.amout = party.amout?.plus(total)
             }
         }
+        if (party != null) {
+            databaseDao.updateParty(party)
+        }
+
     }
 
     suspend fun updateItem(itemsEntity: ItemsEntity) {
