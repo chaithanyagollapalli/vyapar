@@ -23,23 +23,23 @@ class ItemsViewModel @Inject constructor(
         getAllItems()
         getAllTransactions()
         getAllParties()
-        /* addItem(ItemsEntity("cola", "sale", "33", "as", 332, 231, 0.6f, 30))
-         addItem(ItemsEntity("car", "sale", "33", "as", 332, 231, 0.6f, 30))
-         addItem(ItemsEntity("book", "sale", "33", "as", 332, 231, 0.6f, 30))*/
-
-        // addParty(PartyEntity("batman", "454", "343", 100))
-        /* addTransaction(
-             TransactionEntity(
-                 54,
-                 Constants.PURCHASE,
-                 "batman",
-                 "cola,car",
-                 "10,15",
-                 1000,
-                 500,
-                 1000
-             )
-         )*/
+//         addItem(ItemsEntity("cola", "sale", "33", "as", 332, 231, 0.6f, 30))
+//         addItem(ItemsEntity("car", "sale", "33", "as", 332, 231, 0.6f, 30))
+//         addItem(ItemsEntity("book", "sale", "33", "as", 332, 231, 0.6f, 30))
+//
+//        addParty(PartyEntity("batman", "454", "343", 100))
+//        addTransaction(
+//             TransactionEntity(
+//                 54,
+//                 Constants.PURCHASE,
+//                 "batman",
+//                 "cola,car",
+//                 "10,15",
+//                 1000,
+//                 500,
+//                 1000
+//             )
+//         )
     }
 
     val selectedType: MutableState<Int> = mutableStateOf(0)
