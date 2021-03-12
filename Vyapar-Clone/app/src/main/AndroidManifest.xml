@@ -17,10 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Vyapar">
-        <activity
-            android:name=".AddSaleActivity"
-            android:exported="true" />
-        <activity android:name=".AddPurchaseActivity" />
+
         <activity
             android:name=".HomeActivity"
             android:exported="true"
