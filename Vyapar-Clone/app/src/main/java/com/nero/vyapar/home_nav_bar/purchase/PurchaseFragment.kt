@@ -68,7 +68,7 @@ class PurchaseFragment : Fragment() {
                         convertListToBilledItems(),
                         convertListToBilledQuantity(),
                         etPaid.text.toString().toLong(),
-                        balanceDue.text.toString().toLong(),
+                        0,
                         etTotal.text.toString().toLong()
                     )
                 )
