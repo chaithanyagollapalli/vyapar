@@ -238,7 +238,7 @@ fun TransactionCard(
                             )
                             Spacer(modifier = Modifier.size(5.dp))
                             Text(
-                                text = "₹ " + (transactionEntity.total!! - (transactionEntity.received!!)).toString(),
+                                text = "₹ " + (transactionEntity.total!! - (getTheBigger(transactionEntity.received!!,transactionEntity.paidAmt!!))).toString(),
                                 fontSize = 15.sp,
                                 fontFamily = robotoFamily,
                                 fontWeight = FontWeight.Normal
@@ -282,6 +282,10 @@ fun TransactionCard(
 
     }
 
+}
+
+fun getTheBigger(received: Long, paidAmt: Long): Long {
+    return Math.max(paidAmt,received)
 }
 
 @Composable
