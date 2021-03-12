@@ -41,7 +41,7 @@ class ItemFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        viewModel.getExpenses().observe(this, Observer {
+        viewModel.getExpenseItems().observe(this, Observer {
             expenseList.clear()
             expenseList.addAll(it)
             adapter.notifyDataSetChanged()
