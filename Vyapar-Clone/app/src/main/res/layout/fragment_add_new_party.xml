@@ -121,7 +121,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/partyNameEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:hint="@string/eg_party"
             android:padding="@dimen/dp_5"/>
 
@@ -139,7 +139,7 @@
             android:id="@+id/contactNumberEditText"
             android:inputType="number"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:hint="@string/contact_number"
             android:padding="@dimen/dp_5"/>
 
@@ -155,7 +155,9 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPagerAddNewParty"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="500dp"
+        android:layout_below="@+id/tabLayoutAddNewParty"
+         />
 
     <Button
         android:id="@+id/btnSave"
