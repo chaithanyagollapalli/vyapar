@@ -45,7 +45,7 @@
     <string name="purchase_List">Purchase List</string>
     <string name="my_online_store">My Online Store</string>
     <string name="expenses_list">Expenses List</string>
-    <string name="bank_account">Bank \n Account</string>
+    <string name="bank_account">Bank Account</string>
     <string name="create_online_store">Create Online Store</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -74,4 +74,6 @@
     <string name="big">Big Bazaar</string>
     <string name="home">Home</string>
     <string name="product">Product</string>
+    <string name="add_item">Add Item</string>
+    <string name="expense">Expense</string>
 </resources>

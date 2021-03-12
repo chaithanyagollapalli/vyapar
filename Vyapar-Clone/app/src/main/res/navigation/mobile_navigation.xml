@@ -53,6 +53,9 @@
         <action
             android:id="@+id/action_nav_sale_to_nav_purchase"
             app:destination="@id/nav_purchase" />
+        <action
+            android:id="@+id/action_nav_sale_to_addSaleFragment"
+            app:destination="@id/addSaleFragment" />
     </fragment>
 
     <fragment
@@ -63,6 +66,9 @@
         <action
             android:id="@+id/action_nav_purchase_to_nav_expenses"
             app:destination="@id/nav_expenses" />
+        <action
+            android:id="@+id/action_nav_purchase_to_addPurchaseFragment"
+            app:destination="@id/addPurchaseFragment" />
     </fragment>
 
     <fragment
@@ -73,6 +79,9 @@
         <action
             android:id="@+id/action_nav_expenses_to_nav_cash_banks"
             app:destination="@id/nav_cash_banks" />
+        <action
+            android:id="@+id/action_nav_expenses_to_addExpenseFragment"
+            app:destination="@id/addExpenseFragment" />
     </fragment>
 
     <fragment
@@ -119,5 +128,24 @@
             app:destination="@id/addProductFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/addExpenseFragment"
+        android:name="com.nero.vyapar.home_nav_bar.expense.AddExpenseFragment"
+        android:label="fragment_add_expense"
+        tools:layout="@layout/fragment_add_expense" >
+        <action
+            android:id="@+id/action_addExpenseFragment_to_nav_expenses"
+            app:destination="@id/nav_expenses" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSaleFragment"
+        android:name="com.nero.vyapar.home_nav_bar.sale.AddSaleFragment"
+        android:label="fragment_add_sale"
+        tools:layout="@layout/fragment_add_sale" />
+    <fragment
+        android:id="@+id/addPurchaseFragment"
+        android:name="com.nero.vyapar.home_nav_bar.purchase.AddPurchaseFragment"
+        android:label="fragment_add_purchase"
+        tools:layout="@layout/fragment_add_purchase" />
 
 </navigation>
