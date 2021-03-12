@@ -1,9 +1,10 @@
 package com.nero.vyapar.home_nav_bar.items
 
+import android.content.Intent
+import android.os.Binder
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.ImageButton
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -23,10 +24,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.FragmentNavigator
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.nero.vyapar.HomeActivity
 import com.nero.vyapar.R
 import com.nero.vyapar.constants.Constants
+import com.nero.vyapar.home_nav_bar.expense.ExpensesFragment
+import com.nero.vyapar.home_nav_bar.expense.ExpensesFragmentDirections
 import com.nero.vyapar.presentation.componenets.*
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -38,6 +43,16 @@ class ItemsFragment : Fragment() {
             val action = ItemsFragmentDirections.actionNavItemsToAddProductFragment()
             findNavController().navigate(action)
         }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+
+    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.item_menu, menu)
+
     }
 
     private val viewModel: ItemsViewModel by viewModels()
@@ -186,6 +201,13 @@ class ItemsFragment : Fragment() {
         bottomSheetDialog?.setContentView(view)
         bottomSheetDialog?.setCanceledOnTouchOutside(true)
         bottomSheetDialog?.show()
+
+        val ibExpense = bottomSheetDialog?.findViewById<ImageButton>(R.id.ibExpenses)
+        ibExpense?.setOnClickListener {
+
+
+        }
+
     }
 
     private fun navigateToSaleFragment() {

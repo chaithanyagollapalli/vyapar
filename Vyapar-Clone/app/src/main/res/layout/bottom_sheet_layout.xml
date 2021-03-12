@@ -275,7 +275,6 @@
         android:layout_marginTop="@dimen/dp_10"
         android:background="@drawable/image_button_bg"
         android:src="@drawable/ic_wallet"
-
         app:layout_constraintEnd_toStartOf="@+id/ibPaymentOut"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvOtherTransactions" />
@@ -297,7 +296,7 @@
         android:layout_marginBottom="@dimen/dp_15"
         android:background="@drawable/close_button_bg"
         android:gravity="center"
-        android:padding="@dimen/dp_15"
+        android:padding="@dimen/dp_10"
         android:src="@drawable/ic_baseline_close_24"
         app:layout_constraintBottom_toBottomOf="@id/llBottomConatainer"
         app:layout_constraintEnd_toEndOf="parent"

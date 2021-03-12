@@ -30,4 +30,7 @@ class ProductFragment : Fragment() {
 //        servicesRecyclerView.adapter = productsAdapter
 //        servicesRecyclerView.layoutManager = LinearLayoutManager(context)
     }
+
+
+
 }
