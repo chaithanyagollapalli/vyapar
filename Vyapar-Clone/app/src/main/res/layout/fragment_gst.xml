@@ -11,7 +11,6 @@
         android:id="@+id/gstTypeInputLayout"
         app:boxStrokeColor="@color/black"
         android:layout_width="match_parent"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp_10">
 
@@ -26,7 +25,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailAddressInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp_10">

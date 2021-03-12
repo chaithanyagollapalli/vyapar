@@ -99,4 +99,8 @@
     <string name="product">Product</string>
     <string name="add_item">Add Item</string>
     <string name="expense">Expense</string>
+    <string name="submit">Submit</string>
+    <string name="resend_code_in_40_sec">Resend code in 40 sec</string>
+    <string name="enter_otp_code">Enter OTP Code</string>
+    <string name="change">Change ?</string>
 </resources>

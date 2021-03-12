@@ -36,9 +36,5 @@ class AddSaleFragment : Fragment() {
             )
             activity?.onBackPressed()
         }
-
-
     }
-
-
 }
