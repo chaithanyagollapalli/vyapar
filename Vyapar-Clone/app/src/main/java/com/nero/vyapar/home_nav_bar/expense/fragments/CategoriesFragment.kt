@@ -41,16 +41,21 @@ class CategoriesFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        viewModel.getExpenses()
-        viewModel.hashMapList.observe(this, Observer {
-            expenseList.clear()
-            expenseList.addAll(it)
-            adapter.notifyDataSetChanged()
-        })
+//        viewModel.getExpenses()
+//        viewModel.hashMapList.observe(this, Observer {
+//            expenseList.clear()
+//            expenseList.addAll(it)
+//            adapter.notifyDataSetChanged()
+//        })
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel.getExpenses()
+        viewModel.hashMapList.observe(viewLifecycleOwner, Observer {
+            expenseList.clear()
+            expenseList.addAll(it)
+            adapter.notifyDataSetChanged()
+        })
         categoriesRecyclerView.layoutManager = LinearLayoutManager(context)
         categoriesRecyclerView.adapter = adapter
 

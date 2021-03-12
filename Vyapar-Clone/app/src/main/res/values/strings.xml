@@ -105,9 +105,15 @@
     <string name="services">Services</string>
     <string name="stock_value">Stock Value</string>
     <string name="stock_quantity">Stock Quantity</string>
-    <string name="add_line_item">Add Line Item</string>
+    <string name="add_line_item">Add Item</string>
     <string name="state_of_supply">State of Supply</string>
     <string name="save_amp_new"><![CDATA[SAVE & NEW]]></string>
     <string name="credit">Credit</string>
     <string name="inv_no">Inv. No.</string>
+    <string name="unit">Unit</string>
+    <string name="rate_price_unit">Rate (Price / Unit)</string>
+    <string name="ad_purchase">Add Purchase</string>
+    <string name="products">Products</string>
+    <string name="add_sales">Add Sales</string>
+    <string name="add_expenses">Add Expenses</string>
 </resources>
