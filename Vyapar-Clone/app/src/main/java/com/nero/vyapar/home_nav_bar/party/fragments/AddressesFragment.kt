@@ -6,12 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.nero.vyapar.R
+import com.nero.vyapar.home_nav_bar.expense.fragments.CategoriesFragment
 import kotlinx.android.synthetic.main.fragment_addresses.view.*
 
 class AddressesFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+    }
+    companion object {
+        fun newInstance() = AddressesFragment()
     }
 
     override fun onCreateView(

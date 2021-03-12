@@ -45,6 +45,13 @@ class ItemsFragment : Fragment() {
         }
     }
 
+    private fun addParty(item: Int) {
+        if (item == 2) {
+            val action = ItemsFragmentDirections.actionNavItemsToAddProductFragment()
+            findNavController().navigate(action)
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
@@ -127,7 +134,9 @@ class ItemsFragment : Fragment() {
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 if (viewModel.selectedType.value == 0) {
-                                    AddButton(name = "New Party", onClick = { /*TODO*/ }, type = 0)
+                                    AddButton(name = "New Party", onClick = {
+                                        addParty(it)
+                                    }, type = 0)
                                 } else if (viewModel.selectedType.value == 2) {
                                     AddButton(name = "New Item", onClick = {
                                         addItem(it)

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import com.nero.vyapar.R
+import com.nero.vyapar.home_nav_bar.expense.fragments.CategoriesFragment
 import kotlinx.android.synthetic.main.fragment_gst.*
 
 class GstFragment : Fragment() {
@@ -15,6 +16,10 @@ class GstFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+    }
+
+    companion object {
+        fun newInstance() = GstFragment()
     }
 
     override fun onCreateView(
