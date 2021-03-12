@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/dp_10"
     android:elevation="@dimen/dp_12"
-    app:cardCornerRadius="@dimen/dp_10"
-    android:layout_margin="@dimen/dp_10">
+    app:cardCornerRadius="@dimen/dp_10">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_marginBottom="@dimen/dp_10"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10">
 
         <TextView
             android:id="@+id/tvMenuItemName"
@@ -28,6 +28,7 @@
             android:layout_margin="@dimen/dp_20">
 
             <ImageButton
+                android:id="@+id/ibEDitItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp_20"
@@ -42,6 +43,7 @@
                 android:src="@drawable/ic_settings" />
 
             <ImageButton
+                android:id="@+id/ibShareItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp_5"
@@ -84,7 +86,7 @@
             android:layout_below="@+id/tvStockQuantityNumber"
             android:layout_marginStart="@dimen/dp_25"
             android:layout_marginTop="@dimen/dp_10"
-            android:text="Stock Quantity" />
+            android:text="@string/stock_value" />
 
         <TextView
             android:id="@+id/tvStockValueNumber"
@@ -92,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvStockValue"
             android:layout_marginStart="@dimen/dp_25"
-            android:text="500.00" />
+            android:text="__.__" />
 
         <TextView
             android:id="@+id/tvSalePrice"
@@ -122,7 +124,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="@dimen/dp_10"
             android:layout_marginEnd="@dimen/dp_25"
-            android:text="Stock Quantity" />
+            android:text="@string/purchase_price" />
 
         <TextView
             android:id="@+id/tvPurchasePriceNumber"

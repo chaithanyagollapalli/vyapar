@@ -1,6 +1,11 @@
 package com.nero.vyapar.home_nav_bar.sale
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.MediaStore
+import android.view.*
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
@@ -28,10 +33,13 @@ import com.nero.vyapar.constants.Constants
 import com.nero.vyapar.local.entity.TransactionEntity
 import com.nero.vyapar.presentation.componenets.robotoFamily
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_add_product.*
+import kotlinx.android.synthetic.main.fragment_add_sale.*
 import kotlinx.android.synthetic.main.sale_fragment.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.util.*
 
 
 @AndroidEntryPoint
@@ -40,11 +48,36 @@ class SaleFragment : Fragment() {
 
     private val sharedViewModel: SaleSharedViewModel by activityViewModels()
 
+
+    override fun onResume() {
+        super.onResume()
+        //hiding the nav bar
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+        val data = sharedViewModel.listOfSale.value
+        var totalPrice: Long = 0
+        for (i in data.indices) {
+            totalPrice += (data[i].price * data[i].quantity)
+        }
+        etTotalAmount.setText(totalPrice.toString())
+
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.sales_menu, menu)
+
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         val view = inflater.inflate(R.layout.sale_fragment, container, false)
         view.findViewById<ComposeView>(R.id.ItemRecyclerCompose).setContent {
             LazyColumn() {
@@ -55,20 +88,7 @@ class SaleFragment : Fragment() {
                 }
             }
         }
-
-
-
         return view
-    }
-
-    override fun onResume() {
-        super.onResume()
-        val data = sharedViewModel.listOfSale.value
-        var totalPrice: Long = 0
-        for (i in data.indices) {
-            totalPrice += (data[i].price * data[i].quantity)
-        }
-        etTotalAmount.setText(totalPrice.toString())
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -85,8 +105,12 @@ class SaleFragment : Fragment() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (etTotalAmount.text.toString().isNotEmpty() && etPaidAmount.text.toString().isNotEmpty()){
-                    val balanceDue: Long = etTotalAmount.text.toString().toLong() - etPaidAmount.text.toString().toLong()
+                if (etTotalAmount.text.toString().isNotEmpty() && etPaidAmount.text.toString()
+                        .isNotEmpty()
+                ) {
+                    val balanceDue: Long =
+                        etTotalAmount.text.toString().toLong() - etPaidAmount.text.toString()
+                            .toLong()
                     val due = balanceDue.toString()
                     etBalanceDue.setText(due)
                 }
@@ -109,27 +133,76 @@ class SaleFragment : Fragment() {
 
         btnSave2.setOnClickListener {
 
-            CoroutineScope(Dispatchers.IO).launch {
-                sharedViewModel.addTransaction(
-                    TransactionEntity(
-                        etInvNo.text.toString().toInt(),
-                        Constants.SALE,
-                        etCustomer.text.toString(),
-                        convertListToBilledItems(),
-                        convertListToBilledQuantity(),
-                        0,
-                        etPaidAmount.text.toString().toLong(),
-                        etTotalAmount.text.toString().toLong()
-                    )
-                )
-                sharedViewModel.listOfSale.value.clear()
+            if (isDataValid()) {
+                CoroutineScope(Dispatchers.IO).launch {
 
+
+                    sharedViewModel.addTransaction(
+
+                        TransactionEntity(
+                            etInvNo.text.toString().toInt(),
+                            Constants.SALE,
+                            etCustomer.text.toString(),
+                            convertListToBilledItems(),
+                            convertListToBilledQuantity(),
+                            0,
+                            etPaidAmount.text.toString().toLong(),
+                            etTotalAmount.text.toString().toLong()
+                        )
+                    )
+                    sharedViewModel.listOfSale.value.clear()
+
+                }
             }
 
-            activity?.onBackPressed()
 
+            activity?.onBackPressed()
         }
+
+
+        //toast msg
+        btnSaveAndNew2.setOnClickListener {
+            Toast.makeText(
+                activity,
+                "Item / services name cannot be left empty",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        ibCameraSaleFragment.setOnClickListener {
+            val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            startActivity(cameraIntent)
+            true
+        }
+
     }
+
+    private fun isDataValid(): Boolean {
+        var isValid = true
+        if (etInvNo.text.toString().isEmpty()) {
+            etInvNo.error = "Required"
+            isValid = false
+        }
+        if (etCustomer.text.toString().isEmpty()) {
+            etCustomer.error = "Required"
+            isValid = false
+        }
+        if (etPaidAmount.text.toString().isEmpty()) {
+            etPaidAmount.error = "Required"
+            isValid = false
+        }
+        if (etTotalAmount.text.toString().isEmpty()) {
+            etTotalAmount.error = "Required"
+            isValid = false
+        }
+        if (sharedViewModel.listOfSale.value.isEmpty()) {
+            Toast.makeText(activity, "Item is empty", Toast.LENGTH_SHORT).show()
+            isValid = false
+        }
+
+        return isValid
+    }
+
 
     private fun convertListToBilledQuantity(): String? {
         val data = sharedViewModel.listOfSale.value

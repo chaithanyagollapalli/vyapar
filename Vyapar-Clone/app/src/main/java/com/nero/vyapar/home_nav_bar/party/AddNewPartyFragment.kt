@@ -43,9 +43,8 @@ class AddNewPartyFragment : Fragment() {
         val viewPageAdapter = PartyViewPagerAdapterNew(this)
         viewPagerAddNewParty.adapter = viewPageAdapter
 
-        TabLayoutMediator(tabLayoutAddNewParty,viewPagerAddNewParty){
-                tab,position ->
-            tab.text = when(position) {
+        TabLayoutMediator(tabLayoutAddNewParty, viewPagerAddNewParty) { tab, position ->
+            tab.text = when (position) {
                 0 -> "Addresses"
                 1 -> "GST"
                 2 -> "Opening Balance"
@@ -54,35 +53,43 @@ class AddNewPartyFragment : Fragment() {
         }.attach()
 
 
-
         var partyName: String = ""
         var contactNo: String = ""
         var billingAdd: String = ""
         var amount: Long = 0
 
         btnSave.setOnClickListener {
-            if (isDataValid()){
+            if (isDataValid()) {
                 partyName = partyNameEditText.text.toString()
                 contactNo = contactNumberEditText.text.toString()
-                billingAdd = billingAddressEditText.text.toString()
-              //  amount = parseLong(openingBalanceEditText.text.toString())
+//                billingAdd = billingAddressEditText.text.toString()
+                amount = parseLong(openingBalanceEditText.text.toString())
 
-                var partyEntity = PartyEntity(partyName,contactNo,billingAdd,0)
+                var partyEntity =
+                    PartyEntity(partyName, contactNo, "Pune", amount)
                 partiesViewModel.addParty(partyEntity)
             }
+            activity?.onBackPressed()
         }
+
 
     }
 
     private fun isDataValid(): Boolean {
-        if (partyNameEditText.text == null)
+        if (partyNameEditText.text == null) {
+            partyNameEditText.error = "Required"
             return false
-        if (billingAddressEditText.text == null)
+        }
+
+        if (contactNumberEditText.text == null || contactNumberEditText.text.toString().length != 10) {
+            contactNumberEditText.error = "Required"
             return false
-        if (contactNumberEditText.text == null || contactNumberEditText.text.toString().length != 10)
+        }
+        if (openingBalanceEditText.text == null) {
+            openingBalanceEditText.error = "Required"
             return false
-       /* if (openingBalanceEditText.text == null)
-            return false*/
+        }
+
 
         return true
     }
@@ -98,7 +105,7 @@ private class PartyViewPagerAdapterNew(fm: AddNewPartyFragment) :
         return when (position) {
             0 -> return AddressesFragment.newInstance()
             1 -> return GstFragment.newInstance()
-            3 -> return OpeningBalanceFragment.newInstance()
+            2 -> return OpeningBalanceFragment.newInstance()
             else -> CategoriesFragment.newInstance()
         }
     }

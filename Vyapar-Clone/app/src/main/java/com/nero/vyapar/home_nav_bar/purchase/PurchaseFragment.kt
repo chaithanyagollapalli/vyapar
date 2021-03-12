@@ -80,7 +80,6 @@ class PurchaseFragment : Fragment() {
 
         }
 
-
     }
 
     private fun convertListToBilledQuantity(): String? {
