@@ -59,6 +59,12 @@
         <action
             android:id="@+id/action_nav_sale_to_addSaleFragment"
             app:destination="@id/addSaleFragment" />
+        <action
+            android:id="@+id/action_nav_sale_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_sale_to_nav_items"
+            app:destination="@id/nav_items" />
     </fragment>
 
     <fragment
@@ -119,23 +125,33 @@
         <action
             android:id="@+id/action_addProductFragment_to_nav_items"
             app:destination="@id/nav_items" />
+        <action
+            android:id="@+id/action_addProductFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+        <argument
+            android:name="itemdetails"
+            app:argType="com.nero.vyapar.local.entity.ItemsEntity"
+            app:nullable="true" />
     </fragment>
 
     <fragment
         android:id="@+id/nav_home"
         android:name="com.nero.vyapar.home_nav_bar.menuItems.MenuItemsFragment"
         android:label="@string/stock_item_list"
-        tools:layout="@layout/menu_items_fragment" >
+        tools:layout="@layout/menu_items_fragment">
         <action
             android:id="@+id/action_nav_home_to_addProductFragment"
             app:destination="@id/addProductFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_productFragment"
+            app:destination="@id/productFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/addExpenseFragment"
         android:name="com.nero.vyapar.home_nav_bar.expense.AddExpenseFragment"
         android:label="fragment_add_expense"
-        tools:layout="@layout/fragment_add_expense" >
+        tools:layout="@layout/fragment_add_expense">
         <action
             android:id="@+id/action_addExpenseFragment_to_nav_expenses"
             app:destination="@id/nav_expenses" />
@@ -144,7 +160,14 @@
         android:id="@+id/addSaleFragment"
         android:name="com.nero.vyapar.home_nav_bar.sale.AddSaleFragment"
         android:label="fragment_add_sale"
-        tools:layout="@layout/fragment_add_sale" />
+        tools:layout="@layout/fragment_add_sale" >
+        <action
+            android:id="@+id/action_addSaleFragment_to_nav_sale"
+            app:destination="@id/nav_sale" />
+        <action
+            android:id="@+id/action_addSaleFragment_to_nav_settings"
+            app:destination="@id/nav_settings" />
+    </fragment>
     <fragment
         android:id="@+id/addPurchaseFragment"
         android:name="com.nero.vyapar.home_nav_bar.purchase.AddPurchaseFragment"
@@ -155,5 +178,21 @@
         android:name="com.nero.vyapar.home_nav_bar.party.AddNewPartyFragment"
         android:label="fragment_add_new_party"
         tools:layout="@layout/fragment_add_new_party" />
+
+
+
+
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.nero.vyapar.home_nav_bar.menuItems.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product">
+        <action
+            android:id="@+id/action_productFragment_to_addProductFragment2"
+            app:destination="@id/addProductFragment" />
+        <action
+            android:id="@+id/action_productFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+    </fragment>
 
 </navigation>

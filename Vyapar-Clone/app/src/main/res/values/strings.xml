@@ -12,7 +12,6 @@
     <string name="add_description">Add Description</string>
     <string name="sale">Sale</string>
     <string name="customer">Customer*</string>
-    <string name="save_amp_new"><![CDATA[SAVE & NEW]]></string>
     <string name="save">SAVE</string>
     <string name="purchase_transactions">Purchase Transactions</string>
     <string name="title_activity_home_screen">HomeScreen</string>
@@ -51,7 +50,7 @@
 
     <string name="eg_party">e.g. Ram Prasad</string>
     <string name="btn_save">Save</string>
-    <string name="contact_number">Contact Number</string>
+    <string name="contact_number" translatable="false">Contact Number</string>
     <string name="import_parties_select_multiple">Select multiple contacts and add as parties</string>
     <string name="import_parties">Import parties from Contacts</string>
     <string name="this_month">This month :</string>
@@ -103,4 +102,12 @@
     <string name="resend_code_in_40_sec">Resend code in 40 sec</string>
     <string name="enter_otp_code">Enter OTP Code</string>
     <string name="change">Change ?</string>
+    <string name="services">Services</string>
+    <string name="stock_value">Stock Value</string>
+    <string name="stock_quantity">Stock Quantity</string>
+    <string name="add_line_item">Add Line Item</string>
+    <string name="state_of_supply">State of Supply</string>
+    <string name="save_amp_new"><![CDATA[SAVE & NEW]]></string>
+    <string name="credit">Credit</string>
+    <string name="inv_no">Inv. No.</string>
 </resources>
