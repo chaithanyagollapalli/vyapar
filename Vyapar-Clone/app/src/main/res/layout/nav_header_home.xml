@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_10"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/nav_header_title"
+        android:text="Big Bazar"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5"
-        android:text="@string/nav_header_subtitle"
+        android:text="9503483897"
         app:layout_constraintStart_toStartOf="@+id/tvStoreName"
         app:layout_constraintTop_toBottomOf="@+id/tvStoreName" />
 
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5"
-        android:text="@string/nav_header_subtitle"
+        android:text="big bazar"
         app:layout_constraintEnd_toEndOf="@+id/tvMobileNumber"
         app:layout_constraintStart_toStartOf="@+id/tvMobileNumber"
         app:layout_constraintTop_toBottomOf="@+id/tvMobileNumber" />
