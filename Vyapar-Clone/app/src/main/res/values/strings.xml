@@ -71,4 +71,8 @@
     <string name="sale_price">Sale Price</string>
     <string name="cancel">Cancel</string>
     <string name="expense">Expense</string>
+    <string name="submit">Submit</string>
+    <string name="resend_code_in_40_sec">Resend code in 40 sec</string>
+    <string name="enter_otp_code">Enter OTP Code</string>
+    <string name="change">Change ?</string>
 </resources>
