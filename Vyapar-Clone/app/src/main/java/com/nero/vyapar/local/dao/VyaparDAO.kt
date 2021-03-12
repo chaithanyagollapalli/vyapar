@@ -18,9 +18,6 @@ interface VyaparDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTransaction(transactionEntity: TransactionEntity)
 
-
-
-
     @Query("SELECT * FROM ItemsTable")
     fun getAllItems(): LiveData<List<ItemsEntity>>
 

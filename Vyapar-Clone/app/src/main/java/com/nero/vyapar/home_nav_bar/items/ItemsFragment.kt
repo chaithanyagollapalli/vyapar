@@ -84,7 +84,7 @@ class ItemsFragment : Fragment() {
                                 name = "You'll Give",
                                 viewModel.totalToGive.value,
                                 R.drawable.ic_upward,
-                                Constants.YOUWILLGETINT,
+                                Constants.YOUWILLGIVEINT,
                                 { })
                             Spacer(modifier = Modifier.size(10.dp))
 
@@ -92,6 +92,14 @@ class ItemsFragment : Fragment() {
                                 name = "Purchase",
                                 viewModel.totalPurchase.value,
                                 R.drawable.ic_shopping_cart,
+                                Constants.PURCHASEINT,
+                                { })
+                            Spacer(modifier = Modifier.size(10.dp))
+
+                            TotalInformationCard(
+                                name = "Expense",
+                                viewModel.totalExpenses.value,
+                                R.drawable.ic_wallet,
                                 Constants.PURCHASEINT,
                                 { })
                             Spacer(modifier = Modifier.size(10.dp))

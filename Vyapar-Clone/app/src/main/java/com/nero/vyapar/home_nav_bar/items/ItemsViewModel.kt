@@ -51,6 +51,7 @@ class ItemsViewModel @Inject constructor(
     var totalSale: MutableState<Long> = mutableStateOf(0)
     var totalPurchase: MutableState<Long> = mutableStateOf(0)
     var totalToGive: MutableState<Long> = mutableStateOf(0)
+    var totalExpenses: MutableState<Long> = mutableStateOf(0)
 
     fun getAllItems() {
         repository.getAllItems().observeForever() {
