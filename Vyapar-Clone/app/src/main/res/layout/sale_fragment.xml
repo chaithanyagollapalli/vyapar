@@ -265,7 +265,7 @@
             android:textColor="@color/white" />
 
         <ImageButton
-            android:id="@+id/ibShare2"
+            android:id="@+id/ibShare2SalesFragment"
             android:layout_width="0dp"
             android:layout_height="@dimen/dp_50"
             android:layout_gravity="center"

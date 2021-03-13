@@ -82,7 +82,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etProductName"
+                    android:id="@+id/etProductNamePurchaseFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColorHighlight="#105B7A" />
@@ -117,7 +117,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etQuantity"
+                    android:id="@+id/etQuantityProductFrag"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColorHighlight="#105B7A" />
@@ -151,7 +151,7 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etRate"
+                    android:id="@+id/etRateProductFrag"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColorHighlight="#105B7A" />
@@ -181,7 +181,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvSaveAndNew"
+        android:id="@+id/cvSaveAndNewPurchaseFragment"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:backgroundTint="#E6E5E9"

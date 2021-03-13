@@ -35,6 +35,7 @@ import com.nero.vyapar.presentation.componenets.robotoFamily
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_add_product.*
 import kotlinx.android.synthetic.main.fragment_add_sale.*
+import kotlinx.android.synthetic.main.purchase_fragment.*
 import kotlinx.android.synthetic.main.sale_fragment.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -153,10 +154,10 @@ class SaleFragment : Fragment() {
                     sharedViewModel.listOfSale.value.clear()
 
                 }
+                activity?.onBackPressed()
             }
 
 
-            activity?.onBackPressed()
         }
 
 
@@ -173,6 +174,18 @@ class SaleFragment : Fragment() {
             val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
             startActivity(cameraIntent)
             true
+        }
+
+        ibShare2SalesFragment.setOnClickListener {
+            val myIntent = Intent(Intent.ACTION_SEND)
+            myIntent.type = "text/plain"
+            val name =
+                "Item Details:  \n " +
+                        "Invoice No: ${etInvNo.text}\n Customer Name: ${etCustomer.text}\n " +
+                        " Total Amount: ${etTotalAmount.text}\n"
+
+            myIntent.putExtra(Intent.EXTRA_TEXT, name);
+            startActivity(Intent.createChooser(myIntent, "Share Using"))
         }
 
     }

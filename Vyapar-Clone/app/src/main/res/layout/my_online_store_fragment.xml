@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home_nav_bar.myOnlineStore.MyOnlineStoreFragment">
 
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/create_online_store" />
+        android:src="@drawable/onlinestore" />
 
-</FrameLayout>
+
+    <Button
+        android:id="@+id/btnCreateOnlineStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:background="@drawable/add_expenses_bg"
+        android:drawableStart="@drawable/ic_add_button_with_plus_symbol_in_a_black_circle"
+        android:drawablePadding="@dimen/dp_15"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_20"
+        android:text="@string/create_online_store"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+
+
+</RelativeLayout>
