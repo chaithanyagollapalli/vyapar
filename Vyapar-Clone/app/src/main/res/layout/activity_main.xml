@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -16,7 +17,6 @@
         android:src="@drawable/splash_screen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,7 +35,7 @@
         android:id="@+id/imageView3"
         android:layout_width="@dimen/dp_70"
         android:layout_height="@dimen/dp_50"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/dp_18"
         android:src="@drawable/green_tick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView" />

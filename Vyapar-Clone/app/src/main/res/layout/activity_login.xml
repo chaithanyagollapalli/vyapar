@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_15"
         android:layout_marginTop="40dp"
-        android:text="Sign up"
+        android:text="@string/sign_up"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_15"
-        android:text="Get control of your business with Vyapar"
+        android:text="@string/get_control_of_your_business_with_vyapar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSignUp" />
 
@@ -37,7 +37,7 @@
         android:drawableStart="@drawable/ic_india"
         android:drawablePadding="@dimen/dp_10"
         android:gravity="center"
-        android:text="INDIA"
+        android:text="@string/india"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvGetControl" />
@@ -49,7 +49,7 @@
         android:layout_margin="@dimen/dp_15"
         android:background="@drawable/enter_mobile_box"
         android:ems="10"
-        android:hint="Enter Mobile Number"
+        android:hint="@string/enter_mobile_number"
         android:inputType="phone"
         android:padding="@dimen/dp_15"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
         android:layout_margin="@dimen/dp_15"
         android:background="@drawable/get_otp_box"
         android:elevation="12dp"
-        android:text="Get OTP"
+        android:text="@string/get_otp"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="18sp"
@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp_15"
         android:gravity="center"
-        android:text="or"
+        android:text="@string/or"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGetOtp" />
 
@@ -88,7 +88,7 @@
         android:drawableStart="@drawable/ic_google"
         android:paddingStart="@dimen/dp_50"
         android:paddingEnd="@dimen/dp_50"
-        android:text="Sign In with Google"
+        android:text="@string/sign_in_with_google"
         android:textAllCaps="false"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +99,17 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dp_10"
         android:gravity="center"
-        android:text="By continuing, I agree the terms and conditions"
+        android:text="@string/by_continuing_i_agree_the_terms_and_conditions"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/dp_15"
+        android:spinnerMode="dropdown"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

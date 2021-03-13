@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp_15"
-        android:text="Verifying OTP"
+        android:text="@string/verifying_otp"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
         android:layout_marginTop="@dimen/dp_15"
         android:layout_marginStart="@dimen/dp_15"
         android:layout_marginBottom="@dimen/dp_15"
-        android:text="Otp sent to +919640024533."
+        android:text="@string/otp_sent_to_919640024533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvVerifying" />
 

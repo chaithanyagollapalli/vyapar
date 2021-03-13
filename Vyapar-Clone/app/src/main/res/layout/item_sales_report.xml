@@ -22,7 +22,7 @@
                 android:id="@+id/tvPartyName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="customer 1"
+                android:text="@string/customer_1"
                 android:layout_weight="1"
                 android:gravity="start"/>
 
@@ -30,7 +30,7 @@
                 android:id="@+id/tvId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="sale 1"
+                android:text="@string/sale_1"
                 android:layout_weight="1"
                 android:gravity="start"/>
 
@@ -38,7 +38,7 @@
                 android:id="@+id/tvAmount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Paid amt 100"
+                android:text="@string/paid_amt_100"
                 android:layout_weight="1"
                 android:gravity="end"/>
 
@@ -54,7 +54,7 @@
                 android:id="@+id/tvBillNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="454545"
+                android:text="@string/_454545"
                 android:layout_weight="1"
                 android:gravity="start"/>
 
@@ -62,7 +62,7 @@
                 android:id="@+id/tvReceived"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="sale 1"
+                android:text="@string/sale_1"
                 android:layout_weight="1"
                 android:gravity="start"/>
 
@@ -70,7 +70,7 @@
                 android:id="@+id/tvTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total 1515"
+                android:text="@string/total_1515"
                 android:layout_weight="1"
                 android:gravity="end"/>
 
