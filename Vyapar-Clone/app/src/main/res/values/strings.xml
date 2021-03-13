@@ -77,7 +77,7 @@
     <string name="invoice_print">Invoice Print</string>
     <string name="taxes_gst"><![CDATA[Taxes & GST]]></string>
     <string name="ab_har_business_banega_digital">Ab har business banega <b>digital</b></string>
-
+<string name="add_expenses">Add Expenses</string>
     <string name="add_product">Add Product</string>
     <string name="item_code_barcode">Item Code / Barcode</string>
     <string name="hsn_sac_code">HSN / SAC Code</string>
@@ -130,7 +130,6 @@
     <string name="other_transactions">Other Transactions</string>
     <string name="expenses">Expenses</string>
     <string name="expense">Expense</string>
-    <string name="add_expenses">Add Expenses</string>
     <string name="gst">GST</string>
     <string name="expense_no">Expense No.</string>
     <string name="expense_category">Expense Category</string>
@@ -172,10 +171,10 @@
     <string name="sale_price">Sale Price</string>
     <string name="_10_00">10.00</string>
     <string name="_500_0">500.0</string>
-
     <string name="ad_purchase">Add Purchase</string>
     <string name="products">Products</string>
     <string name="add_sales">Add Sales</string>
+    <string name="total">Total:  </string>
 
     <string-array name="languageList">
 

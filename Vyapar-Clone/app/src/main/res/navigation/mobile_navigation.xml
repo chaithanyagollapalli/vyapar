@@ -100,17 +100,18 @@
         tools:layout="@layout/cash_bank_fragment">
         <action
             android:id="@+id/action_nav_cash_banks_to_nav_myOnlineStore2"
-            app:destination="@id/nav_myOnlineStore" />
+            app:destination="@id/nav_online_store" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_myOnlineStore"
+        android:id="@+id/nav_online_store"
         android:name="com.nero.vyapar.home_nav_bar.myOnlineStore.MyOnlineStoreFragment"
         android:label="@string/create_online_store"
-        tools:layout="@layout/cash_bank_fragment">
+        tools:layout="@layout/my_online_store_fragment">
+
         <action
-            android:id="@+id/action_nav_myOnlineStore_to_nav_settings"
-            app:destination="@id/nav_settings" />
+            android:id="@+id/action_nav_online_store_to_productFragment"
+            app:destination="@id/productFragment" />
     </fragment>
     <fragment
         android:id="@+id/nav_settings"
@@ -160,7 +161,7 @@
         android:id="@+id/addSaleFragment"
         android:name="com.nero.vyapar.home_nav_bar.sale.AddSaleFragment"
         android:label="@string/add_sales"
-        tools:layout="@layout/fragment_add_sale" >
+        tools:layout="@layout/fragment_add_sale">
         <action
             android:id="@+id/action_addSaleFragment_to_nav_sale"
             app:destination="@id/nav_sale" />
@@ -177,9 +178,11 @@
         android:id="@+id/addNewPartyFragment"
         android:name="com.nero.vyapar.home_nav_bar.party.AddNewPartyFragment"
         android:label="@string/add_new_party"
-        tools:layout="@layout/fragment_add_new_party" />
-
-
+        tools:layout="@layout/fragment_add_new_party" >
+        <action
+            android:id="@+id/action_addNewPartyFragment_to_nav_items"
+            app:destination="@id/nav_items" />
+    </fragment>
 
 
     <fragment

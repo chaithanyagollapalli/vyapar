@@ -18,7 +18,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_categories.*
 
 
-
 @AndroidEntryPoint
 class CategoriesFragment : Fragment() {
 
@@ -39,15 +38,6 @@ class CategoriesFragment : Fragment() {
         fun newInstance() = CategoriesFragment()
     }
 
-    override fun onResume() {
-        super.onResume()
-//        viewModel.getExpenses()
-//        viewModel.hashMapList.observe(this, Observer {
-//            expenseList.clear()
-//            expenseList.addAll(it)
-//            adapter.notifyDataSetChanged()
-//        })
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel.getExpenses()
@@ -59,6 +49,9 @@ class CategoriesFragment : Fragment() {
         categoriesRecyclerView.layoutManager = LinearLayoutManager(context)
         categoriesRecyclerView.adapter = adapter
 
+        viewModel.totalMapList.observe(viewLifecycleOwner, Observer {
+            tvTotalChangeNumber.text = it.toString()
+        })
     }
 }
 
