@@ -137,7 +137,7 @@ fun ItemCard(itemEntity: ItemsEntity, onClick: (ItemsEntity) -> Unit) {
             }
         }
 
-        Divider(color = Color.LightGray, thickness = 0.2.dp, startIndent = 10.dp)
+        Divider(color = Color.LightGray, thickness = 1.dp, startIndent = 10.dp)
     }
 }
 
@@ -283,7 +283,7 @@ fun TransactionCard(
 
             }
         }
-        Divider(color = Color.LightGray, thickness = 0.2.dp)
+        Divider(color = Color.LightGray, thickness = 1.dp)
 
     }
 
@@ -342,7 +342,7 @@ fun PartiesCard(partyEntity: PartyEntity, onClick: (PartyEntity) -> Unit) {
 
             }
         }
-        Divider(color = Color.LightGray, thickness = 0.2.dp)
+        Divider(color = Color.LightGray, thickness = 1.dp)
     }
 
 }
