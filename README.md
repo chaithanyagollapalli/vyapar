@@ -49,12 +49,6 @@ The project statement given to us was to create a dynamic clone of Vyapar, an ap
     implementation 'androidx.compose.runtime:runtime-rxjava2:1.0.0-beta01'
 
 
-## Team Members
-
-1) Chaithanya Guptha Gollapalli: [GitHub Profile] (https://github.com/chaithanyagollapalli)
-2) Dheeraj Gupta: [GitHub Profile] (https://github.com/nero002)
-3) Karthik Manoharan: [GitHub Profile] (https://github.com/SpiderGod607)
-4) Summet Das: [GitHub Profile] (https://github.com/PaPluckfii)
 
 ## Screenshots 
 
