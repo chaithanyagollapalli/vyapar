@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Vyapar</string>
     <string name="bill_no">Bill No.</string>
-    <string name="date_09_03_2021">Date 09/03/2021</string>
+    <string name="date_09_03_2021">Date 13/03/2021</string>
     <string name="add_items_optional">ADD ITEMS (OPTIONAL)</string>
     <string name="total_amt">Total Amt</string>
     <string name="paid_amt">Paid Amt</string>
@@ -130,7 +130,6 @@
     <string name="other_transactions">Other Transactions</string>
     <string name="expenses">Expenses</string>
     <string name="expense">Expense</string>
-    <string name="gst">GST</string>
     <string name="expense_no">Expense No.</string>
     <string name="expense_category">Expense Category</string>
     <string name="billed_items">Billed Items</string>
@@ -175,6 +174,7 @@
     <string name="products">Products</string>
     <string name="add_sales">Add Sales</string>
     <string name="total">Total:  </string>
+    <string name="gst">GST</string>
     <string name="youll_get">You\'ll Get</string>
     <string name="sale_compose">Sale</string>
     <string name="youll_give">You\'ll Give</string>

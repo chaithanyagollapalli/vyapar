@@ -121,7 +121,7 @@
     <fragment
         android:id="@+id/addProductFragment"
         android:name="com.nero.vyapar.home_nav_bar.items.AddProductFragment"
-        android:label="@string/add_item"
+        android:label="@string/add_line_item"
         tools:layout="@layout/fragment_add_product">
         <action
             android:id="@+id/action_addProductFragment_to_nav_items"
