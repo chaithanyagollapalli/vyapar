@@ -7,13 +7,12 @@
         android:id="@+id/action_camera"
         android:icon="@drawable/ic_baseline_camera_alt_24"
         android:title="@string/camera"
+
         app:showAsAction="ifRoom" />
-
-
 
     <item
         android:id="@+id/action_setting"
-        android:icon="@drawable/ic_baseline_settings_24_white"
+        android:icon="@drawable/ic_baseline_settings_24_blue"
         android:title="@string/settings"
         app:showAsAction="ifRoom" />
 </menu>

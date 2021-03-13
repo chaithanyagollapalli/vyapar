@@ -72,6 +72,10 @@ class ItemsRepository(private val databaseDao: VyaparDAO) {
 
     }
 
+    suspend fun updateItem(itemsEntity: ItemsEntity) {
+        databaseDao.updateItems(itemsEntity)
+    }
+
     private suspend fun updateItems(
         itemList: List<String>,
         itemQuantity: java.util.ArrayList<Int>,

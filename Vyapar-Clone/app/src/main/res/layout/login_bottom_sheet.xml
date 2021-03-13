@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/bsLogin"
+    android:background="@drawable/btn_animation_bg"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tvHi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_15"
+        android:text="@string/hi_chaithanya_gollapalli"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvToContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_15"
+        android:text="@string/to_continue_please_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHi" />
+
+    <Button
+        android:id="@+id/btnUseNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_15"
+        android:background="@drawable/use_number_box"
+        android:text="@string/use_9640024533"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvToContinue" />
+
+    <TextView
+        android:id="@+id/tvTrueCaller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/by_continuing_ypu_consent_to_share_your_truecaller_profile_information_nwith_vyapar"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUseNumber" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:drawableEnd="@drawable/ic_truecaller_logo_vector"
+        android:gravity="center"
+        android:text="@string/instant_verification_by"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTrueCaller" />
+</androidx.constraintlayout.widget.ConstraintLayout>

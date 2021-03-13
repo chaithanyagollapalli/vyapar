@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp_10"
-        android:text="Sale Transactions"
+        android:text="@string/sale_transactions"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5"
-        android:text="Sale invoices"
+        android:text="@string/sale_invoices"
         app:layout_constraintEnd_toStartOf="@+id/ibPaymentIn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ibSaleInvoices" />
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5"
-        android:text="Payment in"
+        android:text="@string/payment_in"
         app:layout_constraintEnd_toStartOf="@+id/ibSaleReturn"
         app:layout_constraintStart_toEndOf="@id/ibSaleInvoices"
         app:layout_constraintTop_toBottomOf="@+id/ibSaleInvoices" />
@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5"
-        android:text="Sale Return"
+        android:text="@string/sale_return"
         app:layout_constraintEnd_toStartOf="@+id/ibSaleOrder"
         app:layout_constraintStart_toEndOf="@id/tvPaymentIn"
         app:layout_constraintTop_toBottomOf="@+id/ibSaleInvoices" />
@@ -96,7 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5"
-        android:text="Sale Order"
+        android:text="@string/sale_order"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tvSaleReturn"
         app:layout_constraintTop_toBottomOf="@+id/ibSaleInvoices" />
@@ -116,7 +116,7 @@
         android:id="@+id/tvEstimate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Estimate/\nQuotation"
+        android:text="@string/estimate_nquotation"
         app:layout_constraintEnd_toStartOf="@+id/ibPaymentIn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ibEstimate" />
@@ -136,7 +136,7 @@
         android:id="@+id/tvProformaInvoice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Proforma\n  Invoice"
+        android:text="@string/proforma_n_invoice"
         app:layout_constraintEnd_toStartOf="@+id/ibSaleReturn"
         app:layout_constraintStart_toEndOf="@id/ibSaleInvoices"
         app:layout_constraintTop_toBottomOf="@+id/ibEstimate" />
@@ -156,7 +156,7 @@
         android:id="@+id/tvDeliveryChallan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delivery Challan"
+        android:text="@string/delivery_challan"
         app:layout_constraintEnd_toStartOf="@+id/ibSaleOrder"
         app:layout_constraintStart_toEndOf="@id/tvPaymentIn"
         app:layout_constraintTop_toBottomOf="@+id/ibEstimate" />
@@ -187,7 +187,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5"
-        android:text="Purchase"
+        android:text="@string/purchase"
         app:layout_constraintEnd_toStartOf="@id/tvPaymentIn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ibPurchase" />
@@ -208,7 +208,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5"
-        android:text="Payment-Out"
+        android:text="@string/payment_out"
         app:layout_constraintEnd_toStartOf="@+id/ibSaleReturn"
         app:layout_constraintStart_toEndOf="@id/ibSaleInvoices"
         app:layout_constraintTop_toBottomOf="@+id/ibPaymentOut" />
@@ -230,7 +230,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5"
         android:gravity="center"
-        android:text="Purchase\nReturn"
+        android:text="@string/purchase_nreturn"
         app:layout_constraintEnd_toStartOf="@+id/ibSaleOrder"
         app:layout_constraintStart_toEndOf="@id/tvPaymentIn"
         app:layout_constraintTop_toBottomOf="@+id/ibPurchaseReturn" />
@@ -251,7 +251,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5"
-        android:text="Purchase Order"
+        android:text="@string/purchase_order"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tvSaleReturn"
         app:layout_constraintTop_toBottomOf="@+id/ibPurchaseOrder" />
@@ -262,7 +262,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp_10"
-        android:text="Other Transactions"
+        android:text="@string/other_transactions"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPurchaseReturn" />
@@ -274,7 +274,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_10"
         android:background="@drawable/image_button_bg"
-        android:src="@drawable/ic_wallet"
+        android:src="@drawable/ic_wallet1"
         app:layout_constraintEnd_toStartOf="@+id/ibPaymentOut"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvOtherTransactions" />
@@ -284,7 +284,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5"
-        android:text="Expenses"
+        android:text="@string/expenses"
         app:layout_constraintEnd_toStartOf="@id/tvPaymentIn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ibExpenses" />

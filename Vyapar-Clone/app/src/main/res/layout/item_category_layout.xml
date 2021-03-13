@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_margin="@dimen/dp_20"
     android:layout_height="wrap_content">
 
     <RelativeLayout
@@ -14,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_marginStart="@dimen/dp_5"
-            android:text="Petrol"
+            android:text="@string/petrol"
             android:textSize="@dimen/sp_18" />
 
         <TextView
@@ -23,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="@dimen/dp_5"
-            android:text="390.0/-"
+            android:text="@string/_390_0"
             android:textSize="@dimen/sp_18" />
 
     </RelativeLayout>

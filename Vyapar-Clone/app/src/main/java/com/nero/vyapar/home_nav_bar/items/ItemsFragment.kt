@@ -3,6 +3,7 @@ package com.nero.vyapar.home_nav_bar.items
 import android.os.Bundle
 import android.view.*
 import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -34,7 +35,7 @@ class ItemsFragment : Fragment() {
 
     private fun addItem(item: Int) {
         if (item == 2) {
-            val action = ItemsFragmentDirections.actionNavItemsToAddProductFragment()
+            val action = ItemsFragmentDirections.actionNavItemsToAddProductFragment(null)
             findNavController().navigate(action)
         }
     }
@@ -46,6 +47,10 @@ class ItemsFragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)

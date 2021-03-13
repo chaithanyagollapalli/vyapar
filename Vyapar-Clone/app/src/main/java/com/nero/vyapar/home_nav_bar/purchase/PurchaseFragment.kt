@@ -1,6 +1,8 @@
 package com.nero.vyapar.home_nav_bar.purchase
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +17,9 @@ import com.nero.vyapar.constants.Constants
 import com.nero.vyapar.home_nav_bar.sale.BilledItem
 import com.nero.vyapar.local.entity.TransactionEntity
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_add_sale.*
 import kotlinx.android.synthetic.main.purchase_fragment.*
+import kotlinx.android.synthetic.main.purchase_fragment.btnSave
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -58,29 +62,66 @@ class PurchaseFragment : Fragment() {
         }
 
         btnSave.setOnClickListener {
+            if (isDataValid()) {
 
-            CoroutineScope(Dispatchers.IO).launch {
-                sharedViewModel.addTransaction(
-                    TransactionEntity(
-                        etBillNo.text.toString().toInt(),
-                        Constants.PURCHASE,
-                        etParty.text.toString(),
-                        convertListToBilledItems(),
-                        convertListToBilledQuantity(),
-                        etPaid.text.toString().toLong(),
-                        0,
-                        etTotal.text.toString().toLong()
+                CoroutineScope(Dispatchers.IO).launch {
+                    sharedViewModel.addTransaction(
+                        TransactionEntity(
+                            etBillNo.text.toString().toInt(),
+                            Constants.PURCHASE,
+                            etParty.text.toString(),
+                            convertListToBilledItems(),
+                            convertListToBilledQuantity(),
+                            etPaid.text.toString().toLong(),
+                            0,
+                            etTotal.text.toString().toLong()
+                        )
                     )
-                )
-                sharedViewModel.listOfPurchase.value.clear()
+                    sharedViewModel.listOfPurchase.value.clear()
 
+                }
+                activity?.onBackPressed()
             }
 
-            activity?.onBackPressed()
 
         }
 
+        btnCameraPurchaseFrag.setOnClickListener {
+            val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            startActivity(cameraIntent)
+            true
+        }
+        btnSharePurchaseFrag.setOnClickListener {
+            val myIntent = Intent(Intent.ACTION_SEND)
+            val name =
+                "Item Details:  \n " +
+                        "Name: ${etBillNo.text}\n Paid Amount: ${etPaid.text}\n " +
+                        " Total Amount: ${etTotal.text}\n"
 
+            myIntent.putExtra(Intent.EXTRA_TEXT, name);
+            startActivity(Intent.createChooser(myIntent, "Share Using"))
+        }
+    }
+
+    private fun isDataValid(): Boolean {
+        var isValid = true
+        if (etBillNo.text.toString().isEmpty()) {
+            etBillNo.error = "Required"
+            isValid = false
+        }
+        if (etParty.text.toString().isEmpty()) {
+            etParty.error = "Required"
+            isValid = false
+        }
+        if (etPaid.text.toString().isEmpty()) {
+            etPaid.error = "Required"
+            isValid = false
+        }
+        if (etTotal.text.toString().isEmpty()) {
+            etTotal.error = "Required"
+            isValid = false
+        }
+        return isValid
     }
 
     private fun convertListToBilledQuantity(): String? {

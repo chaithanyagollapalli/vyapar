@@ -21,4 +21,11 @@ class AddProductViewModel @Inject constructor(
     }
 
 
+    fun updateItem(itemsEntity: ItemsEntity) {
+        viewModelScope.launch {
+            repository.updateItem(itemsEntity)
+        }
+    }
+
+
 }

@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <Switch
+
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credit"
+        android:outlineSpotShadowColor="@color/app_blue"
+        android:textSelectHandleLeft="@string/credit"
+        android:textColor="@color/save_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSelectHandleRight="@string/cash"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+</RelativeLayout>
