@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Vyapar</string>
     <string name="bill_no">बिल संख्या</string>
-    <string name="date_09_03_2021">तारीख 09/03/2021</string>
+    <string name="date_09_03_2021">तारीख 13/03/2021</string>
     <string name="add_items_optional">जोड़ें आइटम (वैकल्पिक)</string>
     <string name="total_amt">संपूर्ण रकम</string>
     <string name="paid_amt">भुगतान रकम</string>

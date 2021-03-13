@@ -3,11 +3,10 @@ package com.nero.vyapar.home_nav_bar.expense
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.nero.vyapar.R
@@ -22,7 +21,21 @@ import kotlinx.android.synthetic.main.fragment_add_purchase.*
 class AddExpenseFragment : Fragment() {
 
     private val viewModel: AddExpenseViewModel by viewModels()
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+    }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.add_line_item, menu)
+
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

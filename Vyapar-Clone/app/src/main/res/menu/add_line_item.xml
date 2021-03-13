@@ -2,16 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/myswitch"
-        android:actionLayout="@layout/swithc_layout"
-        android:title="@string/gst"
-        app:showAsAction="ifRoom" />
-
-    <item
         android:id="@+id/ibSettings2"
+        app:showAsAction="ifRoom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/ic_outline_settings_24"
-        android:title=""
-        app:showAsAction="ifRoom" />
+        android:title="" />
 </menu>
