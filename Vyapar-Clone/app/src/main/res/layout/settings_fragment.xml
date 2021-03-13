@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,12 +14,17 @@
         <TextView
             android:id="@+id/tvSettingGeneral"
             style="@style/settingNameTextView"
+            android:layout_gravity="center"
             android:drawableStart="@drawable/ic_baseline_settings_24"
             android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
             android:text="@string/general" />
 
 
     </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvSettingTransaction"
@@ -36,6 +40,10 @@
 
     </androidx.cardview.widget.CardView>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cvParty"
         style="@style/settingCardView">
@@ -49,6 +57,10 @@
 
 
     </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvSettingItems"
@@ -64,6 +76,10 @@
 
     </androidx.cardview.widget.CardView>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cvSettingTransactionMessage"
         style="@style/settingCardView">
@@ -77,6 +93,10 @@
 
 
     </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
 
 
     <androidx.cardview.widget.CardView
@@ -93,6 +113,10 @@
 
     </androidx.cardview.widget.CardView>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cvSettingInvoicePrint"
         style="@style/settingCardView">
@@ -107,6 +131,10 @@
 
     </androidx.cardview.widget.CardView>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cvSettingTaxesGST"
         style="@style/settingCardView">
@@ -120,6 +148,10 @@
 
 
     </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
 
 
 </LinearLayout>
