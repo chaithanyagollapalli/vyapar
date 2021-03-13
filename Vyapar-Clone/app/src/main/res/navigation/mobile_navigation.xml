@@ -45,6 +45,9 @@
         <action
             android:id="@+id/action_nav_Reports_to_nav_sale"
             app:destination="@id/nav_sale" />
+        <action
+            android:id="@+id/action_nav_reports_to_saleReportFragment"
+            app:destination="@id/saleReportFragment" />
     </fragment>
 
 
@@ -155,5 +158,10 @@
         android:name="com.nero.vyapar.home_nav_bar.party.AddNewPartyFragment"
         android:label="fragment_add_new_party"
         tools:layout="@layout/fragment_add_new_party" />
+    <fragment
+        android:id="@+id/saleReportFragment"
+        android:name="com.nero.vyapar.home_nav_bar.reports.salereport.SaleReportFragment"
+        android:label="fragment_sale_report"
+        tools:layout="@layout/fragment_sale_report" />
 
 </navigation>

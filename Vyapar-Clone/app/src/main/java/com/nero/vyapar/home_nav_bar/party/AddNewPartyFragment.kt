@@ -65,7 +65,7 @@ class AddNewPartyFragment : Fragment() {
                 partyName = partyNameEditText.text.toString()
                 contactNo = contactNumberEditText.text.toString()
                 billingAdd = billingAddressEditText.text.toString()
-              //  amount = parseLong(openingBalanceEditText.text.toString())
+                amount = parseLong(openingBalanceEditText.text.toString())
 
                 var partyEntity = PartyEntity(partyName,contactNo,billingAdd,0)
                 partiesViewModel.addParty(partyEntity)
@@ -81,8 +81,8 @@ class AddNewPartyFragment : Fragment() {
             return false
         if (contactNumberEditText.text == null || contactNumberEditText.text.toString().length != 10)
             return false
-       /* if (openingBalanceEditText.text == null)
-            return false*/
+        if (openingBalanceEditText.text == null)
+            return false
 
         return true
     }

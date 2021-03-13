@@ -1,51 +1,41 @@
 package com.nero.vyapar.home_nav_bar.reports.salereport
 
-import android.app.Application
-import android.content.Intent
-import android.graphics.pdf.PdfDocument
+import android.content.Context
 import android.os.Bundle
-import android.os.Environment
+import android.print.PrintAttributes
+import android.print.PrintManager
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.compose.ui.graphics.Paint
-import androidx.core.app.ActivityCompat
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.nero.vyapar.HomeActivity
+import com.itextpdf.text.*
+import com.itextpdf.text.pdf.PdfWriter
 import com.nero.vyapar.R
-import com.nero.vyapar.home_nav_bar.expense.fragments.ItemFragment
-import com.nero.vyapar.home_nav_bar.party.PartiesViewModel
 import com.nero.vyapar.home_nav_bar.reports.salereport.recyclerview.SalesReportAdapter
 import com.nero.vyapar.local.entity.TransactionEntity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_sale_report.*
 import kotlinx.android.synthetic.main.fragment_sale_report.*
 import kotlinx.android.synthetic.main.fragment_sale_report.salesRecyclerView
+
+import com.karumi.dexter.Dexter
+import com.karumi.dexter.PermissionToken
+import com.karumi.dexter.listener.PermissionDeniedResponse
+import com.karumi.dexter.listener.PermissionGrantedResponse
+import com.karumi.dexter.listener.PermissionRequest
+import com.karumi.dexter.listener.single.PermissionListener
 import java.io.File
 import java.io.FileOutputStream
-import android.graphics.pdf.PdfDocument.PageInfo
-import android.icu.text.SimpleDateFormat
-import android.net.Uri
-import android.os.Build
-import android.widget.Toast
-import androidx.annotation.RequiresApi
-import androidx.compose.ui.text.intl.Locale
-import androidx.core.content.ContextCompat.checkSelfPermission
-import com.itextpdf.text.Paragraph
-import com.itextpdf.text.pdf.PdfPCell
-import com.itextpdf.text.pdf.PdfPTable
-import com.itextpdf.text.pdf.PdfWriter
-import com.itextpdf.text.pdf.fonts.otf.TableHeader
-import org.w3c.dom.Document
-import java.lang.Exception
-import java.util.jar.Manifest
 
 
 @AndroidEntryPoint
 class SaleReportFragment : Fragment() {
+
+    var file_name: String = "test_pdf.pdf"
 
     var transactions = mutableListOf<TransactionEntity>()
     private val salesReportViewModel: SaleReportViewModel by viewModels()
@@ -84,43 +74,76 @@ class SaleReportFragment : Fragment() {
         salesRecyclerView.adapter = adapter
 
         ibExportPdf.setOnClickListener {
-            if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M){
-                savePdf()
-            }
+            Dexter.withActivity(activity)
+                .withPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .withListener(object : PermissionListener {
+                    override fun onPermissionGranted(response: PermissionGrantedResponse?) {
+                        savePdf(Common.getAppPath(this@SaleReportFragment) + file_name)
+                    }
+
+                    override fun onPermissionDenied(response: PermissionDeniedResponse?) {
+                        TODO("Not yet implemented")
+                    }
+
+                    override fun onPermissionRationaleShouldBeShown(
+                        permission: PermissionRequest?,
+                        token: PermissionToken?
+                    ) {
+                        TODO("Not yet implemented")
+                    }
+
+                })
+        }
+
+    }
+
+
+    private fun savePdf(appPath: String) {
+        if (File(appPath).exists())
+            File(appPath).delete()
+        try {
+            val document = Document()
+
+            PdfWriter.getInstance(document, FileOutputStream(appPath))
+
+            document.open()
+            document.pageSize = PageSize.A4
+            document.addCreationDate()
+            document.addAuthor("Billed")
+            document.addCreator("Vyapar")
+
+            addNewItem(document, "Sales Report", Element.ALIGN_CENTER)
+
+            document.close()
+
+            Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show()
+
+            printPdf()
+
+        } catch (e: Exception) {
+
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
-    private fun savePdf() {
-        val mDoc = com.itextpdf.text.Document()
-        val mFileName = SimpleDateFormat("yyyyMMdd_HHmmss").format(System.currentTimeMillis())
-        val mFilePath = Environment.getExternalStorageDirectory().toString() + "/" + mFileName + ".pdf"
-        try{
-            PdfWriter.getInstance(mDoc, FileOutputStream(mFilePath))
-            mDoc.open()
-            val data = "this data will enter"
-            mDoc.addAuthor("Vyapar_Clone")
-            val table = PdfPTable(transactions.size)
-            for (i in 0..transactions.size){
-                val para = Paragraph(transactions[i].toString())
-                val cell = PdfPCell(para)
-                table.addCell(cell)
-            }
-            mDoc.add(table)
-            mDoc.close()
-            val pdfFile = File(mFilePath, mFileName)
+    private fun printPdf() {
+        val printManager = context?.getSystemService(Context.PRINT_SERVICE) as PrintManager
+        try {
+            val printAdapter = PdfDocumentAdapter(
+                requireActivity().applicationContext,
+                Common.getAppPath(this) + file_name
+            )
+            printManager.print("Document", printAdapter, PrintAttributes.Builder().build())
+        } catch (e: Exception) {
 
-            if (pdfFile.exists())
-            {
-                val path: Uri = Uri.fromFile(pdfFile)
-                val objIntent = Intent(Intent.ACTION_VIEW)
-                objIntent.setDataAndType(path, "application/pdf")
-                objIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-                startActivity(objIntent) //Starting the pdf viewer
-            } else {
-                Toast.makeText(activity, "The file not exists! ", Toast.LENGTH_SHORT).show()
-            }
-        }catch (e: Exception){}
+        }
+    }
+
+    @Throws(DocumentException::class)
+    private fun addNewItem(document: Document, text: String, align: Int) {
+        val chunk = Chunk(text)
+        val p = Paragraph(chunk)
+        p.alignment = align
+        document.add(p)
     }
 
 }

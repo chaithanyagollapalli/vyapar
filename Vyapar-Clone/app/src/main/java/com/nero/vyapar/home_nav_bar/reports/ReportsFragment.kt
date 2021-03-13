@@ -19,9 +19,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.nero.vyapar.constants.ReportConstant
 import com.nero.vyapar.home_nav_bar.items.ItemsViewModel
+import com.nero.vyapar.home_nav_bar.reports.salereport.SaleReportFragment
+import com.nero.vyapar.home_nav_bar.reports.salereport.recyclerview.SalesReportAdapter
 import com.nero.vyapar.presentation.componenets.robotoFamily
 
 class ReportsFragment : Fragment() {
@@ -55,7 +59,8 @@ class ReportsFragment : Fragment() {
 
     private fun OnItemClicked(name: String) {
         if(name == "Sale Report"){
-            val intent = Intent()
+            val action = ReportsFragmentDirections.actionNavReportsToSaleReportFragment()
+            findNavController().navigate(action)
         }
     }
 
