@@ -173,6 +173,10 @@
     <string name="_10_00">10.00</string>
     <string name="_500_0">500.0</string>
 
+    <string name="ad_purchase">खरीद जोड़ें</string>
+    <string name="products">उत्पादों</string>
+    <string name="add_sales">बिक्री जोड़ें</string>
+
     <string-array name="languageList">
 
         <item>English</item>
