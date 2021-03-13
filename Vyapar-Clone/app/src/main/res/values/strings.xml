@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Vyapar</string>
-    <string name="purchase">Purchase</string>
     <string name="bill_no">Bill No.</string>
     <string name="date_09_03_2021">Date 09/03/2021</string>
     <string name="add_items_optional">ADD ITEMS (OPTIONAL)</string>
@@ -12,7 +11,6 @@
     <string name="add_description">Add Description</string>
     <string name="sale">Sale</string>
     <string name="customer">Customer*</string>
-    <string name="save">SAVE</string>
     <string name="purchase_transactions">Purchase Transactions</string>
     <string name="title_activity_home_screen">HomeScreen</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -27,7 +25,6 @@
     <string name="menu_Reports">Reports</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="sales">Sales</string>
-    <string name="expenses">Expenses</string>
     <string name="cash_bank"><![CDATA[Cash & Bank]]></string>
     <string name="settings">Settings</string>
     <string name="backup_restore"><![CDATA[Backup & Restore]]></string>
@@ -90,24 +87,96 @@
     <string name="pricing_details">Pricing Details</string>
     <string name="purchase_price">Purchase Price</string>
     <string name="tax_rate">Tax Rate</string>
-    <string name="sale_price">Sale Price</string>
     <string name="cancel">Cancel</string>
     <string name="camera">Camera</string>
     <string name="big">Big Bazaar</string>
     <string name="home">Home</string>
     <string name="product">Product</string>
     <string name="add_item">Add Item</string>
-    <string name="expense">Expense</string>
     <string name="submit">Submit</string>
     <string name="resend_code_in_40_sec">Resend code in 40 sec</string>
     <string name="enter_otp_code">Enter OTP Code</string>
     <string name="change">Change ?</string>
     <string name="services">Services</string>
     <string name="stock_value">Stock Value</string>
-    <string name="stock_quantity">Stock Quantity</string>
-    <string name="add_line_item">Add Line Item</string>
-    <string name="state_of_supply">State of Supply</string>
-    <string name="save_amp_new"><![CDATA[SAVE & NEW]]></string>
     <string name="credit">Credit</string>
+    <string name="sign_up">Sign up</string>
+    <string name="get_control_of_your_business_with_vyapar">Get control of your business with Vyapar</string>
+    <string name="india">INDIA</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="or">or</string>
+    <string name="sign_in_with_google">Sign In with Google</string>
+    <string name="by_continuing_i_agree_the_terms_and_conditions">By continuing, I agree the terms and conditions</string>
+    <string name="verifying_otp">Verifying OTP</string>
+    <string name="party_with_asterisk">Party*</string>
     <string name="inv_no">Inv. No.</string>
+    <string name="received">Received</string>
+    <string name="state_of_supply">State of Supply</string>
+    <string name="otp_sent_to_919640024533">Otp sent to +919640024533.</string>
+    <string name="pdf">pdf</string>
+    <string name="sale_transactions">Sale Transactions</string>
+    <string name="sale_invoices">Sale invoices</string>
+    <string name="payment_in">Payment in</string>
+    <string name="sale_return">Sale Return</string>
+    <string name="sale_order">Sale Order</string>
+    <string name="estimate_nquotation">Estimate/\nQuotation</string>
+    <string name="proforma_n_invoice">Proforma\n Invoice</string>
+    <string name="delivery_challan">Delivery Challan</string>
+    <string name="purchase">Purchase</string>
+    <string name="payment_out">Payment-Out</string>
+    <string name="purchase_nreturn">Purchase\nReturn</string>
+    <string name="purchase_order">Purchase Order</string>
+    <string name="other_transactions">Other Transactions</string>
+    <string name="expenses">Expenses</string>
+    <string name="expense">Expense</string>
+    <string name="add_expenses">Add Expenses</string>
+    <string name="gst">GST</string>
+    <string name="expense_no">Expense No.</string>
+    <string name="expense_category">Expense Category</string>
+    <string name="billed_items">Billed Items</string>
+    <string name="item_name_1">Item name</string>
+    <string name="qty">Qty</string>
+    <string name="price">Price</string>
+    <string name="item_name_2">Item name</string>
+    <string name="enter_qty">Enter Qty</string>
+    <string name="enter_price">Enter Price</string>
+    <string name="add_line_item">Add Line Item</string>
+    <string name="save_amp_new"><![CDATA[SAVE & NEW]]></string>
+    <string name="product_service_name">Product/Service name</string>
+    <string name="quantity">Quantity</string>
+    <string name="unit">Unit</string>
+    <string name="rate_price_unit">Rate (Price / Unit)</string>
+    <string name="tax">Tax</string>
+    <string name="save">SAVE</string>
+    <string name="petrol">Petrol</string>
+    <string name="_390_0">390.0/-</string>
+    <string name="customer_1">customer 1</string>
+    <string name="paid_amt_100">Paid amt 100</string>
+    <string name="_454545">454545</string>
+    <string name="sale_1">sale 1</string>
+    <string name="total_1515">Total 1515</string>
+    <string name="hi_chaithanya_gollapalli">Hi, Chaithanya Gollapalli</string>
+    <string name="to_continue_please_login">To continue, please login</string>
+    <string name="use_9640024533">USE 9640024533</string>
+    <string name="by_continuing_ypu_consent_to_share_your_truecaller_profile_information_nwith_vyapar">By continuing you consent to share your Truecaller profile information\nwith Vyapar</string>
+    <string name="instant_verification_by">Instant Verification by</string>
+    <string name="service_1">Service 1</string>
+    <string name="_90_00">90.00</string>
+    <string name="bags_bag">BAGS (Bag)</string>
+    <string name="big_bazaar">Big Bazaar</string>
+    <string name="_9503483897">9503483897</string>
+    <string name="item_1">Item 1</string>
+    <string name="stock_quantity">Stock Quantity</string>
+    <string name="_10_0_box">10.0 Box</string>
+    <string name="sale_price">Sale Price</string>
+    <string name="_10_00">10.00</string>
+    <string name="_500_0">500.0</string>
+
+    <string-array name="languageList">
+
+        <item>English</item>
+        <item>हिन्दी</item>
+
+    </string-array>
 </resources>

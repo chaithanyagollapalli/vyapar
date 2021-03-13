@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/dp_10"
-            android:text="Service 1"
+            android:text="@string/service_1"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_18" />
 
@@ -47,7 +47,7 @@
             android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/dp_10"
             android:layout_toStartOf="@+id/ibShareService"
-            android:text="90.00"
+            android:text="@string/_90_00"
             android:textSize="@dimen/sp_18" />
 
     </RelativeLayout>

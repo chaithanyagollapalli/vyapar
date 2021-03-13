@@ -29,19 +29,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_10"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Big Bazar"
+        android:text="@string/big_bazaar"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvMobileNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="83dp"
+        android:layout_height="16dp"
         android:layout_marginTop="@dimen/dp_5"
-        android:text="9503483897"
-        app:layout_constraintStart_toStartOf="@+id/tvStoreName"
+        android:text="@string/_9503483897"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvStoreName" />
 
     <TextView
@@ -49,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_5"
-        android:text="big bazar"
+        android:text="@string/big_bazaar"
         app:layout_constraintEnd_toEndOf="@+id/tvMobileNumber"
         app:layout_constraintStart_toStartOf="@+id/tvMobileNumber"
         app:layout_constraintTop_toBottomOf="@+id/tvMobileNumber" />

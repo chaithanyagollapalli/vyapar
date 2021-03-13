@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_10"
-            android:text="BAGS (Bag)"
+            android:text="@string/bags_bag"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_18" />
 
