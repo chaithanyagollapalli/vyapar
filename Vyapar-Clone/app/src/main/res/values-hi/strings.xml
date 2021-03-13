@@ -178,6 +178,21 @@
     <string name="products">उत्पादों</string>
     <string name="add_sales">बिक्री जोड़ें</string>
 
+    <string name="youll_get">आपको मिलेंगे</string>
+    <string name="sale_compose">बिक्री</string>
+    <string name="youll_give">आप देंगे</string>
+    <string name="purchase_compose">क्रय</string>
+    <string name="expense_compose">व्यय</string>
+    <string name="new_party_compose">नई पार्टी</string>
+    <string name="new_item">नई वस्तु</string>
+    <string name="search_trans">खोज लेनदेन</string>
+    <string name="parties_compose">दलों</string>
+    <string name="trans_compose">लेनदेन</string>
+    <string name="items_compose">आइटम</string>
+    <string name="pur_comp">क्रय जोड़ें</string>
+    <string name="add_sale_compose">बिक्री जोड़ें</string>
+
+
     <string-array name="languageList">
 
         <item>English</item>
