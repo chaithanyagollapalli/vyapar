@@ -51,6 +51,7 @@ class ItemsViewModel @Inject constructor(
     var totalPurchase: MutableState<Long> = mutableStateOf(0)
     var totalToGive: MutableState<Long> = mutableStateOf(0)
     var totalExpenses: MutableState<Long> = mutableStateOf(0)
+    var searchQuery: MutableState<String> = mutableStateOf("")
 
     fun getAllItems() {
         repository.getAllItems().observeForever() {
@@ -65,7 +66,7 @@ class ItemsViewModel @Inject constructor(
             var pruchase: Long = 0;
             var toget: Long = 0;
             var togive: Long = 0;
-            
+
             for (transaction in it) {
                 if (transaction.total != null && transaction.type != Constants.PURCHASE) {
                     sale += transaction.total!!
@@ -110,6 +111,10 @@ class ItemsViewModel @Inject constructor(
 
     fun changeSelectedType(type: Int) {
         selectedType.value = type
+    }
+
+    fun searchQueryChange(data: String) {
+        searchQuery.value = data
     }
 
 }

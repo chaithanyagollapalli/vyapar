@@ -4,10 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.Card
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -24,8 +21,9 @@ fun AddButton(name: String, onClick: (Int) -> Unit, type: Int) {
 
     Card(
         modifier = Modifier
+            .padding(end = 15.dp)
             .width(110.dp)
-            .height(30.dp)
+            .height(32.dp)
             .clickable {
                 onClick(type)
             },
@@ -45,14 +43,14 @@ fun AddButton(name: String, onClick: (Int) -> Unit, type: Int) {
                 modifier = Modifier
                     .height(13.dp)
                     .width(13.dp),
-                painter = painterResource(id = R.drawable.ic_baseline_add_24),
+                painter = painterResource(id = R.drawable.ic_baseline_add_24_blue),
                 contentDescription = null
             )
             //  Spacer(modifier = Modifier.size(5.dp))
             Text(
                 text = name,
                 fontFamily = robotoFamily,
-                fontWeight = FontWeight.Normal,
+                fontWeight = FontWeight.Medium,
                 fontSize = 15.sp,
                 color = Color(0xFF3076BD)
             )
@@ -67,8 +65,8 @@ fun CircleAddButton(onClick: () -> Unit) {
         painter = painterResource(id = R.drawable.ic_circle_plus),
         contentDescription = null,
         modifier = Modifier
-            .height(50.dp)
-            .width(50.dp)
+            .height(45.dp)
+            .width(45.dp)
             .clickable { onClick() }
     )
 
@@ -86,9 +84,9 @@ fun SalePurchaseButton(
         onClick = { onClick() },
         modifier = Modifier
             .width(140.dp)
-            .height(50.dp),
+            .height(45.dp),
         colors = ButtonDefaults.buttonColors(backgroundColor = backGroundColour),
-        shape = RoundedCornerShape(25.dp)
+        shape = RoundedCornerShape(50)
     ) {
         Row(
             modifier = Modifier

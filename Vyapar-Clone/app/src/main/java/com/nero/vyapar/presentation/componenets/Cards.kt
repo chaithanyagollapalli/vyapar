@@ -86,7 +86,7 @@ fun ItemCard(itemEntity: ItemsEntity, onClick: (ItemsEntity) -> Unit) {
                         )
                         Spacer(modifier = Modifier.size(5.dp))
                         Text(
-                            text = itemEntity.salePrice.toString(),
+                            text = "₹ "+itemEntity.salePrice.toString(),
                             fontSize = 15.sp,
                             fontFamily = robotoFamily,
                             fontWeight = FontWeight.Normal,
@@ -106,7 +106,7 @@ fun ItemCard(itemEntity: ItemsEntity, onClick: (ItemsEntity) -> Unit) {
                         )
                         Spacer(modifier = Modifier.size(5.dp))
                         Text(
-                            text = itemEntity.purchasePrice.toString(),
+                            text = "₹ "+itemEntity.purchasePrice.toString(),
                             fontSize = 15.sp,
                             fontFamily = robotoFamily,
                             fontWeight = FontWeight.Normal,
@@ -119,14 +119,14 @@ fun ItemCard(itemEntity: ItemsEntity, onClick: (ItemsEntity) -> Unit) {
                     ) {
                         Text(
                             text = "In Stock",
-                            fontSize = 10.sp,
+                            fontSize = 12.sp,
                             fontFamily = robotoFamily,
                             fontWeight = FontWeight.Medium,
                             color = Color.Gray
                         )
                         Spacer(modifier = Modifier.size(5.dp))
                         Text(
-                            text = itemEntity.stock.toString(),
+                            text = "₹ "+itemEntity.stock.toString(),
                             fontSize = 15.sp,
                             fontFamily = robotoFamily,
                             fontWeight = FontWeight.Normal
@@ -152,7 +152,7 @@ fun TransactionCard(
                 .fillMaxWidth()
                 .clickable { onClick(transactionEntity) },
         ) {
-            Column(modifier = Modifier.padding(start = 10.dp)) {
+            Column(modifier = Modifier.padding(start = 16.dp)) {
                 Text(
                     modifier = Modifier
                         .padding(top = 10.dp)
@@ -170,22 +170,27 @@ fun TransactionCard(
                     shape = MaterialTheme.shapes.small,
                     color = if (transactionEntity.type == "purchase") Color(0xFFFEE4DC) else Color(
                         0xFFD1F2E7
-                    )
+                    ),
+
                 ) {
-                    if (transactionEntity.type == "purchase") {
-                        Text(
-                            text = "PURCHASE",
-                            modifier = Modifier.padding(3.dp),
-                            color = Color(0xFFE36B4E),
-                            fontSize = 10.sp
-                        )
-                    } else {
-                        Text(
-                            text = "SALE",
-                            modifier = Modifier.padding(3.dp),
-                            color = Color(0xFF26B180),
-                            fontSize = 10.sp
-                        )
+                    Column(
+                        verticalArrangement = Arrangement.Center
+                    ) {
+                        if (transactionEntity.type == "purchase") {
+                            Text(
+                                text = "PURCHASE",
+                                modifier = Modifier.padding(start=5.dp,end =5.dp),
+                                color = Color(0xFFE36B4E),
+                                fontSize = 10.sp
+                            )
+                        } else {
+                            Text(
+                                text = "SALE",
+                                modifier = Modifier.padding(start=5.dp,end =5.dp),
+                                color = Color(0xFF26B180),
+                                fontSize = 10.sp
+                            )
+                        }
                     }
                 }
                 Spacer(modifier = Modifier.size(15.dp))
@@ -293,14 +298,14 @@ fun PartiesCard(partyEntity: PartyEntity, onClick: (PartyEntity) -> Unit) {
     Column(modifier = Modifier.fillMaxWidth()) {
         Card(
             modifier = Modifier
-                .height(60.dp)
+                .height(65.dp)
                 .fillMaxWidth()
                 .clickable { onClick(partyEntity) },
         ) {
 
             Row(
                 modifier = Modifier
-                    .padding(start = 10.dp, end = 10.dp)
+                    .padding(start = 17.dp, end = 17.dp)
                     .fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
@@ -309,7 +314,7 @@ fun PartiesCard(partyEntity: PartyEntity, onClick: (PartyEntity) -> Unit) {
 
                 Text(
                     text = partyEntity.partyName!!,
-                    fontSize = 15.sp,
+                    fontSize = 14.sp,
                     fontFamily = robotoFamily,
                     fontWeight = FontWeight.Medium
                 )
@@ -319,8 +324,8 @@ fun PartiesCard(partyEntity: PartyEntity, onClick: (PartyEntity) -> Unit) {
                     verticalArrangement = Arrangement.Center
                 ) {
                     Text(
-                        text = abs(partyEntity.amout!!).toString(),
-                        fontSize = 15.sp,
+                        text = "₹ "+abs(partyEntity.amout!!).toString(),
+                        fontSize = 17.sp,
                         fontFamily = robotoFamily,
                         fontWeight = FontWeight.Medium,
                         color = if (partyEntity.amout!! > 0) Color(0xFF26B180) else Color(0xFFE36B4E)
@@ -328,7 +333,7 @@ fun PartiesCard(partyEntity: PartyEntity, onClick: (PartyEntity) -> Unit) {
                     Spacer(modifier = Modifier.size(5.dp))
                     Text(
                         text = if (partyEntity.amout!! > 0) "You'll Get" else "You'll Give",
-                        fontSize = 10.sp,
+                        fontSize = 13.sp,
                         fontFamily = robotoFamily,
                         fontWeight = FontWeight.Normal,
                         color = if (partyEntity.amout!! > 0) Color(0xFF26B180) else Color(0xFFE36B4E)
