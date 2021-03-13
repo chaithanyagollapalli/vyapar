@@ -3,7 +3,7 @@ package com.nero.vyapar.home_nav_bar.items
 import android.os.Bundle
 import android.view.*
 import android.widget.ImageButton
-import androidx.compose.animation.animateContentSize
+//import androidx.compose.animation.animateContentSize
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -75,7 +76,7 @@ class ItemsFragment : Fragment() {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(Color(0xFFF3F3F3)).animateContentSize(),
+                        .background(Color(0xFFF3F3F3)),
                 ) {
                     Column(
                         modifier = Modifier.background(Color.White)
@@ -88,7 +89,7 @@ class ItemsFragment : Fragment() {
                         ) {
                             Spacer(modifier = Modifier.size(10.dp))
                             TotalInformationCard(
-                                name = "You'll Get",
+                                name = context.getString(R.string.youll_get),
                                 viewModel.totalToGet.value,
                                 R.drawable.ic_arrow_downward,
                                 Constants.YOUWILLGETINT,
@@ -96,7 +97,7 @@ class ItemsFragment : Fragment() {
                             Spacer(modifier = Modifier.size(10.dp))
 
                             TotalInformationCard(
-                                name = "Sale",
+                                name = context.getString(R.string.sale_compose),
                                 viewModel.totalSale.value,
                                 R.drawable.ic_bill,
                                 Constants.SALEINT,
@@ -104,7 +105,7 @@ class ItemsFragment : Fragment() {
                             Spacer(modifier = Modifier.size(10.dp))
 
                             TotalInformationCard(
-                                name = "You'll Give",
+                                name = context.getString(R.string.youll_give),
                                 viewModel.totalToGive.value,
                                 R.drawable.ic_upward,
                                 Constants.YOUWILLGIVEINT,
@@ -112,7 +113,7 @@ class ItemsFragment : Fragment() {
                             Spacer(modifier = Modifier.size(10.dp))
 
                             TotalInformationCard(
-                                name = "Purchase",
+                                name = context.getString(R.string.purchase_compose),
                                 viewModel.totalPurchase.value,
                                 R.drawable.ic_shopping_cart,
                                 Constants.PURCHASEINT,
@@ -120,7 +121,7 @@ class ItemsFragment : Fragment() {
                             Spacer(modifier = Modifier.size(10.dp))
 
                             TotalInformationCard(
-                                name = "Expense",
+                                name = context.getString(R.string.expense_compose),
                                 viewModel.totalExpenses.value,
                                 R.drawable.ic_wallet,
                                 Constants.PURCHASEINT,
@@ -144,12 +145,12 @@ class ItemsFragment : Fragment() {
                             ) {
                                 if (viewModel.selectedType.value == 0) {
                                     AddButton(
-                                        name = "New Party",
+                                        name = context.getString(R.string.new_party_compose),
                                         onClick = { addParty(it) },
                                         type = 0
                                     )
                                 } else if (viewModel.selectedType.value == 2) {
-                                    AddButton(name = "New Item", onClick = {
+                                    AddButton(name = context.getString(R.string.new_item), onClick = {
                                         addItem(it)
                                     }, type = 2)
                                 }
@@ -167,7 +168,7 @@ class ItemsFragment : Fragment() {
                                     textColor = Color.Black,
                                 ),
                                 placeholder = {
-                                    Text(text = "Search Transactions")
+                                    Text(text = context.getString(R.string.search_trans))
                                 },
                                 leadingIcon = {
                                     Image(
@@ -277,9 +278,9 @@ fun Selector(selected: Int, onClick: (Int) -> Unit) {
         horizontalArrangement = Arrangement.SpaceEvenly,
         modifier = Modifier.fillMaxWidth()
     ) {
-        SelectorCards(selected == 0, "Parties", 0, onClick = onClick)
-        SelectorCards(selected == 1, "Transactions", 1, onClick = onClick)
-        SelectorCards(selected == 2, "Items", 2, onClick = onClick)
+        SelectorCards(selected == 0, stringResource(R.string.parties_compose), 0, onClick = onClick)
+        SelectorCards(selected == 1, stringResource(R.string.trans_compose), 1, onClick = onClick)
+        SelectorCards(selected == 2, stringResource(R.string.items_compose), 2, onClick = onClick)
     }
 
 }
@@ -383,9 +384,9 @@ fun BottomButtons(
         horizontalArrangement = Arrangement.SpaceEvenly
 
     ) {
-        SalePurchaseButton(Color(0xFF0174E7), "Purchase", onClickPurchase)
+        SalePurchaseButton(Color(0xFF0174E7), stringResource(R.string.pur_comp), onClickPurchase)
         CircleAddButton(onClick = onClickMiddle)
-        SalePurchaseButton(Color(0xFFED1A3B), "Add Sale", onClickSale)
+        SalePurchaseButton(Color(0xFFED1A3B), stringResource(R.string.add_sale_compose), onClickSale)
     }
 }
 

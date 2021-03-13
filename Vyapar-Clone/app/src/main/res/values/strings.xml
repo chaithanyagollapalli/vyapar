@@ -175,6 +175,19 @@
     <string name="add_sales">Add Sales</string>
     <string name="total">Total:  </string>
     <string name="gst">GST</string>
+    <string name="youll_get">You\'ll Get</string>
+    <string name="sale_compose">Sale</string>
+    <string name="youll_give">You\'ll Give</string>
+    <string name="purchase_compose">Purchase</string>
+    <string name="expense_compose">Expense</string>
+    <string name="new_party_compose">New Party</string>
+    <string name="new_item">New Item</string>
+    <string name="search_trans">Search Transactions</string>
+    <string name="parties_compose">Parties</string>
+    <string name="trans_compose">Transactions</string>
+    <string name="items_compose">Items</string>
+    <string name="pur_comp">Add Purchase</string>
+    <string name="add_sale_compose">Add Sale</string>
 
     <string-array name="languageList">
 

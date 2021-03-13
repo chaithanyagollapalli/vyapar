@@ -33,7 +33,7 @@ class AddExpenseFragment : Fragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.add_line_item, menu)
+        inflater.inflate(R.menu.add_line_item , menu)
 
     }
     override fun onCreateView(
