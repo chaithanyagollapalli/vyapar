@@ -20,6 +20,20 @@ import kotlinx.android.synthetic.main.fragment_add_new_party.*
 import kotlinx.android.synthetic.main.fragment_addresses.*
 import kotlinx.android.synthetic.main.fragment_opening_balance.*
 import java.lang.Long.parseLong
+import androidx.core.app.ActivityCompat.startActivityForResult
+
+import android.provider.ContactsContract
+
+import android.content.Intent
+import androidx.core.app.ActivityCompat.startActivityForResult
+import android.provider.ContactsContract.CommonDataKinds
+
+
+
+
+
+
+
 
 @AndroidEntryPoint
 class AddNewPartyFragment : Fragment() {
@@ -72,6 +86,11 @@ class AddNewPartyFragment : Fragment() {
             activity?.onBackPressed()
         }
 
+        cvImportContacts.setOnClickListener {
+            val intent = Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI)
+            intent.type = CommonDataKinds.Phone.CONTENT_TYPE
+            startActivityForResult(intent, 1)
+        }
 
     }
 

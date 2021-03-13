@@ -116,4 +116,5 @@
     <string name="products">Products</string>
     <string name="add_sales">Add Sales</string>
     <string name="add_expenses">Add Expenses</string>
+    <string name="total">Total:   </string>
 </resources>

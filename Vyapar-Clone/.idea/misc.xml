@@ -77,6 +77,7 @@
         <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_add_product.xml" value="0.33" />
         <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_add_purchase.xml" value="0.32592592592592595" />
         <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_add_sale.xml" value="0.2708333333333333" />
+        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_categories.xml" value="0.32592592592592595" />
         <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_opening_balance.xml" value="0.32592592592592595" />
         <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_product.xml" value="0.25" />
         <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/fragment_services.xml" value="0.36666666666666664" />
@@ -84,6 +85,7 @@
         <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/item_category_layout.xml" value="0.36666666666666664" />
         <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/menu_items_fragment.xml" value="0.2644927536231884" />
         <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/menu_items_services_layout.xml" value="0.1" />
+        <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/my_online_store_fragment.xml" value="0.26902173913043476" />
         <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/nav_header_home.xml" value="0.27219202898550726" />
         <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/purchase_fragment.xml" value="0.26902173913043476" />
         <entry key="..\:/vyapar/Vyapar-Clone/app/src/main/res/layout/sale_fragment.xml" value="0.5" />

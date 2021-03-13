@@ -6,38 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".home_nav_bar.expense.ExpensesFragment">
 
-    <ImageButton
-        android:id="@+id/ibExpenseBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp_15"
-        android:background="@android:color/transparent"/>
-<!--        android:src="@drawable/ic_backarrow_black" />-->
-
-    <TextView
-        android:id="@+id/tvExpense"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp_10"
-        android:layout_toEndOf="@+id/ibExpenseBack"
-        android:text="Expense"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp_24" />
-
-    <ImageButton
-        android:id="@+id/ibSearchBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="@dimen/dp_15"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_search_black" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/expenseTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvExpense"
         android:background="@color/white"
         android:padding="@dimen/dp_5"
         app:tabIndicatorColor="@color/save_btn"
@@ -51,6 +24,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/expenseTabLayout" />
+
+
+
 
     <Button
         android:id="@+id/addExpensesBtn"

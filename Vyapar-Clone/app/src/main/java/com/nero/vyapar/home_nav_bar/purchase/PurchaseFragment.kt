@@ -93,6 +93,7 @@ class PurchaseFragment : Fragment() {
         }
         btnSharePurchaseFrag.setOnClickListener {
             val myIntent = Intent(Intent.ACTION_SEND)
+            myIntent.type = "text/plain"
             val name =
                 "Item Details:  \n " +
                         "Name: ${etBillNo.text}\n Paid Amount: ${etPaid.text}\n " +

@@ -15,7 +15,7 @@ class ExpensesViewModel @Inject constructor(
     private val hashMap: HashMap<String, Int> = hashMapOf()
 
     val hashMapList: MutableLiveData<List<CategoryModel>> = MutableLiveData()
-
+    val totalMapList: MutableLiveData<Int> = MutableLiveData()
     fun getExpenses() {
         itemsRepository.getAllExpenses().observeForever(Observer {
             hashMap.values.clear()
@@ -35,11 +35,16 @@ class ExpensesViewModel @Inject constructor(
         return itemsRepository.getAllExpenses()
     }
 
+
     private fun convertHashmpToList() {
         val list = arrayListOf<CategoryModel>()
+        var total = 0
         for (i in hashMap) {
             list.add(CategoryModel(i.key, i.value))
+            total += i.value
+
         }
+        totalMapList.postValue(total)
         hashMapList.postValue(list)
     }
 
