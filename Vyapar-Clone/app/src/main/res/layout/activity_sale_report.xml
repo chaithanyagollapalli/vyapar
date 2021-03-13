@@ -11,7 +11,7 @@
         android:id="@+id/btnExportPdf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="pdf"/>
+        android:text="@string/pdf"/>
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/temp"

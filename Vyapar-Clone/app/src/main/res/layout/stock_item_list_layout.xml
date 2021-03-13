@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_20"
-            android:text="Item 1"
+            android:text="@string/item_1"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_18" />
 
@@ -68,7 +68,7 @@
             android:layout_below="@+id/vLine4"
             android:layout_marginStart="@dimen/dp_25"
             android:layout_marginTop="@dimen/dp_10"
-            android:text="Stock Quantity" />
+            android:text="@string/stock_quantity" />
 
         <TextView
             android:id="@+id/tvStockQuantityNumber"
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvStockQuantity"
             android:layout_marginStart="@dimen/dp_25"
-            android:text="10.0 Box" />
+            android:text="@string/_10_0_box" />
 
 
         <TextView
@@ -104,7 +104,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="@dimen/dp_10"
             android:layout_marginEnd="@dimen/dp_25"
-            android:text="Sale Price" />
+            android:text="@string/sale_price" />
 
         <TextView
             android:id="@+id/tvSalePriceNumber"
@@ -113,7 +113,7 @@
             android:layout_below="@+id/tvSalePrice"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="@dimen/dp_25"
-            android:text="10.00" />
+            android:text="@string/_10_00" />
 
 
         <TextView
@@ -133,7 +133,7 @@
             android:layout_below="@+id/tvPurchasePrice"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="@dimen/dp_25"
-            android:text="500.0" />
+            android:text="@string/_500_0" />
 
     </RelativeLayout>
 

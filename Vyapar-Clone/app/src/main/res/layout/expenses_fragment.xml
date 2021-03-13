@@ -40,7 +40,7 @@
         android:drawablePadding="@dimen/dp_15"
         android:paddingStart="@dimen/dp_20"
         android:paddingEnd="@dimen/dp_20"
-        android:text="Add Expenses"
+        android:text="@string/add_expenses"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_18" />
