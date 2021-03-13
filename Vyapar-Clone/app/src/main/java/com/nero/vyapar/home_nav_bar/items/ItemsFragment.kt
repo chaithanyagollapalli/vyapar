@@ -3,13 +3,13 @@ package com.nero.vyapar.home_nav_bar.items
 import android.os.Bundle
 import android.view.*
 import android.widget.ImageButton
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Card
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -17,7 +17,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
@@ -65,20 +64,22 @@ class ItemsFragment : Fragment() {
     ): View? {
 
         return ComposeView(requireContext()).apply {
+
             setContent {
 
                 Column(
                     modifier = Modifier
-                        .fillMaxHeight()
                         .fillMaxWidth()
-                        .background(Color.White),
+                        .background(Color(0xFFF3F3F3)).animateContentSize(),
                 ) {
-                    Column {
+                    Column(
+                        modifier = Modifier.background(Color.White)
+                    ) {
 
                         Row(
                             modifier = Modifier
                                 .horizontalScroll(rememberScrollState())
-                                .padding(bottom = 35.dp, top = 5.dp)
+                                .padding(bottom = 27.dp, top = 5.dp)
                         ) {
                             Spacer(modifier = Modifier.size(10.dp))
                             TotalInformationCard(
@@ -132,7 +133,7 @@ class ItemsFragment : Fragment() {
                             Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .height(55.dp),
+                                    .height(60.dp),
                                 horizontalArrangement = Arrangement.End,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
@@ -147,11 +148,31 @@ class ItemsFragment : Fragment() {
                                         addItem(it)
                                     }, type = 2)
                                 }
+
                             }
                         } else {
-                            Spacer(modifier = Modifier.size(25.dp))
-                        }
 
+                            TextField(
+                                value = viewModel.searchQuery.value,
+                                onValueChange = { viewModel.searchQueryChange(it) },
+                                colors = TextFieldDefaults.textFieldColors(
+                                    backgroundColor = Color.Transparent,
+                                    focusedIndicatorColor = Color.Transparent,
+                                    unfocusedIndicatorColor = Color.Transparent,
+                                    textColor = Color.Black,
+                                ),
+                                placeholder = {
+                                    Text(text = "Search Transactions")
+                                },
+                                leadingIcon = {
+                                    Image(
+                                        painter = painterResource(id = R.drawable.ic_search_blue),
+                                        contentDescription = null
+                                    )
+                                }
+                            )
+                        }
+                        Divider(color = Color.LightGray, thickness = 0.2.dp, startIndent = 10.dp)
                         if (viewModel.selectedType.value == 2) {
                             LazyColumn() {
                                 itemsIndexed(
@@ -173,14 +194,24 @@ class ItemsFragment : Fragment() {
                                 itemsIndexed(
                                     items = viewModel.transcations.value
                                 ) { index, transaction ->
-                                    TransactionCard(
-                                        transactionEntity = transaction,
-                                        onClick = { /*TODO*/ })
+
+                                    if (viewModel.searchQuery.value.isEmpty()) {
+                                        TransactionCard(
+                                            transactionEntity = transaction,
+                                            onClick = { /*TODO*/ })
+                                    } else if (transaction.partyName!!.contains(viewModel.searchQuery.value)) {
+                                        TransactionCard(
+                                            transactionEntity = transaction,
+                                            onClick = { /*TODO*/ })
+                                    }
+
                                 }
                             }
                         }
                     }
                 }
+
+
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -191,8 +222,13 @@ class ItemsFragment : Fragment() {
                         { navigateToPurchaseFragment() },
                         { openBottomSheet() },
                         { navigateToSaleFragment() })
-                    Spacer(modifier = Modifier.size(15.dp))
+                    Spacer(modifier = Modifier.size(10.dp))
                 }
+
+
+
+
+
             }
         }
     }
@@ -253,7 +289,7 @@ fun SelectorCards(isSelected: Boolean, name: String, nameCode: Int, onClick: (In
                 .clickable { onClick(nameCode) },
             shape = RoundedCornerShape(17.dp),
             border = BorderStroke(
-                1.dp,
+                1.3.dp,
                 color = if (isSelected) Color(0xFFCE2848) else Color.LightGray
             ),
             backgroundColor = if (isSelected) Color(0xFFF9DCE1) else Color.White
@@ -271,7 +307,7 @@ fun SelectorCards(isSelected: Boolean, name: String, nameCode: Int, onClick: (In
                     color = if (isSelected) Color(0xFFCE2848) else Color.LightGray,
                     fontSize = 10.sp,
                     fontFamily = robotoFamily,
-                    fontWeight = FontWeight.Normal,
+                    fontWeight = FontWeight.Medium,
                 )
             }
         }
@@ -349,13 +385,6 @@ fun BottomButtons(
 }
 
 
-@Preview(showBackground = true)
-@Composable
-fun preview() {
-    Column {
 
-        BottomButtons({}, {}, {})
 
-        // TotalInformationCard("you'll get", 1000, R.drawable.ic_arrow_downward, 3, {})
-    }
-}
+
