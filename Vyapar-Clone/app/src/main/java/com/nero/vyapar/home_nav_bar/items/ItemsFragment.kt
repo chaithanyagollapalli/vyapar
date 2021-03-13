@@ -178,7 +178,7 @@ class ItemsFragment : Fragment() {
                                 }
                             )
                         }
-                        Divider(color = Color.LightGray, thickness = 0.2.dp, startIndent = 10.dp)
+                        Divider(color = Color.LightGray, thickness = 1.dp, startIndent = 10.dp)
                         if (viewModel.selectedType.value == 2) {
                             LazyColumn() {
                                 itemsIndexed(
@@ -311,7 +311,7 @@ fun SelectorCards(isSelected: Boolean, name: String, nameCode: Int, onClick: (In
                 Text(
                     text = name,
                     color = if (isSelected) Color(0xFFCE2848) else Color.LightGray,
-                    fontSize = 10.sp,
+                    fontSize = 12.sp,
                     fontFamily = robotoFamily,
                     fontWeight = FontWeight.Medium,
                 )

@@ -77,7 +77,7 @@
     <string name="invoice_print">Invoice Print</string>
     <string name="taxes_gst"><![CDATA[Taxes & GST]]></string>
     <string name="ab_har_business_banega_digital">Ab har business banega <b>digital</b></string>
-<string name="add_expenses">Add Expenses</string>
+    <string name="add_expenses">Add Expenses</string>
     <string name="add_product">Add Product</string>
     <string name="item_code_barcode">Item Code / Barcode</string>
     <string name="hsn_sac_code">HSN / SAC Code</string>
