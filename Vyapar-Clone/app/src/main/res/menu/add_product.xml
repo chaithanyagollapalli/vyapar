@@ -12,7 +12,7 @@
 
     <item
         android:id="@+id/action_setting"
-        android:icon="@drawable/ic_baseline_settings_24_white"
+        android:icon="@drawable/ic_baseline_settings_24_blue"
         android:title="@string/settings"
         app:showAsAction="ifRoom" />
 </menu>

@@ -5,37 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".home_nav_bar.purchase.PurchaseFragment">
 
-    <ImageButton
-        android:id="@+id/ibBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp_20"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_backarrow_black" />
-
-    <TextView
-        android:id="@+id/tvPurchase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_70"
-        android:layout_marginTop="@dimen/dp_15"
-        android:text="@string/purchase"
-        android:textSize="@dimen/sp_24" />
-
-    <ImageButton
-        android:id="@+id/ibSettings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="@dimen/dp_20"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_outline_settings_24" />
 
     <TextView
         android:id="@+id/tvBillNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ibBack"
+        android:layout_alignParentTop="true"
         android:layout_margin="@dimen/dp_15"
         android:text="@string/bill_no" />
 
@@ -43,7 +18,6 @@
         android:id="@+id/etBillNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ibBack"
         android:layout_toEndOf="@id/tvBillNo"
         android:ems="4"
         android:textSize="@dimen/sp_16" />
@@ -52,7 +26,6 @@
         android:id="@+id/tvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ibBack"
         android:layout_alignParentEnd="true"
         android:layout_margin="@dimen/dp_15"
         android:drawableEnd="@drawable/ic_baseline_calendar_today_20"
@@ -74,6 +47,7 @@
         android:layout_below="@+id/vLine1"
         android:layout_margin="@dimen/dp_15"
         android:background="@drawable/party_editext_box"
+        android:inputType="textAutoComplete"
         android:hint="@string/party_with_asterisk"
         android:padding="@dimen/dp_15" />
 
@@ -147,6 +121,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/dp_10"
                     android:ems="6"
+                    android:hint="0.0"
+                    android:inputType="number"
                     android:textSize="@dimen/sp_18" />
 
                 <EditText
@@ -155,14 +131,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/dp_10"
                     android:ems="6"
+                    android:hint="0.0"
+                    android:inputType="number"
                     android:textSize="@dimen/sp_18" />
 
                 <EditText
+
                     android:id="@+id/balanceDue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/dp_10"
                     android:ems="6"
+                    android:hint="0.0"
+                    android:inputType="number"
                     android:textSize="@dimen/sp_18" />
 
             </LinearLayout>
@@ -234,11 +215,13 @@
             android:textColor="@color/save_btn" />
 
         <ImageButton
+            android:id="@+id/btnCameraPurchaseFrag"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@android:color/transparent"
+            android:padding="@dimen/dp_12"
             android:src="@drawable/ic_camera" />
 
 
@@ -251,8 +234,8 @@
         android:layout_above="@+id/buttonlayout" />
 
     <LinearLayout
-        android:layout_width="match_parent"
         android:id="@+id/buttonlayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
 
@@ -275,7 +258,7 @@
 
         <ImageButton
 
-            android:id="@+id/btnShare"
+            android:id="@+id/btnSharePurchaseFrag"
             android:layout_width="0dp"
             android:layout_height="@dimen/dp_50"
             android:layout_gravity="center"

@@ -173,6 +173,10 @@
     <string name="_10_00">10.00</string>
     <string name="_500_0">500.0</string>
 
+    <string name="ad_purchase">Add Purchase</string>
+    <string name="products">Products</string>
+    <string name="add_sales">Add Sales</string>
+
     <string-array name="languageList">
 
         <item>English</item>
