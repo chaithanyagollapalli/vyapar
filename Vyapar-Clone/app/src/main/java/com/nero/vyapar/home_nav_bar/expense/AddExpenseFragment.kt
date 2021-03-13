@@ -7,12 +7,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.nero.vyapar.R
 import com.nero.vyapar.local.entity.ExpenseEntity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_add_expense.*
+import kotlinx.android.synthetic.main.fragment_add_expense.etItemName
+import kotlinx.android.synthetic.main.fragment_add_product.*
+import kotlinx.android.synthetic.main.fragment_add_purchase.*
 
 @AndroidEntryPoint
 class AddExpenseFragment : Fragment() {
@@ -60,6 +64,9 @@ class AddExpenseFragment : Fragment() {
         })
 
         btnAddExpenseSave.setOnClickListener {
+
+            if (isDataValid()){
+
             val expenseEntity = ExpenseEntity(
                 etExpenseCategory.text.toString(),
                 etItemName.text.toString(),
@@ -67,12 +74,47 @@ class AddExpenseFragment : Fragment() {
                 etPrice.text.toString().toInt(),
                 etTotalAmt.text.toString().toInt()
             )
-            viewModel.addExpense(expenseEntity)
+                viewModel.addExpense(expenseEntity)
+                val action = AddExpenseFragmentDirections.actionAddExpenseFragmentToNavExpenses()
+                findNavController().navigate(action)
+            }
 
-            val action = AddExpenseFragmentDirections.actionAddExpenseFragmentToNavExpenses()
-            findNavController().navigate(action)
         }
 
+        btnAddExpenseSaveAndNew.setOnClickListener {
+            Toast.makeText(
+                activity,
+                "Item / services name cannot be left empty",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+    }
+    private fun isDataValid(): Boolean {
+        var isValid = true
+        if (etItemName.text.toString().isEmpty()) {
+            etItemName.error = "Required"
+            isValid = false
+        }
+        if (etQty.text.toString().isEmpty()) {
+            etQty.error = "Required"
+            isValid = false
+        }
+        if (etPrice.text.toString().isEmpty()) {
+            etPrice.error = "Required"
+            isValid = false
+        }
+        if (etTotalAmt.text.toString().isEmpty()) {
+            etTotalAmt.error = "required"
+            isValid = false
+        }
+        if (etExpenseCategory.text.toString().isEmpty()) {
+            etExpenseCategory.error = "required"
+            isValid = false
+        }
+
+
+        return isValid
     }
 
     companion object {
