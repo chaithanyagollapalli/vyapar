@@ -1,4 +1,4 @@
-# Vyapar - A Money Manager App Clone
+# Vyapar - A Businness and Inventory Manager App Clone
 
 <img src="https://vyaparapp.in/blog/wp-content/uploads/2019/09/cccdcdcdcdcdcdcdcd-1.png" width="320">
 
