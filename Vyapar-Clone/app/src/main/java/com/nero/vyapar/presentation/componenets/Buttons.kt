@@ -107,7 +107,7 @@ fun SalePurchaseButton(
             Text(
                 text = name, fontFamily = robotoFamily,
                 fontWeight = FontWeight.Medium,
-                fontSize = 15.sp,
+                fontSize = 10.sp,
                 color = Color.White
             )
 
