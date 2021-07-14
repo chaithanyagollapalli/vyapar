@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">  
-This is a an android project based on modern Android application tech-stacks and MVVM architecture. Tried new technologies like Jetpack Compose and Hilt. Used Room database to store the data. It can dynamically update the amounts depending on the entries of expenses and purchases. We also added an option to choose Hindi as the language used in app.
+This is a demo android project based on modern Android application tech-stacks and MVVM architecture. Tried new technologies like Jetpack Compose and Hilt. Used Room database to store the data. It can dynamically update the amounts depending on the entries of expenses and purchases. We also added an option to choose Hindi as the language used in app.
 </p>
 
 ## App Screenshots
