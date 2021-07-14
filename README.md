@@ -19,7 +19,7 @@ This is a demo android project based on modern Android application tech-stacks a
  </table>
 
 ## Libraries & Tech Used
-- Minimum SDK level 23
+- Minimum SDK level 21
 - [Kotlin](https://kotlinlang.org/) based, [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) for asynchronous handling.
 - [Hilt (stable)](https://developer.android.com/training/dependency-injection/hilt-android) for dependency injection.
 - JetPack
